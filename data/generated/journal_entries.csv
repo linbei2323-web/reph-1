@@ -1,0 +1,307 @@
+je_no,posting_date,je_type,account,debit,credit,cost_center,product,party,remark
+JE-2025-00001,2025-01-01,Opening balance,1000 Bank,5000000.0,0.0,,,,Opening balances
+JE-2025-00001,2025-01-01,Opening balance,1200 Inventory,300000.0,0.0,,,,Opening balances
+JE-2025-00001,2025-01-01,Opening balance,3000 Equity,0.0,5300000.0,,,,Opening balances
+JE-2025-00002,2025-01-31,Payroll,6000 Commercial,208473.65,0.0,Commercial,,,Payroll Jan 2025
+JE-2025-00002,2025-01-31,Payroll,6100 R&D,154904.38,0.0,R&D,,,Payroll Jan 2025
+JE-2025-00002,2025-01-31,Payroll,6200 Manufacturing,143492.01,0.0,Manufacturing,,,Payroll Jan 2025
+JE-2025-00002,2025-01-31,Payroll,6300 G&A,80430.73,0.0,G&A,,,Payroll Jan 2025
+JE-2025-00002,2025-01-31,Payroll,1000 Bank,0.0,587300.77,,,,Payroll Jan 2025
+JE-2025-00003,2025-01-31,COGS,5000 Cost of goods sold,56400.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold Jan 2025
+JE-2025-00003,2025-01-31,COGS,5000 Cost of goods sold,10000.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold Jan 2025
+JE-2025-00003,2025-01-31,COGS,5000 Cost of goods sold,36050.0,0.0,Manufacturing,Respiqor,,Cost of goods sold Jan 2025
+JE-2025-00003,2025-01-31,COGS,1200 Inventory,0.0,102450.0,Manufacturing,,,Cost of goods sold Jan 2025
+JE-2025-00004,2025-01-31,Rebate accrual,4100 Rebates,283692.0,0.0,Commercial,Glyvanta,,Rebate accrual Jan 2025
+JE-2025-00004,2025-01-31,Rebate accrual,4100 Rebates,13301.0,0.0,Commercial,Onkalyn,,Rebate accrual Jan 2025
+JE-2025-00004,2025-01-31,Rebate accrual,4100 Rebates,130861.5,0.0,Commercial,Respiqor,,Rebate accrual Jan 2025
+JE-2025-00004,2025-01-31,Rebate accrual,2100 Rebate accrual,0.0,427854.5,Commercial,,,Rebate accrual Jan 2025
+JE-2025-00005,2025-01-31,Chargeback accrual,4200 Chargebacks,18912.8,0.0,Commercial,Glyvanta,,Chargeback accrual Jan 2025
+JE-2025-00005,2025-01-31,Chargeback accrual,4200 Chargebacks,26602.0,0.0,Commercial,Onkalyn,,Chargeback accrual Jan 2025
+JE-2025-00005,2025-01-31,Chargeback accrual,4200 Chargebacks,8724.1,0.0,Commercial,Respiqor,,Chargeback accrual Jan 2025
+JE-2025-00005,2025-01-31,Chargeback accrual,2110 Chargeback accrual,0.0,54238.9,Commercial,,,Chargeback accrual Jan 2025
+JE-2025-00006,2025-01-31,Returns accrual,4300 Returns,9456.4,0.0,Commercial,Glyvanta,,Returns accrual Jan 2025
+JE-2025-00006,2025-01-31,Returns accrual,4300 Returns,2660.2,0.0,Commercial,Onkalyn,,Returns accrual Jan 2025
+JE-2025-00006,2025-01-31,Returns accrual,4300 Returns,4362.05,0.0,Commercial,Respiqor,,Returns accrual Jan 2025
+JE-2025-00006,2025-01-31,Returns accrual,2120 Returns reserve,0.0,16478.65,Commercial,,,Returns accrual Jan 2025
+JE-2025-00007,2025-02-28,Payroll,6000 Commercial,207541.36,0.0,Commercial,,,Payroll Feb 2025
+JE-2025-00007,2025-02-28,Payroll,6100 R&D,155467.38,0.0,R&D,,,Payroll Feb 2025
+JE-2025-00007,2025-02-28,Payroll,6200 Manufacturing,147165.37,0.0,Manufacturing,,,Payroll Feb 2025
+JE-2025-00007,2025-02-28,Payroll,6300 G&A,80514.17,0.0,G&A,,,Payroll Feb 2025
+JE-2025-00007,2025-02-28,Payroll,1000 Bank,0.0,590688.28,,,,Payroll Feb 2025
+JE-2025-00008,2025-02-28,COGS,5000 Cost of goods sold,54600.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold Feb 2025
+JE-2025-00008,2025-02-28,COGS,5000 Cost of goods sold,10000.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold Feb 2025
+JE-2025-00008,2025-02-28,COGS,5000 Cost of goods sold,36050.0,0.0,Manufacturing,Respiqor,,Cost of goods sold Feb 2025
+JE-2025-00008,2025-02-28,COGS,1200 Inventory,0.0,100650.0,Manufacturing,,,Cost of goods sold Feb 2025
+JE-2025-00009,2025-02-28,Rebate accrual,4100 Rebates,274638.0,0.0,Commercial,Glyvanta,,Rebate accrual Feb 2025
+JE-2025-00009,2025-02-28,Rebate accrual,4100 Rebates,13301.0,0.0,Commercial,Onkalyn,,Rebate accrual Feb 2025
+JE-2025-00009,2025-02-28,Rebate accrual,4100 Rebates,130861.5,0.0,Commercial,Respiqor,,Rebate accrual Feb 2025
+JE-2025-00009,2025-02-28,Rebate accrual,2100 Rebate accrual,0.0,418800.5,Commercial,,,Rebate accrual Feb 2025
+JE-2025-00010,2025-02-28,Chargeback accrual,4200 Chargebacks,18309.2,0.0,Commercial,Glyvanta,,Chargeback accrual Feb 2025
+JE-2025-00010,2025-02-28,Chargeback accrual,4200 Chargebacks,26602.0,0.0,Commercial,Onkalyn,,Chargeback accrual Feb 2025
+JE-2025-00010,2025-02-28,Chargeback accrual,4200 Chargebacks,8724.1,0.0,Commercial,Respiqor,,Chargeback accrual Feb 2025
+JE-2025-00010,2025-02-28,Chargeback accrual,2110 Chargeback accrual,0.0,53635.3,Commercial,,,Chargeback accrual Feb 2025
+JE-2025-00011,2025-02-28,Returns accrual,4300 Returns,9154.6,0.0,Commercial,Glyvanta,,Returns accrual Feb 2025
+JE-2025-00011,2025-02-28,Returns accrual,4300 Returns,2660.2,0.0,Commercial,Onkalyn,,Returns accrual Feb 2025
+JE-2025-00011,2025-02-28,Returns accrual,4300 Returns,4362.05,0.0,Commercial,Respiqor,,Returns accrual Feb 2025
+JE-2025-00011,2025-02-28,Returns accrual,2120 Returns reserve,0.0,16176.85,Commercial,,,Returns accrual Feb 2025
+JE-2025-00012,2025-03-31,Payroll,6000 Commercial,202505.02,0.0,Commercial,,,Payroll Mar 2025
+JE-2025-00012,2025-03-31,Payroll,6100 R&D,148453.84,0.0,R&D,,,Payroll Mar 2025
+JE-2025-00012,2025-03-31,Payroll,6200 Manufacturing,152304.7,0.0,Manufacturing,,,Payroll Mar 2025
+JE-2025-00012,2025-03-31,Payroll,6300 G&A,80837.85,0.0,G&A,,,Payroll Mar 2025
+JE-2025-00012,2025-03-31,Payroll,1000 Bank,0.0,584101.41,,,,Payroll Mar 2025
+JE-2025-00013,2025-03-31,COGS,5000 Cost of goods sold,58080.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold Mar 2025
+JE-2025-00013,2025-03-31,COGS,5000 Cost of goods sold,10000.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold Mar 2025
+JE-2025-00013,2025-03-31,COGS,5000 Cost of goods sold,36960.0,0.0,Manufacturing,Respiqor,,Cost of goods sold Mar 2025
+JE-2025-00013,2025-03-31,COGS,1200 Inventory,0.0,105040.0,Manufacturing,,,Cost of goods sold Mar 2025
+JE-2025-00014,2025-03-31,Rebate accrual,4100 Rebates,292142.4,0.0,Commercial,Glyvanta,,Rebate accrual Mar 2025
+JE-2025-00014,2025-03-31,Rebate accrual,4100 Rebates,13301.0,0.0,Commercial,Onkalyn,,Rebate accrual Mar 2025
+JE-2025-00014,2025-03-31,Rebate accrual,4100 Rebates,134164.8,0.0,Commercial,Respiqor,,Rebate accrual Mar 2025
+JE-2025-00014,2025-03-31,Rebate accrual,2100 Rebate accrual,0.0,439608.2,Commercial,,,Rebate accrual Mar 2025
+JE-2025-00015,2025-03-31,Chargeback accrual,4200 Chargebacks,19476.16,0.0,Commercial,Glyvanta,,Chargeback accrual Mar 2025
+JE-2025-00015,2025-03-31,Chargeback accrual,4200 Chargebacks,26602.0,0.0,Commercial,Onkalyn,,Chargeback accrual Mar 2025
+JE-2025-00015,2025-03-31,Chargeback accrual,4200 Chargebacks,8944.32,0.0,Commercial,Respiqor,,Chargeback accrual Mar 2025
+JE-2025-00015,2025-03-31,Chargeback accrual,2110 Chargeback accrual,0.0,55022.48,Commercial,,,Chargeback accrual Mar 2025
+JE-2025-00016,2025-03-31,Returns accrual,4300 Returns,9738.08,0.0,Commercial,Glyvanta,,Returns accrual Mar 2025
+JE-2025-00016,2025-03-31,Returns accrual,4300 Returns,2660.2,0.0,Commercial,Onkalyn,,Returns accrual Mar 2025
+JE-2025-00016,2025-03-31,Returns accrual,4300 Returns,4472.16,0.0,Commercial,Respiqor,,Returns accrual Mar 2025
+JE-2025-00016,2025-03-31,Returns accrual,2120 Returns reserve,0.0,16870.44,Commercial,,,Returns accrual Mar 2025
+JE-2025-00017,2025-04-30,Payroll,6000 Commercial,209832.8,0.0,Commercial,,,Payroll Apr 2025
+JE-2025-00017,2025-04-30,Payroll,6100 R&D,153894.39,0.0,R&D,,,Payroll Apr 2025
+JE-2025-00017,2025-04-30,Payroll,6200 Manufacturing,148510.51,0.0,Manufacturing,,,Payroll Apr 2025
+JE-2025-00017,2025-04-30,Payroll,6300 G&A,83636.63,0.0,G&A,,,Payroll Apr 2025
+JE-2025-00017,2025-04-30,Payroll,1000 Bank,0.0,595874.33,,,,Payroll Apr 2025
+JE-2025-00018,2025-04-30,COGS,5000 Cost of goods sold,56700.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold Apr 2025
+JE-2025-00018,2025-04-30,COGS,5000 Cost of goods sold,9500.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold Apr 2025
+JE-2025-00018,2025-04-30,COGS,5000 Cost of goods sold,36610.0,0.0,Manufacturing,Respiqor,,Cost of goods sold Apr 2025
+JE-2025-00018,2025-04-30,COGS,1200 Inventory,0.0,102810.0,Manufacturing,,,Cost of goods sold Apr 2025
+JE-2025-00019,2025-04-30,Rebate accrual,4100 Rebates,285201.0,0.0,Commercial,Glyvanta,,Rebate accrual Apr 2025
+JE-2025-00019,2025-04-30,Rebate accrual,4100 Rebates,12635.95,0.0,Commercial,Onkalyn,,Rebate accrual Apr 2025
+JE-2025-00019,2025-04-30,Rebate accrual,4100 Rebates,132894.3,0.0,Commercial,Respiqor,,Rebate accrual Apr 2025
+JE-2025-00019,2025-04-30,Rebate accrual,2100 Rebate accrual,0.0,430731.25,Commercial,,,Rebate accrual Apr 2025
+JE-2025-00020,2025-04-30,Chargeback accrual,4200 Chargebacks,19013.4,0.0,Commercial,Glyvanta,,Chargeback accrual Apr 2025
+JE-2025-00020,2025-04-30,Chargeback accrual,4200 Chargebacks,25271.9,0.0,Commercial,Onkalyn,,Chargeback accrual Apr 2025
+JE-2025-00020,2025-04-30,Chargeback accrual,4200 Chargebacks,8859.62,0.0,Commercial,Respiqor,,Chargeback accrual Apr 2025
+JE-2025-00020,2025-04-30,Chargeback accrual,2110 Chargeback accrual,0.0,53144.92,Commercial,,,Chargeback accrual Apr 2025
+JE-2025-00021,2025-04-30,Returns accrual,4300 Returns,9506.7,0.0,Commercial,Glyvanta,,Returns accrual Apr 2025
+JE-2025-00021,2025-04-30,Returns accrual,4300 Returns,2527.19,0.0,Commercial,Onkalyn,,Returns accrual Apr 2025
+JE-2025-00021,2025-04-30,Returns accrual,4300 Returns,4429.81,0.0,Commercial,Respiqor,,Returns accrual Apr 2025
+JE-2025-00021,2025-04-30,Returns accrual,2120 Returns reserve,0.0,16463.7,Commercial,,,Returns accrual Apr 2025
+JE-2025-00022,2025-05-30,Payroll,6000 Commercial,214699.06,0.0,Commercial,,,Payroll May 2025
+JE-2025-00022,2025-05-30,Payroll,6100 R&D,153399.07,0.0,R&D,,,Payroll May 2025
+JE-2025-00022,2025-05-30,Payroll,6200 Manufacturing,154335.13,0.0,Manufacturing,,,Payroll May 2025
+JE-2025-00022,2025-05-30,Payroll,6300 G&A,80729.03,0.0,G&A,,,Payroll May 2025
+JE-2025-00022,2025-05-30,Payroll,1000 Bank,0.0,603162.29,,,,Payroll May 2025
+JE-2025-00023,2025-05-30,COGS,5000 Cost of goods sold,58560.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold May 2025
+JE-2025-00023,2025-05-30,COGS,5000 Cost of goods sold,10000.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold May 2025
+JE-2025-00023,2025-05-30,COGS,5000 Cost of goods sold,37030.0,0.0,Manufacturing,Respiqor,,Cost of goods sold May 2025
+JE-2025-00023,2025-05-30,COGS,1200 Inventory,0.0,105590.0,Manufacturing,,,Cost of goods sold May 2025
+JE-2025-00024,2025-05-30,Rebate accrual,4100 Rebates,294556.8,0.0,Commercial,Glyvanta,,Rebate accrual May 2025
+JE-2025-00024,2025-05-30,Rebate accrual,4100 Rebates,13301.0,0.0,Commercial,Onkalyn,,Rebate accrual May 2025
+JE-2025-00024,2025-05-30,Rebate accrual,4100 Rebates,134418.9,0.0,Commercial,Respiqor,,Rebate accrual May 2025
+JE-2025-00024,2025-05-30,Rebate accrual,2100 Rebate accrual,0.0,442276.7,Commercial,,,Rebate accrual May 2025
+JE-2025-00025,2025-05-30,Chargeback accrual,4200 Chargebacks,19637.12,0.0,Commercial,Glyvanta,,Chargeback accrual May 2025
+JE-2025-00025,2025-05-30,Chargeback accrual,4200 Chargebacks,26602.0,0.0,Commercial,Onkalyn,,Chargeback accrual May 2025
+JE-2025-00025,2025-05-30,Chargeback accrual,4200 Chargebacks,8961.26,0.0,Commercial,Respiqor,,Chargeback accrual May 2025
+JE-2025-00025,2025-05-30,Chargeback accrual,2110 Chargeback accrual,0.0,55200.38,Commercial,,,Chargeback accrual May 2025
+JE-2025-00026,2025-05-30,Returns accrual,4300 Returns,9818.56,0.0,Commercial,Glyvanta,,Returns accrual May 2025
+JE-2025-00026,2025-05-30,Returns accrual,4300 Returns,2660.2,0.0,Commercial,Onkalyn,,Returns accrual May 2025
+JE-2025-00026,2025-05-30,Returns accrual,4300 Returns,4480.63,0.0,Commercial,Respiqor,,Returns accrual May 2025
+JE-2025-00026,2025-05-30,Returns accrual,2120 Returns reserve,0.0,16959.39,Commercial,,,Returns accrual May 2025
+JE-2025-00027,2025-06-30,Payroll,6000 Commercial,200735.1,0.0,Commercial,,,Payroll Jun 2025
+JE-2025-00027,2025-06-30,Payroll,6100 R&D,152069.45,0.0,R&D,,,Payroll Jun 2025
+JE-2025-00027,2025-06-30,Payroll,6200 Manufacturing,146797.02,0.0,Manufacturing,,,Payroll Jun 2025
+JE-2025-00027,2025-06-30,Payroll,6300 G&A,81255.75,0.0,G&A,,,Payroll Jun 2025
+JE-2025-00027,2025-06-30,Payroll,1000 Bank,0.0,580857.32,,,,Payroll Jun 2025
+JE-2025-00028,2025-06-30,COGS,5000 Cost of goods sold,55320.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold Jun 2025
+JE-2025-00028,2025-06-30,COGS,5000 Cost of goods sold,10000.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold Jun 2025
+JE-2025-00028,2025-06-30,COGS,5000 Cost of goods sold,37030.0,0.0,Manufacturing,Respiqor,,Cost of goods sold Jun 2025
+JE-2025-00028,2025-06-30,COGS,1200 Inventory,0.0,102350.0,Manufacturing,,,Cost of goods sold Jun 2025
+JE-2025-00029,2025-06-30,Rebate accrual,4100 Rebates,278259.6,0.0,Commercial,Glyvanta,,Rebate accrual Jun 2025
+JE-2025-00029,2025-06-30,Rebate accrual,4100 Rebates,13301.0,0.0,Commercial,Onkalyn,,Rebate accrual Jun 2025
+JE-2025-00029,2025-06-30,Rebate accrual,4100 Rebates,134418.9,0.0,Commercial,Respiqor,,Rebate accrual Jun 2025
+JE-2025-00029,2025-06-30,Rebate accrual,2100 Rebate accrual,0.0,425979.5,Commercial,,,Rebate accrual Jun 2025
+JE-2025-00030,2025-06-30,Chargeback accrual,4200 Chargebacks,18550.64,0.0,Commercial,Glyvanta,,Chargeback accrual Jun 2025
+JE-2025-00030,2025-06-30,Chargeback accrual,4200 Chargebacks,26602.0,0.0,Commercial,Onkalyn,,Chargeback accrual Jun 2025
+JE-2025-00030,2025-06-30,Chargeback accrual,4200 Chargebacks,8961.26,0.0,Commercial,Respiqor,,Chargeback accrual Jun 2025
+JE-2025-00030,2025-06-30,Chargeback accrual,2110 Chargeback accrual,0.0,54113.9,Commercial,,,Chargeback accrual Jun 2025
+JE-2025-00031,2025-06-30,Returns accrual,4300 Returns,9275.32,0.0,Commercial,Glyvanta,,Returns accrual Jun 2025
+JE-2025-00031,2025-06-30,Returns accrual,4300 Returns,2660.2,0.0,Commercial,Onkalyn,,Returns accrual Jun 2025
+JE-2025-00031,2025-06-30,Returns accrual,4300 Returns,4480.63,0.0,Commercial,Respiqor,,Returns accrual Jun 2025
+JE-2025-00031,2025-06-30,Returns accrual,2120 Returns reserve,0.0,16416.15,Commercial,,,Returns accrual Jun 2025
+JE-2025-00032,2025-07-31,Payroll,6000 Commercial,192738.61,0.0,Commercial,,,Payroll Jul 2025
+JE-2025-00032,2025-07-31,Payroll,6100 R&D,149162.29,0.0,R&D,,,Payroll Jul 2025
+JE-2025-00032,2025-07-31,Payroll,6200 Manufacturing,156405.21,0.0,Manufacturing,,,Payroll Jul 2025
+JE-2025-00032,2025-07-31,Payroll,6300 G&A,84412.08,0.0,G&A,,,Payroll Jul 2025
+JE-2025-00032,2025-07-31,Payroll,1000 Bank,0.0,582718.19,,,,Payroll Jul 2025
+JE-2025-00033,2025-07-31,COGS,5000 Cost of goods sold,58260.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold Jul 2025
+JE-2025-00033,2025-07-31,COGS,5000 Cost of goods sold,11000.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold Jul 2025
+JE-2025-00033,2025-07-31,COGS,5000 Cost of goods sold,37660.0,0.0,Manufacturing,Respiqor,,Cost of goods sold Jul 2025
+JE-2025-00033,2025-07-31,COGS,1200 Inventory,0.0,106920.0,Manufacturing,,,Cost of goods sold Jul 2025
+JE-2025-00034,2025-07-31,Rebate accrual,4100 Rebates,293047.8,0.0,Commercial,Glyvanta,,Rebate accrual Jul 2025
+JE-2025-00034,2025-07-31,Rebate accrual,4100 Rebates,14631.1,0.0,Commercial,Onkalyn,,Rebate accrual Jul 2025
+JE-2025-00034,2025-07-31,Rebate accrual,4100 Rebates,136705.8,0.0,Commercial,Respiqor,,Rebate accrual Jul 2025
+JE-2025-00034,2025-07-31,Rebate accrual,2100 Rebate accrual,0.0,444384.7,Commercial,,,Rebate accrual Jul 2025
+JE-2025-00035,2025-07-31,Chargeback accrual,4200 Chargebacks,19536.52,0.0,Commercial,Glyvanta,,Chargeback accrual Jul 2025
+JE-2025-00035,2025-07-31,Chargeback accrual,4200 Chargebacks,29262.2,0.0,Commercial,Onkalyn,,Chargeback accrual Jul 2025
+JE-2025-00035,2025-07-31,Chargeback accrual,4200 Chargebacks,9113.72,0.0,Commercial,Respiqor,,Chargeback accrual Jul 2025
+JE-2025-00035,2025-07-31,Chargeback accrual,2110 Chargeback accrual,0.0,57912.44,Commercial,,,Chargeback accrual Jul 2025
+JE-2025-00036,2025-07-31,Returns accrual,4300 Returns,9768.26,0.0,Commercial,Glyvanta,,Returns accrual Jul 2025
+JE-2025-00036,2025-07-31,Returns accrual,4300 Returns,2926.22,0.0,Commercial,Onkalyn,,Returns accrual Jul 2025
+JE-2025-00036,2025-07-31,Returns accrual,4300 Returns,4556.86,0.0,Commercial,Respiqor,,Returns accrual Jul 2025
+JE-2025-00036,2025-07-31,Returns accrual,2120 Returns reserve,0.0,17251.34,Commercial,,,Returns accrual Jul 2025
+JE-2025-00037,2025-08-29,Payroll,6000 Commercial,198913.79,0.0,Commercial,,,Payroll Aug 2025
+JE-2025-00037,2025-08-29,Payroll,6100 R&D,151466.07,0.0,R&D,,,Payroll Aug 2025
+JE-2025-00037,2025-08-29,Payroll,6200 Manufacturing,144882.65,0.0,Manufacturing,,,Payroll Aug 2025
+JE-2025-00037,2025-08-29,Payroll,6300 G&A,79420.35,0.0,G&A,,,Payroll Aug 2025
+JE-2025-00037,2025-08-29,Payroll,1000 Bank,0.0,574682.86,,,,Payroll Aug 2025
+JE-2025-00038,2025-08-29,COGS,5000 Cost of goods sold,56760.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold Aug 2025
+JE-2025-00038,2025-08-29,COGS,5000 Cost of goods sold,10000.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold Aug 2025
+JE-2025-00038,2025-08-29,COGS,5000 Cost of goods sold,37030.0,0.0,Manufacturing,Respiqor,,Cost of goods sold Aug 2025
+JE-2025-00038,2025-08-29,COGS,1200 Inventory,0.0,103790.0,Manufacturing,,,Cost of goods sold Aug 2025
+JE-2025-00039,2025-08-29,Rebate accrual,4100 Rebates,285502.8,0.0,Commercial,Glyvanta,,Rebate accrual Aug 2025
+JE-2025-00039,2025-08-29,Rebate accrual,4100 Rebates,13301.0,0.0,Commercial,Onkalyn,,Rebate accrual Aug 2025
+JE-2025-00039,2025-08-29,Rebate accrual,4100 Rebates,134418.9,0.0,Commercial,Respiqor,,Rebate accrual Aug 2025
+JE-2025-00039,2025-08-29,Rebate accrual,2100 Rebate accrual,0.0,433222.7,Commercial,,,Rebate accrual Aug 2025
+JE-2025-00040,2025-08-29,Chargeback accrual,4200 Chargebacks,19033.52,0.0,Commercial,Glyvanta,,Chargeback accrual Aug 2025
+JE-2025-00040,2025-08-29,Chargeback accrual,4200 Chargebacks,26602.0,0.0,Commercial,Onkalyn,,Chargeback accrual Aug 2025
+JE-2025-00040,2025-08-29,Chargeback accrual,4200 Chargebacks,8961.26,0.0,Commercial,Respiqor,,Chargeback accrual Aug 2025
+JE-2025-00040,2025-08-29,Chargeback accrual,2110 Chargeback accrual,0.0,54596.78,Commercial,,,Chargeback accrual Aug 2025
+JE-2025-00041,2025-08-29,Returns accrual,4300 Returns,9516.76,0.0,Commercial,Glyvanta,,Returns accrual Aug 2025
+JE-2025-00041,2025-08-29,Returns accrual,4300 Returns,2660.2,0.0,Commercial,Onkalyn,,Returns accrual Aug 2025
+JE-2025-00041,2025-08-29,Returns accrual,4300 Returns,4480.63,0.0,Commercial,Respiqor,,Returns accrual Aug 2025
+JE-2025-00041,2025-08-29,Returns accrual,2120 Returns reserve,0.0,16657.59,Commercial,,,Returns accrual Aug 2025
+JE-2025-00042,2025-09-30,Payroll,6000 Commercial,200534.92,0.0,Commercial,,,Payroll Sep 2025
+JE-2025-00042,2025-09-30,Payroll,6100 R&D,152057.57,0.0,R&D,,,Payroll Sep 2025
+JE-2025-00042,2025-09-30,Payroll,6200 Manufacturing,149712.65,0.0,Manufacturing,,,Payroll Sep 2025
+JE-2025-00042,2025-09-30,Payroll,6300 G&A,81678.66,0.0,G&A,,,Payroll Sep 2025
+JE-2025-00042,2025-09-30,Payroll,1000 Bank,0.0,583983.8,,,,Payroll Sep 2025
+JE-2025-00043,2025-09-30,COGS,5000 Cost of goods sold,56400.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold Sep 2025
+JE-2025-00043,2025-09-30,COGS,5000 Cost of goods sold,8500.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold Sep 2025
+JE-2025-00043,2025-09-30,COGS,5000 Cost of goods sold,37730.0,0.0,Manufacturing,Respiqor,,Cost of goods sold Sep 2025
+JE-2025-00043,2025-09-30,COGS,1200 Inventory,0.0,102630.0,Manufacturing,,,Cost of goods sold Sep 2025
+JE-2025-00044,2025-09-30,Rebate accrual,4100 Rebates,283692.0,0.0,Commercial,Glyvanta,,Rebate accrual Sep 2025
+JE-2025-00044,2025-09-30,Rebate accrual,4100 Rebates,11305.85,0.0,Commercial,Onkalyn,,Rebate accrual Sep 2025
+JE-2025-00044,2025-09-30,Rebate accrual,4100 Rebates,136959.9,0.0,Commercial,Respiqor,,Rebate accrual Sep 2025
+JE-2025-00044,2025-09-30,Rebate accrual,2100 Rebate accrual,0.0,431957.75,Commercial,,,Rebate accrual Sep 2025
+JE-2025-00045,2025-09-30,Chargeback accrual,4200 Chargebacks,18912.8,0.0,Commercial,Glyvanta,,Chargeback accrual Sep 2025
+JE-2025-00045,2025-09-30,Chargeback accrual,4200 Chargebacks,22611.7,0.0,Commercial,Onkalyn,,Chargeback accrual Sep 2025
+JE-2025-00045,2025-09-30,Chargeback accrual,4200 Chargebacks,9130.66,0.0,Commercial,Respiqor,,Chargeback accrual Sep 2025
+JE-2025-00045,2025-09-30,Chargeback accrual,2110 Chargeback accrual,0.0,50655.16,Commercial,,,Chargeback accrual Sep 2025
+JE-2025-00046,2025-09-30,Returns accrual,4300 Returns,9456.4,0.0,Commercial,Glyvanta,,Returns accrual Sep 2025
+JE-2025-00046,2025-09-30,Returns accrual,4300 Returns,2261.17,0.0,Commercial,Onkalyn,,Returns accrual Sep 2025
+JE-2025-00046,2025-09-30,Returns accrual,4300 Returns,4565.33,0.0,Commercial,Respiqor,,Returns accrual Sep 2025
+JE-2025-00046,2025-09-30,Returns accrual,2120 Returns reserve,0.0,16282.9,Commercial,,,Returns accrual Sep 2025
+JE-2025-00047,2025-10-31,Payroll,6000 Commercial,197876.44,0.0,Commercial,,,Payroll Oct 2025
+JE-2025-00047,2025-10-31,Payroll,6100 R&D,145406.5,0.0,R&D,,,Payroll Oct 2025
+JE-2025-00047,2025-10-31,Payroll,6200 Manufacturing,150802.86,0.0,Manufacturing,,,Payroll Oct 2025
+JE-2025-00047,2025-10-31,Payroll,6300 G&A,81651.73,0.0,G&A,,,Payroll Oct 2025
+JE-2025-00047,2025-10-31,Payroll,1000 Bank,0.0,575737.53,,,,Payroll Oct 2025
+JE-2025-00048,2025-10-31,COGS,5000 Cost of goods sold,57420.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold Oct 2025
+JE-2025-00048,2025-10-31,COGS,5000 Cost of goods sold,10000.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold Oct 2025
+JE-2025-00048,2025-10-31,COGS,5000 Cost of goods sold,36680.0,0.0,Manufacturing,Respiqor,,Cost of goods sold Oct 2025
+JE-2025-00048,2025-10-31,COGS,1200 Inventory,0.0,104100.0,Manufacturing,,,Cost of goods sold Oct 2025
+JE-2025-00049,2025-10-31,Rebate accrual,4100 Rebates,288822.6,0.0,Commercial,Glyvanta,,Rebate accrual Oct 2025
+JE-2025-00049,2025-10-31,Rebate accrual,4100 Rebates,13301.0,0.0,Commercial,Onkalyn,,Rebate accrual Oct 2025
+JE-2025-00049,2025-10-31,Rebate accrual,4100 Rebates,133148.4,0.0,Commercial,Respiqor,,Rebate accrual Oct 2025
+JE-2025-00049,2025-10-31,Rebate accrual,2100 Rebate accrual,0.0,435272.0,Commercial,,,Rebate accrual Oct 2025
+JE-2025-00050,2025-10-31,Chargeback accrual,4200 Chargebacks,19254.84,0.0,Commercial,Glyvanta,,Chargeback accrual Oct 2025
+JE-2025-00050,2025-10-31,Chargeback accrual,4200 Chargebacks,26602.0,0.0,Commercial,Onkalyn,,Chargeback accrual Oct 2025
+JE-2025-00050,2025-10-31,Chargeback accrual,4200 Chargebacks,8876.56,0.0,Commercial,Respiqor,,Chargeback accrual Oct 2025
+JE-2025-00050,2025-10-31,Chargeback accrual,2110 Chargeback accrual,0.0,54733.4,Commercial,,,Chargeback accrual Oct 2025
+JE-2025-00051,2025-10-31,Returns accrual,4300 Returns,9627.42,0.0,Commercial,Glyvanta,,Returns accrual Oct 2025
+JE-2025-00051,2025-10-31,Returns accrual,4300 Returns,2660.2,0.0,Commercial,Onkalyn,,Returns accrual Oct 2025
+JE-2025-00051,2025-10-31,Returns accrual,4300 Returns,4438.28,0.0,Commercial,Respiqor,,Returns accrual Oct 2025
+JE-2025-00051,2025-10-31,Returns accrual,2120 Returns reserve,0.0,16725.9,Commercial,,,Returns accrual Oct 2025
+JE-2025-00052,2025-11-28,Payroll,6000 Commercial,197758.24,0.0,Commercial,,,Payroll Nov 2025
+JE-2025-00052,2025-11-28,Payroll,6100 R&D,151453.79,0.0,R&D,,,Payroll Nov 2025
+JE-2025-00052,2025-11-28,Payroll,6200 Manufacturing,154760.83,0.0,Manufacturing,,,Payroll Nov 2025
+JE-2025-00052,2025-11-28,Payroll,6300 G&A,78140.21,0.0,G&A,,,Payroll Nov 2025
+JE-2025-00052,2025-11-28,Payroll,1000 Bank,0.0,582113.07,,,,Payroll Nov 2025
+JE-2025-00053,2025-11-28,COGS,5000 Cost of goods sold,56700.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold Nov 2025
+JE-2025-00053,2025-11-28,COGS,5000 Cost of goods sold,11000.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold Nov 2025
+JE-2025-00053,2025-11-28,COGS,5000 Cost of goods sold,36400.0,0.0,Manufacturing,Respiqor,,Cost of goods sold Nov 2025
+JE-2025-00053,2025-11-28,COGS,1200 Inventory,0.0,104100.0,Manufacturing,,,Cost of goods sold Nov 2025
+JE-2025-00054,2025-11-28,Rebate accrual,4100 Rebates,285201.0,0.0,Commercial,Glyvanta,,Rebate accrual Nov 2025
+JE-2025-00054,2025-11-28,Rebate accrual,4100 Rebates,14631.1,0.0,Commercial,Onkalyn,,Rebate accrual Nov 2025
+JE-2025-00054,2025-11-28,Rebate accrual,4100 Rebates,132132.0,0.0,Commercial,Respiqor,,Rebate accrual Nov 2025
+JE-2025-00054,2025-11-28,Rebate accrual,2100 Rebate accrual,0.0,431964.1,Commercial,,,Rebate accrual Nov 2025
+JE-2025-00055,2025-11-28,Chargeback accrual,4200 Chargebacks,19013.4,0.0,Commercial,Glyvanta,,Chargeback accrual Nov 2025
+JE-2025-00055,2025-11-28,Chargeback accrual,4200 Chargebacks,29262.2,0.0,Commercial,Onkalyn,,Chargeback accrual Nov 2025
+JE-2025-00055,2025-11-28,Chargeback accrual,4200 Chargebacks,8808.8,0.0,Commercial,Respiqor,,Chargeback accrual Nov 2025
+JE-2025-00055,2025-11-28,Chargeback accrual,2110 Chargeback accrual,0.0,57084.4,Commercial,,,Chargeback accrual Nov 2025
+JE-2025-00056,2025-11-28,Returns accrual,4300 Returns,9506.7,0.0,Commercial,Glyvanta,,Returns accrual Nov 2025
+JE-2025-00056,2025-11-28,Returns accrual,4300 Returns,2926.22,0.0,Commercial,Onkalyn,,Returns accrual Nov 2025
+JE-2025-00056,2025-11-28,Returns accrual,4300 Returns,4404.4,0.0,Commercial,Respiqor,,Returns accrual Nov 2025
+JE-2025-00056,2025-11-28,Returns accrual,2120 Returns reserve,0.0,16837.32,Commercial,,,Returns accrual Nov 2025
+JE-2025-00057,2025-12-31,Payroll,6000 Commercial,197622.79,0.0,Commercial,,,Payroll Dec 2025
+JE-2025-00057,2025-12-31,Payroll,6100 R&D,151346.03,0.0,R&D,,,Payroll Dec 2025
+JE-2025-00057,2025-12-31,Payroll,6200 Manufacturing,140583.63,0.0,Manufacturing,,,Payroll Dec 2025
+JE-2025-00057,2025-12-31,Payroll,6300 G&A,80786.93,0.0,G&A,,,Payroll Dec 2025
+JE-2025-00057,2025-12-31,Payroll,1000 Bank,0.0,570339.38,,,,Payroll Dec 2025
+JE-2025-00058,2025-12-31,COGS,5000 Cost of goods sold,54960.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold Dec 2025
+JE-2025-00058,2025-12-31,COGS,5000 Cost of goods sold,9000.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold Dec 2025
+JE-2025-00058,2025-12-31,COGS,5000 Cost of goods sold,35700.0,0.0,Manufacturing,Respiqor,,Cost of goods sold Dec 2025
+JE-2025-00058,2025-12-31,COGS,1200 Inventory,0.0,99660.0,Manufacturing,,,Cost of goods sold Dec 2025
+JE-2025-00059,2025-12-31,Rebate accrual,4100 Rebates,276448.8,0.0,Commercial,Glyvanta,,Rebate accrual Dec 2025
+JE-2025-00059,2025-12-31,Rebate accrual,4100 Rebates,11970.9,0.0,Commercial,Onkalyn,,Rebate accrual Dec 2025
+JE-2025-00059,2025-12-31,Rebate accrual,4100 Rebates,129591.0,0.0,Commercial,Respiqor,,Rebate accrual Dec 2025
+JE-2025-00059,2025-12-31,Rebate accrual,2100 Rebate accrual,0.0,418010.7,Commercial,,,Rebate accrual Dec 2025
+JE-2025-00060,2025-12-31,Chargeback accrual,4200 Chargebacks,18429.92,0.0,Commercial,Glyvanta,,Chargeback accrual Dec 2025
+JE-2025-00060,2025-12-31,Chargeback accrual,4200 Chargebacks,23941.8,0.0,Commercial,Onkalyn,,Chargeback accrual Dec 2025
+JE-2025-00060,2025-12-31,Chargeback accrual,4200 Chargebacks,8639.4,0.0,Commercial,Respiqor,,Chargeback accrual Dec 2025
+JE-2025-00060,2025-12-31,Chargeback accrual,2110 Chargeback accrual,0.0,51011.12,Commercial,,,Chargeback accrual Dec 2025
+JE-2025-00061,2025-12-31,Returns accrual,4300 Returns,9214.96,0.0,Commercial,Glyvanta,,Returns accrual Dec 2025
+JE-2025-00061,2025-12-31,Returns accrual,4300 Returns,2394.18,0.0,Commercial,Onkalyn,,Returns accrual Dec 2025
+JE-2025-00061,2025-12-31,Returns accrual,4300 Returns,4319.7,0.0,Commercial,Respiqor,,Returns accrual Dec 2025
+JE-2025-00061,2025-12-31,Returns accrual,2120 Returns reserve,0.0,15928.84,Commercial,,,Returns accrual Dec 2025
+JE-2025-00062,2025-05-15,Rebate settlement,2100 Rebate accrual,1286263.2,0.0,Commercial,,Payer rebate programs,Rebate settlement Q1 2025
+JE-2025-00062,2025-05-15,Rebate settlement,4100 Rebates,0.0,8048.08,Commercial,,Payer rebate programs,Rebate settlement Q1 2025
+JE-2025-00062,2025-05-15,Rebate settlement,1000 Bank,0.0,1278215.12,,,Payer rebate programs,Rebate settlement Q1 2025
+JE-2025-00063,2025-08-14,Rebate settlement,2100 Rebate accrual,1298987.45,0.0,Commercial,,Payer rebate programs,Rebate settlement Q2 2025
+JE-2025-00063,2025-08-14,Rebate settlement,4100 Rebates,0.0,15120.89,Commercial,,Payer rebate programs,Rebate settlement Q2 2025
+JE-2025-00063,2025-08-14,Rebate settlement,1000 Bank,0.0,1283866.56,,,Payer rebate programs,Rebate settlement Q2 2025
+JE-2025-00064,2025-11-14,Rebate settlement,2100 Rebate accrual,1309565.15,0.0,Commercial,,Payer rebate programs,Rebate settlement Q3 2025
+JE-2025-00064,2025-11-14,Rebate settlement,4100 Rebates,59759.22,0.0,Commercial,,Payer rebate programs,Rebate settlement Q3 2025
+JE-2025-00064,2025-11-14,Rebate settlement,1000 Bank,0.0,1369324.37,,,Payer rebate programs,Rebate settlement Q3 2025
+JE-2025-00065,2025-02-20,Chargeback settlement,2110 Chargeback accrual,54238.9,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Jan 2025
+JE-2025-00065,2025-02-20,Chargeback settlement,4200 Chargebacks,0.0,642.8,Commercial,,Wholesalers (claims),Chargeback settlement Jan 2025
+JE-2025-00065,2025-02-20,Chargeback settlement,1000 Bank,0.0,53596.1,,,Wholesalers (claims),Chargeback settlement Jan 2025
+JE-2025-00066,2025-03-20,Chargeback settlement,2110 Chargeback accrual,53635.3,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Feb 2025
+JE-2025-00066,2025-03-20,Chargeback settlement,4200 Chargebacks,709.51,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Feb 2025
+JE-2025-00066,2025-03-20,Chargeback settlement,1000 Bank,0.0,54344.81,,,Wholesalers (claims),Chargeback settlement Feb 2025
+JE-2025-00067,2025-04-21,Chargeback settlement,2110 Chargeback accrual,55022.48,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Mar 2025
+JE-2025-00067,2025-04-21,Chargeback settlement,4200 Chargebacks,0.0,774.09,Commercial,,Wholesalers (claims),Chargeback settlement Mar 2025
+JE-2025-00067,2025-04-21,Chargeback settlement,1000 Bank,0.0,54248.39,,,Wholesalers (claims),Chargeback settlement Mar 2025
+JE-2025-00068,2025-05-20,Chargeback settlement,2110 Chargeback accrual,53144.92,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Apr 2025
+JE-2025-00068,2025-05-20,Chargeback settlement,4200 Chargebacks,1173.68,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Apr 2025
+JE-2025-00068,2025-05-20,Chargeback settlement,1000 Bank,0.0,54318.6,,,Wholesalers (claims),Chargeback settlement Apr 2025
+JE-2025-00069,2025-06-20,Chargeback settlement,2110 Chargeback accrual,55200.38,0.0,Commercial,,Wholesalers (claims),Chargeback settlement May 2025
+JE-2025-00069,2025-06-20,Chargeback settlement,4200 Chargebacks,0.0,489.44,Commercial,,Wholesalers (claims),Chargeback settlement May 2025
+JE-2025-00069,2025-06-20,Chargeback settlement,1000 Bank,0.0,54710.94,,,Wholesalers (claims),Chargeback settlement May 2025
+JE-2025-00070,2025-07-21,Chargeback settlement,2110 Chargeback accrual,54113.9,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Jun 2025
+JE-2025-00070,2025-07-21,Chargeback settlement,4200 Chargebacks,1556.71,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Jun 2025
+JE-2025-00070,2025-07-21,Chargeback settlement,1000 Bank,0.0,55670.61,,,Wholesalers (claims),Chargeback settlement Jun 2025
+JE-2025-00071,2025-08-20,Chargeback settlement,2110 Chargeback accrual,57912.44,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Jul 2025
+JE-2025-00071,2025-08-20,Chargeback settlement,4200 Chargebacks,0.0,47.66,Commercial,,Wholesalers (claims),Chargeback settlement Jul 2025
+JE-2025-00071,2025-08-20,Chargeback settlement,1000 Bank,0.0,57864.78,,,Wholesalers (claims),Chargeback settlement Jul 2025
+JE-2025-00072,2025-09-18,Chargeback settlement,2110 Chargeback accrual,54596.78,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Aug 2025
+JE-2025-00072,2025-09-18,Chargeback settlement,4200 Chargebacks,0.0,973.76,Commercial,,Wholesalers (claims),Chargeback settlement Aug 2025
+JE-2025-00072,2025-09-18,Chargeback settlement,1000 Bank,0.0,53623.02,,,Wholesalers (claims),Chargeback settlement Aug 2025
+JE-2025-00073,2025-10-20,Chargeback settlement,2110 Chargeback accrual,50655.16,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Sep 2025
+JE-2025-00073,2025-10-20,Chargeback settlement,4200 Chargebacks,306.54,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Sep 2025
+JE-2025-00073,2025-10-20,Chargeback settlement,1000 Bank,0.0,50961.7,,,Wholesalers (claims),Chargeback settlement Sep 2025
+JE-2025-00074,2025-11-20,Chargeback settlement,2110 Chargeback accrual,54733.4,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Oct 2025
+JE-2025-00074,2025-11-20,Chargeback settlement,4200 Chargebacks,0.0,272.29,Commercial,,Wholesalers (claims),Chargeback settlement Oct 2025
+JE-2025-00074,2025-11-20,Chargeback settlement,1000 Bank,0.0,54461.11,,,Wholesalers (claims),Chargeback settlement Oct 2025
+JE-2025-00075,2025-12-18,Chargeback settlement,2110 Chargeback accrual,57084.4,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Nov 2025
+JE-2025-00075,2025-12-18,Chargeback settlement,4200 Chargebacks,810.5,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Nov 2025
+JE-2025-00075,2025-12-18,Chargeback settlement,1000 Bank,0.0,57894.9,,,Wholesalers (claims),Chargeback settlement Nov 2025
+JE-2025-00076,2025-04-30,Returns settlement,2120 Returns reserve,49525.94,0.0,Commercial,,Wholesalers (claims),Returns settlement Q1 2025
+JE-2025-00076,2025-04-30,Returns settlement,4300 Returns,7933.43,0.0,Commercial,,Wholesalers (claims),Returns settlement Q1 2025
+JE-2025-00076,2025-04-30,Returns settlement,1000 Bank,0.0,57459.37,,,Wholesalers (claims),Returns settlement Q1 2025
+JE-2025-00077,2025-07-30,Returns settlement,2120 Returns reserve,49839.24,0.0,Commercial,,Wholesalers (claims),Returns settlement Q2 2025
+JE-2025-00077,2025-07-30,Returns settlement,4300 Returns,10113.17,0.0,Commercial,,Wholesalers (claims),Returns settlement Q2 2025
+JE-2025-00077,2025-07-30,Returns settlement,1000 Bank,0.0,59952.41,,,Wholesalers (claims),Returns settlement Q2 2025
+JE-2025-00078,2025-10-30,Returns settlement,2120 Returns reserve,50191.83,0.0,Commercial,,Wholesalers (claims),Returns settlement Q3 2025
+JE-2025-00078,2025-10-30,Returns settlement,4300 Returns,1452.38,0.0,Commercial,,Wholesalers (claims),Returns settlement Q3 2025
+JE-2025-00078,2025-10-30,Returns settlement,1000 Bank,0.0,51644.21,,,Wholesalers (claims),Returns settlement Q3 2025

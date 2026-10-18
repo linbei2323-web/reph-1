@@ -97,7 +97,9 @@ Glyvanta $60, Respiqor $70, Onkalyn $500 per unit → COGS about $103,790 a mont
 ## Chart of accounts / 科目表
 
 As in `docs/pipeline-zh.md` stage 2 (1000 Bank … 6300 G&A), with 4100 Rebates,
-4200 Chargebacks, 4300 Returns, 4400 Prompt-pay discounts.
+4200 Chargebacks, 4300 Returns, 4400 Prompt-pay discounts, plus two liability
+accounts added in generator piece 4: 2110 Chargeback accrual and 2120 Returns reserve
+(so each GTN deduction has its own accrual to tie out).
 
 ## Open decisions / 待定
 

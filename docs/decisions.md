@@ -15,3 +15,7 @@ Decisions Daniel made, with the date and why. 每条决定、日期和原因。
 | 2026-10-18 | Suppliers paid in a weekly Thursday payment run: 90% on the last run before the due date, 10% one or two runs late; no discount | Companies batch supplier payments; late runs give AP timing differences |
 | 2026-10-18 | Customer payments stay one per invoice for now (batching can be added later); 85% on time kept | Defaults until Daniel decides |
 | 2026-10-18 | Daniel does the ERPNext work (setup, import, period close), the SQL work and the Excel / Power Query work himself; Claude prepares data and explains | He must be able to do and explain these hands-on parts in interviews |
+| 2026-10-18 | GTN accruals booked at month end from that month's gross sales × planned rate, by product. Rebates paid quarterly 45 days after quarter end (±3% true-up); chargebacks monthly after 20 days (±2%); returns quarterly after 30 days (±10%). Unpaid amounts stay accrued at year end | Mirrors how estimates are booked first and settled later; true-ups make the tie-out meaningful |
+| 2026-10-18 | Added accounts 2110 Chargeback accrual and 2120 Returns reserve | Each GTN deduction gets its own liability to tie out |
+| 2026-10-18 | Prompt-pay discounts recognised when the customer pays (not accrued at sale); COGS booked monthly at standard unit cost; payroll monthly, ±3% | Simplifications, noted for interviews |
+| 2026-10-18 | Month close date = 5th business day of the next month (data/generated/periods.csv) | Needed for the "posted after close" control |

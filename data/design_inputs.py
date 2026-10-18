@@ -44,7 +44,7 @@ def main():
         annual_units = round(real["total_claims"] * SCALE)
         monthly_units = round(annual_units / 12)
         gross = monthly_units * price
-        gtn_rate = p["rebate"] + p["chargeback"] + p["returns"] + p["prompt_pay"]
+        gtn_rate = round(p["rebate"] + p["chargeback"] + p["returns"] + p["prompt_pay"], 4)
 
         rows.append({
             "product": p["product"],
@@ -58,6 +58,11 @@ def main():
             "gtn_rate": gtn_rate,
             "monthly_net": round(gross * (1 - gtn_rate)),
             "monthly_cogs": monthly_units * p["unit_cost"],
+            "unit_cost": p["unit_cost"],
+            "rebate": p["rebate"],
+            "chargeback": p["chargeback"],
+            "returns": p["returns"],
+            "prompt_pay": p["prompt_pay"],
         })
 
     table = pd.DataFrame(rows)

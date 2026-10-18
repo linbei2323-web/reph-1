@@ -7,8 +7,8 @@ every run produces exactly the same data.
 Built piece by piece:
     1. calendar + sales invoices          (done)
     2. customer payments                  (done)
-    3. purchase invoices + supplier payments  (this version)
-    4. journal entries
+    3. purchase invoices + supplier payments  (done)
+    4. journal entries + period close dates   (this version)
     5. bank lines + planned deviations
 
 Usage:
@@ -70,6 +70,28 @@ AMOUNT_NOISE = 0.15         # each supplier invoice varies by about +/-15%
 SUPPLIER_TERMS_DAYS = 45
 SUPPLIER_ON_TIME_SHARE = 0.90
 PAYMENT_RUN_DAY = "Thu"     # Halvern pays suppliers in one weekly payment run
+
+# Journal entries (piece 4).
+OPENING_BALANCES = {"1000 Bank": 5_000_000, "1200 Inventory": 300_000}  # against 3000 Equity
+# Monthly payroll per cost center: the part of each budget not spent with suppliers.
+PAYROLL = {
+    "Commercial": ("6000 Commercial", 200_000),
+    "R&D": ("6100 R&D", 150_000),
+    "Manufacturing": ("6200 Manufacturing", 150_000),
+    "G&A": ("6300 G&A", 80_000),
+}
+PAYROLL_NOISE = 0.03        # overtime, bonuses, leavers: +/-3% a month
+# GTN accruals are booked at month end from that month's gross sales by product.
+# Settlement: when the cash is actually paid, and how far it may differ from the estimate.
+ACCRUALS = {
+    "rebate": {"expense": "4100 Rebates", "liability": "2100 Rebate accrual",
+               "party": "Payer rebate programs", "settle": "quarterly", "lag_days": 45, "true_up_noise": 0.03},
+    "chargeback": {"expense": "4200 Chargebacks", "liability": "2110 Chargeback accrual",
+                   "party": "wholesaler", "settle": "monthly", "lag_days": 20, "true_up_noise": 0.02},
+    "returns": {"expense": "4300 Returns", "liability": "2120 Returns reserve",
+                "party": "wholesaler", "settle": "quarterly", "lag_days": 30, "true_up_noise": 0.10},
+}
+CLOSE_BUSINESS_DAYS = 5     # each month is closed on the 5th business day of the next month
 
 # Banks and wholesalers don't work on US federal holidays.
 BUSINESS_DAY = CustomBusinessDay(calendar=USFederalHolidayCalendar())
@@ -213,6 +235,146 @@ def supplier_payments(bills, rng):
     return payments
 
 
+class Journal:
+    """Collects journal entries as balanced debit/credit lines."""
+
+    def __init__(self):
+        self.lines = []
+        self.count = 0
+
+    def add(self, date, je_type, lines, remark):
+        """lines: (account, debit, credit, cost_center, product, party) tuples."""
+        debit = round(sum(l[1] for l in lines), 2)
+        credit = round(sum(l[2] for l in lines), 2)
+        assert debit == credit, f"unbalanced {je_type} on {date}: {debit} vs {credit}"
+        self.count += 1
+        je_no = f"JE-{YEAR}-{self.count:05d}"
+        for account, dr, cr, cost_center, product, party in lines:
+            self.lines.append({
+                "je_no": je_no, "posting_date": pd.Timestamp(date).date(), "je_type": je_type,
+                "account": account, "debit": round(dr, 2), "credit": round(cr, 2),
+                "cost_center": cost_center, "product": product, "party": party, "remark": remark,
+            })
+
+    def frame(self):
+        return pd.DataFrame(self.lines)
+
+
+def month_end(month):
+    """Last business day of the month."""
+    return BUSINESS_DAY.rollback(pd.Timestamp(YEAR, month, 1) + pd.offsets.MonthEnd(0))
+
+
+def journal_entries(plan, invoices, rng):
+    """Opening balances, payroll, cost of goods sold, GTN accruals and their settlements."""
+    j = Journal()
+    rates = plan.set_index("product")
+    inv = invoices.assign(month=pd.to_datetime(invoices["posting_date"]).dt.month)
+
+    # Opening balance sheet, 1 January.
+    j.add(f"{YEAR}-01-01", "Opening balance",
+          [(acc, amt, 0, "", "", "") for acc, amt in OPENING_BALANCES.items()]
+          + [("3000 Equity", 0, sum(OPENING_BALANCES.values()), "", "", "")],
+          "Opening balances")
+
+    for month in range(1, 13):
+        end = month_end(month)
+        sold = inv[inv["month"] == month]
+
+        # Payroll, paid on the last business day.
+        lines, total = [], 0
+        for cost_center, (account, amount) in PAYROLL.items():
+            amt = round(amount * rng.normal(1, PAYROLL_NOISE), 2)
+            total += amt
+            lines.append((account, amt, 0, cost_center, "", ""))
+        lines.append(("1000 Bank", 0, round(total, 2), "", "", ""))
+        j.add(end, "Payroll", lines, f"Payroll {end:%b %Y}")
+
+        # Cost of goods sold: units sold this month x standard unit cost.
+        lines, total = [], 0
+        for product, units in sold.groupby("item")["qty"].sum().items():
+            cost = units * rates.loc[product, "unit_cost"]
+            total += cost
+            lines.append(("5000 Cost of goods sold", cost, 0, "Manufacturing", product, ""))
+        lines.append(("1200 Inventory", 0, total, "Manufacturing", "", ""))
+        j.add(end, "COGS", lines, f"Cost of goods sold {end:%b %Y}")
+
+        # GTN accruals: this month's gross sales x the planned rate, by product.
+        for kind, a in ACCRUALS.items():
+            lines, total = [], 0
+            for product, gross in sold.groupby("item")["amount"].sum().items():
+                amt = round(gross * rates.loc[product, kind], 2)
+                total += amt
+                lines.append((a["expense"], amt, 0, "Commercial", product, ""))
+            lines.append((a["liability"], 0, round(total, 2), "Commercial", "", ""))
+            j.add(end, f"{kind.title()} accrual", lines, f"{kind.title()} accrual {end:%b %Y}")
+
+    # Settlements: pay what was accrued for each period; the difference from the
+    # estimate (true-up) goes back to the expense account.
+    accrued = j.frame()
+    accrued = accrued[accrued["je_type"].str.endswith("accrual") & (accrued["credit"] > 0)].copy()
+    accrued["month"] = pd.to_datetime(accrued["posting_date"]).dt.month
+    year_end = pd.Timestamp(f"{YEAR}-12-31")
+    for kind, a in ACCRUALS.items():
+        rows = accrued[accrued["account"] == a["liability"]]
+        if a["settle"] == "quarterly":
+            periods = [(f"Q{q}", [3 * q - 2, 3 * q - 1, 3 * q]) for q in range(1, 5)]
+        else:
+            periods = [(f"{pd.Timestamp(YEAR, m, 1):%b}", [m]) for m in range(1, 13)]
+        for label, months in periods:
+            amount = round(rows[rows["month"].isin(months)]["credit"].sum(), 2)
+            pay_date = BUSINESS_DAY.rollforward(month_end(months[-1]) + pd.Timedelta(days=a["lag_days"]))
+            if pay_date > year_end:
+                continue  # still owed at year end
+            actual = round(amount * rng.normal(1, a["true_up_noise"]), 2)
+            true_up = round(actual - amount, 2)
+            lines = [(a["liability"], amount, 0, "Commercial", "", "")]
+            if true_up > 0:
+                lines.append((a["expense"], true_up, 0, "Commercial", "", ""))
+            elif true_up < 0:
+                lines.append((a["expense"], 0, -true_up, "Commercial", "", ""))
+            lines.append(("1000 Bank", 0, actual, "", "", ""))
+            party = a["party"] if a["party"] != "wholesaler" else "Wholesalers (claims)"
+            j.add(pay_date, f"{kind.title()} settlement",
+                  [(acc, dr, cr, cc, prod, party) for acc, dr, cr, cc, prod, _ in lines],
+                  f"{kind.title()} settlement {label} {YEAR}")
+
+    return j.frame()
+
+
+def period_close_dates():
+    """Planned close date for each month: the 5th business day of the next month."""
+    rows = []
+    for month in range(1, 13):
+        first_next = pd.Timestamp(YEAR, month, 1) + pd.offsets.MonthBegin(1)
+        closed_on = BUSINESS_DAY.rollforward(first_next) + (CLOSE_BUSINESS_DAYS - 1) * BUSINESS_DAY
+        rows.append({"period": f"{YEAR}-{month:02d}", "closed_on": closed_on.date()})
+    return pd.DataFrame(rows)
+
+
+def general_ledger(invoices, payments, bills, supplier_pay, journal):
+    """Every document turned into debit/credit lines, as ERPNext will post them.
+
+    Used only to check the generated data and to give an expected trial balance
+    to compare with ERPNext after the import.
+    """
+    gl = []
+    for r in invoices.itertuples():
+        gl += [("1100 Accounts receivable", r.amount, 0), ("4000 Gross product sales", 0, r.amount)]
+    for r in payments.itertuples():
+        gl += [("1000 Bank", r.amount_received, 0), ("4400 Prompt-pay discounts", r.discount, 0),
+               ("1100 Accounts receivable", 0, r.invoice_amount)]
+    for r in bills.itertuples():
+        gl += [(r.account, r.amount, 0), ("2000 Accounts payable", 0, r.amount)]
+    for r in supplier_pay.itertuples():
+        gl += [("2000 Accounts payable", r.amount_paid, 0), ("1000 Bank", 0, r.amount_paid)]
+    gl += list(journal[["account", "debit", "credit"]].itertuples(index=False, name=None))
+    gl = pd.DataFrame(gl, columns=["account", "debit", "credit"])
+    tb = gl.groupby("account")[["debit", "credit"]].sum()
+    tb["balance"] = (tb["debit"] - tb["credit"]).round(2)
+    return tb
+
+
 def main():
     rng = np.random.default_rng(SEED)
     plan = pd.read_csv(HERE / "design_inputs.csv")
@@ -222,12 +384,16 @@ def main():
     payments = customer_payments(invoices, rng)
     bills = purchase_invoices(calendar, rng)
     supplier_pay = supplier_payments(bills, rng)
+    journal = journal_entries(plan, invoices, rng)
+    periods = period_close_dates()
 
     OUT.mkdir(exist_ok=True)
     invoices.to_csv(OUT / "sales_invoices.csv", index=False)
     payments.to_csv(OUT / "customer_payments.csv", index=False)
     bills.to_csv(OUT / "purchase_invoices.csv", index=False)
     supplier_pay.to_csv(OUT / "supplier_payments.csv", index=False)
+    journal.to_csv(OUT / "journal_entries.csv", index=False)
+    periods.to_csv(OUT / "periods.csv", index=False)
 
     # Check: generated units per month vs plan.
     invoices["month"] = pd.to_datetime(invoices["posting_date"]).dt.month
@@ -264,6 +430,37 @@ def main():
     print("open AP at 31 Dec:", f"${open_ap:,.0f}")
     assert round(supplier_pay["amount_paid"].sum() + open_ap, 2) == round(bills["amount"].sum(), 2), "AP does not reconcile"
     print("AP check: paid + open AP = purchases  OK")
+
+    # Check: journal entries.
+    print()
+    print("journal entries:", journal["je_no"].nunique(), "| lines:", len(journal))
+    print(journal.groupby("je_type")["je_no"].nunique().to_string())
+
+    # Check: each GTN accrual account rolls forward (booked = settled + true-up + balance left).
+    print()
+    print("GTN accrual roll-forward (accrued = paid out - true-up + still owed at 31 Dec):")
+    for kind, a in ACCRUALS.items():
+        acc = journal[journal["account"] == a["liability"]]
+        booked = acc.loc[acc["je_type"].str.endswith("accrual"), "credit"].sum()
+        released = acc.loc[acc["je_type"].str.endswith("settlement"), "debit"].sum()
+        settle = journal[journal["je_type"] == f"{kind.title()} settlement"]
+        paid = settle.loc[settle["account"] == "1000 Bank", "credit"].sum()
+        owed = booked - released
+        print(f"  {a['liability']:<24} accrued ${booked:>12,.0f}  paid ${paid:>12,.0f}  "
+              f"true-up ${paid - released:>9,.0f}  still owed ${owed:>11,.0f}")
+
+    print()
+    print("period close dates:", ", ".join(f"{r.period[-2:]}->{r.closed_on:%m-%d}" for r in periods.itertuples()))
+
+    # Expected trial balance from all documents: what ERPNext should show after import.
+    tb = general_ledger(invoices, payments, bills, supplier_pay, journal)
+    tb.to_csv(OUT / "expected_trial_balance.csv")
+    print()
+    print("Expected trial balance at 31 Dec (debit balance +, credit balance -):")
+    print(tb["balance"].map("{:>16,.2f}".format).to_string())
+    assert abs(tb["balance"].sum()) < 0.01, "trial balance does not balance"
+    print("TB check: total debits = total credits  OK")
+    assert tb.loc["1000 Bank", "balance"] > 0 and tb.loc["1200 Inventory", "balance"] > 0
 
 
 if __name__ == "__main__":
