@@ -84,8 +84,8 @@ ROADMAP = [
      "Halvern Pharmaceuticals: 3 products modelled on CMS 2024 Part D data, GTN, cost centers, opening balances",
      "Review and defend every assumption"),
     ("3", "Generate & record 12 months", "In progress",
-     "Generator piece 1 of 5: 1,098 sales invoices, $19.99M gross for 2025",
-     "Pieces 2-5: payments, purchases, journal entries, bank lines; set up ERPNext and import"),
+     "Generator pieces 1-4 of 5 (year 2024): 1,047 sales invoices, 1,132 payments, 192 purchase invoices, 78 journal entries",
+     "Piece 5: bank lines + Medicaid unwinding scenario; you: ERPNext setup and import"),
     ("4", "Move the data to SQL", "Not started", "-", "Schema script, fact / dimension / versioned budget tables"),
     ("5", "Close controls, tested", "Not started",
      "Error plan designed: 4 types x 10, held-out test", "7 control queries, close workbook, seeded test, score"),
@@ -225,7 +225,7 @@ TOUGH = [
 ]
 
 FILL = [
-    ("Transactions recorded", "Target ~4,800; generator so far: 1,098 sales invoices", "Actual final row count"),
+    ("Transactions recorded", "Generator so far: 2,449 documents (bank lines still to come)", "Actual final row count"),
     ("Errors found / false positives", "Not run yet", "Your score output"),
     ("Report time manual / automated", "Not measured yet", "Your stopwatch log"),
     ("Project dates", "Started Oct 2026", "The months you actually worked on it"),

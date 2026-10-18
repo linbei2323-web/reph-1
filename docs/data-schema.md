@@ -3,7 +3,7 @@
 Every file the project produces, what each column means, and how the files link.
 项目生成的所有文件、每一列的含义,以及文件之间如何关联。
 
-Rows as of generator piece 4 (simulation year 2025). Regenerate with:
+Rows as of generator piece 4 (simulation year 2024). Regenerate with:
 
 ```
 python data/design_inputs.py ../pharma-market-analytics   # step 1: product plan
@@ -17,7 +17,7 @@ pharma-market-analytics (real CMS 2024 data)
         │ design_inputs.py
         ▼
 design_inputs.csv  (3 products: price, volume, GTN rates, unit cost)
-        │ generate_transactions.py  (fixed seed 2025)
+        │ generate_transactions.py  (fixed seed 2024)
         ▼
 sales_invoices ─► customer_payments
 purchase_invoices ─► supplier_payments
@@ -53,33 +53,33 @@ erDiagram
 
 Keys: **PK** = primary key (unique per row), **FK** = links to another table.
 
-### sales_invoices.csv: 1,053 rows, one per wholesaler order / 销售发票
+### sales_invoices.csv: 1,047 rows, one per wholesaler order / 销售发票
 
 | Column | Type | Key | Meaning | Example |
 |---|---|---|---|---|
-| invoice_no | text | PK | Invoice number | SINV-2025-00001 |
-| posting_date | date | | Date the sale is recorded | 2025-01-03 |
+| invoice_no | text | PK | Invoice number | SINV-2024-00001 |
+| posting_date | date | | Date the sale is recorded | 2024-01-02 |
 | customer | text | FK → customers | Wholesaler | Keystone Pharma Wholesale |
-| item | text | FK → products | Product sold | Glyvanta |
-| qty | integer | | Units (claims-equivalent) | 20 |
-| rate | number | | Gross price per unit, USD | 1006 |
-| amount | number | | qty × rate, USD (gross, before GTN) | 20120 |
+| item | text | FK → products | Product sold | Onkalyn |
+| qty | integer | | Units (claims-equivalent) | 1 |
+| rate | number | | Gross price per unit, USD | 13301 |
+| amount | number | | qty × rate, USD (gross, before GTN) | 13301 |
 | cost_center | text | FK → cost_centers | Always Commercial | Commercial |
-| due_date | date | | posting_date + 30 days (Net 30) | 2025-02-02 |
+| due_date | date | | posting_date + 30 days (Net 30) | 2024-02-01 |
 
 **Ledger effect:** Dr 1100 Accounts receivable / Cr 4000 Gross product sales.
 
-### customer_payments.csv: 962 rows / 客户收款
+### customer_payments.csv: 959 rows / 客户收款
 
 | Column | Type | Key | Meaning | Example |
 |---|---|---|---|---|
-| payment_no | text | PK | Payment number | PAY-IN-2025-00001 |
-| payment_date | date | | Date cash arrives | 2025-01-31 |
+| payment_no | text | PK | Payment number | PAY-IN-2024-00001 |
+| payment_date | date | | Date cash arrives | 2024-01-30 |
 | customer | text | FK → customers | Who paid | Northstar Drug Supply |
-| invoice_no | text | FK → sales_invoices | Invoice paid | SINV-2025-00005 |
-| invoice_amount | number | | Full invoice amount | 25150 |
-| discount | number | | 2% prompt-pay discount if on time, else 0 | 503 |
-| amount_received | number | | invoice_amount − discount | 24647 |
+| invoice_no | text | FK → sales_invoices | Invoice paid | SINV-2024-00003 |
+| invoice_amount | number | | Full invoice amount | 26602 |
+| discount | number | | 2% prompt-pay discount if on time, else 0 | 532 |
+| amount_received | number | | invoice_amount − discount | 26070 |
 | on_time | true/false | | Paid by the due date | True |
 
 **Ledger effect:** Dr 1000 Bank (amount_received) + Dr 4400 Prompt-pay discounts (discount) / Cr 1100 Accounts receivable (invoice_amount).
@@ -88,25 +88,25 @@ Keys: **PK** = primary key (unique per row), **FK** = links to another table.
 
 | Column | Type | Key | Meaning | Example |
 |---|---|---|---|---|
-| bill_no | text | PK | Supplier bill number | PINV-2025-00001 |
-| posting_date | date | | Date the bill is recorded | 2025-01-02 |
+| bill_no | text | PK | Supplier bill number | PINV-2024-00001 |
+| posting_date | date | | Date the bill is recorded | 2024-01-02 |
 | supplier | text | FK → suppliers | Supplier | Arclight Clinical Research |
 | account | text | FK → accounts | What it's charged to | 6100 R&D |
 | cost_center | text | FK → cost_centers | Department | R&D |
-| amount | number | | USD | 44202.90 |
-| due_date | date | | posting_date + 45 days (Net 45) | 2025-02-16 |
+| amount | number | | USD | 56004.61 |
+| due_date | date | | posting_date + 45 days (Net 45) | 2024-02-16 |
 
 **Ledger effect:** Dr account (inventory or department expense) / Cr 2000 Accounts payable.
 
-### supplier_payments.csv: 171 rows / 供应商付款
+### supplier_payments.csv: 173 rows / 供应商付款
 
 | Column | Type | Key | Meaning | Example |
 |---|---|---|---|---|
-| payment_no | text | PK | Payment number | PAY-OUT-2025-00001 |
-| payment_date | date | | Weekly Thursday payment run (Friday if Thursday is a holiday) | 2025-02-13 |
+| payment_no | text | PK | Payment number | PAY-OUT-2024-00001 |
+| payment_date | date | | Weekly Thursday payment run (Friday if Thursday is a holiday) | 2024-02-15 |
 | supplier | text | FK → suppliers | Who was paid | Arclight Clinical Research |
-| bill_no | text | FK → purchase_invoices | Bill paid | PINV-2025-00001 |
-| amount_paid | number | | USD, full bill amount | 44202.90 |
+| bill_no | text | FK → purchase_invoices | Bill paid | PINV-2024-00001 |
+| amount_paid | number | | USD, full bill amount | 56004.61 |
 | on_time | true/false | | Paid by the due date | True |
 
 **Ledger effect:** Dr 2000 Accounts payable / Cr 1000 Bank.
@@ -118,16 +118,16 @@ One row per **line**; all lines with the same `je_no` form one balanced entry (d
 
 | Column | Type | Key | Meaning | Example |
 |---|---|---|---|---|
-| je_no | text | PK with line order | Entry number | JE-2025-00004 |
-| posting_date | date | | Date posted | 2025-01-31 |
+| je_no | text | PK with line order | Entry number | JE-2024-00004 |
+| posting_date | date | | Date posted | 2024-01-31 |
 | je_type | text | | Opening balance, Payroll, COGS, Rebate / Chargeback / Returns accrual or settlement | Rebate accrual |
 | account | text | FK → accounts | Account | 4100 Rebates |
-| debit | number | | USD | 283692.0 |
+| debit | number | | USD | 295160.4 |
 | credit | number | | USD | 0.0 |
 | cost_center | text | FK → cost_centers | Department, blank for balance sheet lines | Commercial |
 | product | text | FK → products | Product, on COGS and accrual lines | Glyvanta |
 | party | text | | Who is paid, on settlements | Payer rebate programs |
-| remark | text | | Description | Rebate accrual Jan 2025 |
+| remark | text | | Description | Rebate accrual Jan 2024 |
 
 | je_type | Entries | Entry |
 |---|---|---|
@@ -151,8 +151,8 @@ One row per line on the bank statement: every cash movement in customer_payments
 
 | Column | Type | Key | Meaning | Example |
 |---|---|---|---|---|
-| period | text (YYYY-MM) | PK | Month | 2025-01 |
-| closed_on | date | | Planned close date: 5th business day of the next month | 2025-02-07 |
+| period | text (YYYY-MM) | PK | Month | 2024-01 |
+| closed_on | date | | Planned close date: 5th business day of the next month | 2024-02-07 |
 
 Use these dates when you close each month in ERPNext. Control 5 flags anything posted into a period after its `closed_on`.
 

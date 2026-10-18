@@ -19,3 +19,7 @@ Decisions Daniel made, with the date and why. 每条决定、日期和原因。
 | 2026-10-18 | Added accounts 2110 Chargeback accrual and 2120 Returns reserve | Each GTN deduction gets its own liability to tie out |
 | 2026-10-18 | Prompt-pay discounts recognised when the customer pays (not accrued at sale); COGS booked monthly at standard unit cost; payroll monthly, ±3% | Simplifications, noted for interviews |
 | 2026-10-18 | Month close date = 5th business day of the next month (data/generated/periods.csv) | Needed for the "posted after close" control |
+| 2026-10-18 | Simulation year changed from 2025 to 2024 | The Medicaid unwinding (continuous enrollment ended 31 Mar 2023; 25.2M disenrolled by Sep 2024, KFF) falls in 2024, matching the −3.0% Medicaid drug spend in the market data |
+| 2026-10-18 | Year's story: the Medicaid unwinding. Budget (late 2023) assumes Medicaid volume holds; actual Medicaid-channel volume falls during 2024 | A real event, visible in Daniel's own data; gives an unfavourable volume / favourable net-price variance |
+| 2026-10-18 | Add payer channels (Medicaid / Medicare / commercial) with different rebate rates | Needed to model the unwinding; Medicaid statutory rebates are high (to verify) |
+| 2026-10-18 | Daniel calculates the channel shares and the 2023→2024 Medicaid change for the three model drugs from his own market data | His analysis; he must be able to explain it |

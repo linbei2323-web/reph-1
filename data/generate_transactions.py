@@ -25,8 +25,8 @@ from pandas.tseries.offsets import CustomBusinessDay
 HERE = Path(__file__).parent
 OUT = HERE / "generated"
 
-SEED = 2025
-YEAR = 2025
+SEED = 2024
+YEAR = 2024
 
 # Wholesalers and their share of every product's volume (docs/company-design.md).
 CUSTOMERS = {
@@ -403,7 +403,8 @@ def main():
     print()
     print("invoices:", len(invoices), f"(about {len(invoices) / 12:.0f} a month)")
     print("gross sales for the year:", f"${invoices['amount'].sum():,.0f}")
-    print("holiday orders:", int(invoices["posting_date"].astype(str).isin(["2025-01-01", "2025-07-04", "2025-12-25"]).sum()))
+    holidays = USFederalHolidayCalendar().holidays(f"{YEAR}-01-01", f"{YEAR}-12-31")
+    print("holiday orders:", int(pd.to_datetime(invoices["posting_date"]).isin(holidays).sum()))
 
     # Check: payments, discounts and what is still owed at year end.
     open_ar = invoices.loc[~invoices["invoice_no"].isin(payments["invoice_no"]), "amount"].sum()
