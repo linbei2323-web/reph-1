@@ -11,3 +11,6 @@ Decisions Daniel made, with the date and why. 每条决定、日期和原因。
 | 2026-10-18 | Simulation year 2025; no orders or payments on US federal holidays | A full past calendar year; holiday activity would look unrealistic |
 | 2026-10-18 | The resume states the actual final transaction count, not a target | Every claim must match the data |
 | 2026-10-18 | Customer payments: 85% on time with a 2% prompt-pay discount, the rest 1 to 15 days late in full; payments after 31 Dec stay open in AR | Wholesalers usually take the discount; open year-end AR is realistic |
+| 2026-10-18 | Department budgets split into vendor invoices and payroll: Commercial $150k vendor + $200k payroll; R&D $200k + $150k; Manufacturing $0 + $150k; G&A $40k + $80k (per month) | Realistic mix; payroll comes as journal entries in piece 4 |
+| 2026-10-18 | Suppliers paid in a weekly Thursday payment run: 90% on the last run before the due date, 10% one or two runs late; no discount | Companies batch supplier payments; late runs give AP timing differences |
+| 2026-10-18 | Customer payments stay one per invoice for now (batching can be added later); 85% on time kept | Defaults until Daniel decides |
