@@ -5,8 +5,8 @@ writes one CSV per document type to data/generated/. The random seed is fixed, s
 every run produces exactly the same data.
 
 Built piece by piece:
-    1. calendar + sales invoices          (this version)
-    2. customer payments
+    1. calendar + sales invoices          (done)
+    2. customer payments                  (this version)
     3. purchase invoices + supplier payments
     4. journal entries
     5. bank lines + planned deviations
@@ -19,6 +19,8 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+from pandas.tseries.holiday import USFederalHolidayCalendar
+from pandas.tseries.offsets import CustomBusinessDay
 
 HERE = Path(__file__).parent
 OUT = HERE / "generated"
@@ -43,10 +45,18 @@ ORDER_DAYS = {
 
 UNIT_NOISE = 0.10  # each order's units vary randomly by about +/-10% around the plan
 
+PAYMENT_TERMS_DAYS = 30
+PROMPT_PAY_DISCOUNT = 0.02  # taken when the customer pays by the due date
+ON_TIME_SHARE = 0.85        # share of invoices paid by the due date
+MAX_DAYS_LATE = 15          # late payers pay 1 to 15 days after the due date
+
+# Banks and wholesalers don't work on US federal holidays.
+BUSINESS_DAY = CustomBusinessDay(calendar=USFederalHolidayCalendar())
+
 
 def business_days(year):
-    """All Monday-to-Friday dates in the year."""
-    days = pd.bdate_range(f"{year}-01-01", f"{year}-12-31")
+    """All Monday-to-Friday dates in the year, excluding US federal holidays."""
+    days = pd.date_range(f"{year}-01-01", f"{year}-12-31", freq=BUSINESS_DAY)
     return pd.DataFrame({"date": days, "weekday": days.strftime("%a"), "month": days.month})
 
 
@@ -78,9 +88,46 @@ def sales_invoices(plan, calendar, rng):
 
     invoices = pd.DataFrame(rows).sort_values(["posting_date", "customer", "item"])
     invoices.insert(0, "invoice_no", [f"SINV-{YEAR}-{i:05d}" for i in range(1, len(invoices) + 1)])
-    invoices["due_date"] = pd.to_datetime(invoices["posting_date"]) + pd.Timedelta(days=30)
+    invoices["due_date"] = pd.to_datetime(invoices["posting_date"]) + pd.Timedelta(days=PAYMENT_TERMS_DAYS)
     invoices["due_date"] = invoices["due_date"].dt.date
     return invoices
+
+
+def customer_payments(invoices, rng):
+    """One payment per invoice.
+
+    Most wholesalers pay on or just before the due date and take the prompt-pay
+    discount; the rest pay late and pay in full. Payment dates fall on business
+    days. Payments that would land after the year end are not created: those
+    invoices stay open in accounts receivable at 31 December.
+    """
+    rows = []
+    year_end = pd.Timestamp(f"{YEAR}-12-31")
+    for inv in invoices.itertuples():
+        due = pd.Timestamp(inv.due_date)
+        on_time = rng.random() < ON_TIME_SHARE
+        if on_time:
+            pay_date = due - pd.Timedelta(days=int(rng.integers(0, 3)))  # 0 to 2 days early
+        else:
+            pay_date = due + pd.Timedelta(days=int(rng.integers(1, MAX_DAYS_LATE + 1)))
+        pay_date = BUSINESS_DAY.rollforward(pay_date)
+        if pay_date > year_end:
+            continue
+
+        discount = round(inv.amount * PROMPT_PAY_DISCOUNT) if on_time else 0
+        rows.append({
+            "payment_date": pay_date.date(),
+            "customer": inv.customer,
+            "invoice_no": inv.invoice_no,
+            "invoice_amount": inv.amount,
+            "discount": discount,
+            "amount_received": inv.amount - discount,
+            "on_time": on_time,
+        })
+
+    payments = pd.DataFrame(rows).sort_values(["payment_date", "customer", "invoice_no"])
+    payments.insert(0, "payment_no", [f"PAY-IN-{YEAR}-{i:05d}" for i in range(1, len(payments) + 1)])
+    return payments
 
 
 def main():
@@ -89,9 +136,11 @@ def main():
     calendar = business_days(YEAR)
 
     invoices = sales_invoices(plan, calendar, rng)
+    payments = customer_payments(invoices, rng)
 
     OUT.mkdir(exist_ok=True)
     invoices.to_csv(OUT / "sales_invoices.csv", index=False)
+    payments.to_csv(OUT / "customer_payments.csv", index=False)
 
     # Check: generated units per month vs plan.
     invoices["month"] = pd.to_datetime(invoices["posting_date"]).dt.month
@@ -101,6 +150,21 @@ def main():
     print()
     print("invoices:", len(invoices), f"(about {len(invoices) / 12:.0f} a month)")
     print("gross sales for the year:", f"${invoices['amount'].sum():,.0f}")
+    print("holiday orders:", int(invoices["posting_date"].astype(str).isin(["2025-01-01", "2025-07-04", "2025-12-25"]).sum()))
+
+    # Check: payments, discounts and what is still owed at year end.
+    open_ar = invoices.loc[~invoices["invoice_no"].isin(payments["invoice_no"]), "amount"].sum()
+    print()
+    print("payments:", len(payments), f"(about {len(payments) / 12:.0f} a month)")
+    print("paid on time:", f"{payments['on_time'].mean():.1%}")
+    print("cash received:", f"${payments['amount_received'].sum():,.0f}")
+    print("prompt-pay discounts:", f"${payments['discount'].sum():,.0f}",
+          f"({payments['discount'].sum() / invoices['amount'].sum():.2%} of gross sales)")
+    print("open AR at 31 Dec:", f"${open_ar:,.0f}")
+    # Every invoice is either paid (in full, net of discount) or still open.
+    paid = payments["amount_received"].sum() + payments["discount"].sum()
+    assert paid + open_ar == invoices["amount"].sum(), "AR does not reconcile"
+    print("AR check: paid + discounts + open AR = gross sales  OK")
 
 
 if __name__ == "__main__":

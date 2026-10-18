@@ -8,3 +8,6 @@ Decisions Daniel made, with the date and why. 每条决定、日期和原因。
 | 2026-10-18 | Seeded test errors: 4 types × 10 (duplicates, wrong periods, misclassifications, unmatched payments), about 8 deliberately hard | A realistic test must include errors the rules may miss |
 | 2026-10-18 | Plant errors in a copy of the SQL data with a script (`tests/seed_errors.py`) that changes all related tables together, plus `tests/answer_key.csv` | ERPNext would block some errors (e.g. posting into a closed period); a script is reproducible |
 | 2026-10-18 | Write control rules on a development copy with its own errors; run once, unchanged, on the held-out test copy | Keeps the recall / false-positive score honest |
+| 2026-10-18 | Simulation year 2025; no orders or payments on US federal holidays | A full past calendar year; holiday activity would look unrealistic |
+| 2026-10-18 | The resume states the actual final transaction count, not a target | Every claim must match the data |
+| 2026-10-18 | Customer payments: 85% on time with a 2% prompt-pay discount, the rest 1 to 15 days late in full; payments after 31 Dec stay open in AR | Wholesalers usually take the discount; open year-end AR is realistic |
