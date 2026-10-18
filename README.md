@@ -5,6 +5,8 @@ recorded in ERPNext, moved to SQL, checked with month-end close and reconciliati
 controls, and reported as budget-versus-actual and gross-to-net revenue.
 
 > Status: in progress. Results below are filled in only from actual runs.
+>
+> Full project pipeline in Chinese: [docs/pipeline-zh.md](docs/pipeline-zh.md)
 
 ## Stages
 
