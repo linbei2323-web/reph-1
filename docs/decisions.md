@@ -14,3 +14,4 @@ Decisions Daniel made, with the date and why. 每条决定、日期和原因。
 | 2026-10-18 | Department budgets split into vendor invoices and payroll: Commercial $150k vendor + $200k payroll; R&D $200k + $150k; Manufacturing $0 + $150k; G&A $40k + $80k (per month) | Realistic mix; payroll comes as journal entries in piece 4 |
 | 2026-10-18 | Suppliers paid in a weekly Thursday payment run: 90% on the last run before the due date, 10% one or two runs late; no discount | Companies batch supplier payments; late runs give AP timing differences |
 | 2026-10-18 | Customer payments stay one per invoice for now (batching can be added later); 85% on time kept | Defaults until Daniel decides |
+| 2026-10-18 | Daniel does the ERPNext work (setup, import, period close) and the SQL work himself; Claude prepares data and explains | He must be able to do and explain these hands-on parts in interviews |
