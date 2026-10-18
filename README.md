@@ -13,7 +13,7 @@ controls, and reported as budget-versus-actual and gross-to-net revenue.
 | # | Stage | Tools | Status |
 |---|---|---|---|
 | 1 | Learn the accounting | ERPNext docs, a 10-K | In progress |
-| 2 | Design the company | Spreadsheet | Not started |
+| 2 | Design the company | Spreadsheet, CMS data | In progress |
 | 3 | Record 12 months of transactions | ERPNext | Not started |
 | 4 | Move the data to SQL | SQL | Not started |
 | 5 | Close & reconciliation controls, tested | SQL, Excel Power Query | Not started |

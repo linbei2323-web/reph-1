@@ -1,0 +1,4 @@
+product,model_drug,area,real_spend_usd_b,real_claims,price_per_unit,monthly_units,monthly_gross,gtn_rate,monthly_net,monthly_cogs
+Glyvanta,Jardiance (Empagliflozin),Diabetes & Metabolic,11.44,11368280,1006,947,952682,0.35000000000000003,619243,56820
+Respiqor,Trelegy Ellipta (Fluticasone/Umeclidin/Vilanter),Respiratory,5.29,6250872,847,521,441287,0.35000000000000003,286837,36470
+Onkalyn,Xtandi (Enzalutamide),Oncology,3.4,255669,13301,21,279321,0.18000000000000002,229043,10500
