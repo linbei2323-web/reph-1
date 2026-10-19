@@ -35,8 +35,10 @@ cutoff, bank matching…) plus an Excel Power Query close workbook; built budget
 reporting in Power BI.
 
 **R.** [N] transactions. Controls written on a development copy, run once unchanged on a held-out copy with 40
-planted errors: caught [X] of 40, [Y] false positives. Main variance: [product] revenue [−$X] below budget,
-mostly Medicaid volume, partly offset by a lower average rebate rate. Monthly report [M] → [N] minutes, timed
+planted errors: caught [X] of 40, [Y] false positives. Main variance: [product] revenue [−$X] below budget:
+[price $X] and [volume $Y] (of which Medicaid [$Z]), partly offset by lower rebates. Use the real split; in the
+generated data, Glyvanta's gross miss is −$2.66M = price −$1.54M + volume −$1.12M (Medicaid about −$0.49M),
+with rebates $1.00M lower, so −$1.67M after rebates. Price, not Medicaid, is the biggest driver. Monthly report [M] → [N] minutes, timed
 on the same data.
 
 **L** (choose by interviewer):
@@ -44,6 +46,8 @@ on the same data.
 - Analytics: the Medicaid finding (market trend ≠ product trend).
 - Senior: losing Medicaid patients cut volume but raised net price per unit (highest rebates): one event, two
   opposite effects.
+- Any level: the obvious story ("it was Medicaid") was wrong: price was the biggest driver. Check the split
+  before telling the story.
 
 ## Behavioural stories in reserve
 

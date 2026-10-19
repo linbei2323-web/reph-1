@@ -200,7 +200,7 @@ STAGES = [
                ("What was the main variance story?",
                 "The Medicaid unwinding. The budget extrapolated 2022-23 growth; in 2024 all Medicaid prescriptions fell "
                 "6% as about 25M people were disenrolled (KFF), so Medicaid growth for my products slowed well below "
-                "budget. Onkalyn's Medicare volume beat budget by about 40%. [Your price / volume numbers.]"),
+                "budget. Onkalyn's Medicare volume beat budget by about 40%. In the generated data Glyvanta's gross miss is mostly price (-$1.5M) then volume (-$1.1M, about half Medicaid). [Your price / volume numbers.]"),
                ("What did the 90 / 20 minutes consist of?",
                 "Describe your actual steps from the timing log: export, lookups, rebuild pivots versus refresh, review, write commentary.")],
         "evidence": "Dashboard pages, management report, report/timing_log.csv.",
