@@ -7,6 +7,8 @@ controls, and reported as budget-versus-actual and gross-to-net revenue.
 > Status: in progress. Results below are filled in only from actual runs.
 >
 > Full project pipeline in Chinese: [docs/pipeline-zh.md](docs/pipeline-zh.md)
+>
+> Next steps for ERPNext and SQL: [docs/erpnext-sql-guide.md](docs/erpnext-sql-guide.md) · Data schema: [docs/data-schema.md](docs/data-schema.md)
 
 ## Stages
 
