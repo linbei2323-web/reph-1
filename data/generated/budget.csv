@@ -1,0 +1,265 @@
+version,period,account,cost_center,product,units,amount
+v1,2024-01,4000 Gross product sales,Commercial,Glyvanta,1732.26,1877769.84
+v1,2024-01,4100 Rebates,Commercial,Glyvanta,1732.26,673332.02
+v1,2024-01,4200 Chargebacks,Commercial,Glyvanta,1732.26,37555.4
+v1,2024-01,4300 Returns,Commercial,Glyvanta,1732.26,18777.7
+v1,2024-01,4400 Prompt-pay discounts,Commercial,Glyvanta,1732.26,37555.4
+v1,2024-01,5000 Cost of goods sold,Manufacturing,Glyvanta,1732.26,103935.6
+v1,2024-01,4000 Gross product sales,Commercial,Respiqor,806.57,717040.73
+v1,2024-01,4100 Rebates,Commercial,Respiqor,806.57,249602.31
+v1,2024-01,4200 Chargebacks,Commercial,Respiqor,806.57,14340.81
+v1,2024-01,4300 Returns,Commercial,Respiqor,806.57,7170.41
+v1,2024-01,4400 Prompt-pay discounts,Commercial,Respiqor,806.57,14340.81
+v1,2024-01,5000 Cost of goods sold,Manufacturing,Respiqor,806.57,56459.9
+v1,2024-01,4000 Gross product sales,Commercial,Onkalyn,23.71,321839.54
+v1,2024-01,4100 Rebates,Commercial,Onkalyn,23.71,15225.96
+v1,2024-01,4200 Chargebacks,Commercial,Onkalyn,23.71,32183.95
+v1,2024-01,4300 Returns,Commercial,Onkalyn,23.71,3218.4
+v1,2024-01,4400 Prompt-pay discounts,Commercial,Onkalyn,23.71,6436.79
+v1,2024-01,5000 Cost of goods sold,Manufacturing,Onkalyn,23.71,11855.0
+v1,2024-01,6000 Commercial,Commercial,,,350000.0
+v1,2024-01,6100 R&D,R&D,,,350000.0
+v1,2024-01,6200 Manufacturing,Manufacturing,,,150000.0
+v1,2024-01,6300 G&A,G&A,,,120250.0
+v1,2024-02,4000 Gross product sales,Commercial,Glyvanta,1732.26,1877769.84
+v1,2024-02,4100 Rebates,Commercial,Glyvanta,1732.26,673332.02
+v1,2024-02,4200 Chargebacks,Commercial,Glyvanta,1732.26,37555.4
+v1,2024-02,4300 Returns,Commercial,Glyvanta,1732.26,18777.7
+v1,2024-02,4400 Prompt-pay discounts,Commercial,Glyvanta,1732.26,37555.4
+v1,2024-02,5000 Cost of goods sold,Manufacturing,Glyvanta,1732.26,103935.6
+v1,2024-02,4000 Gross product sales,Commercial,Respiqor,806.57,717040.73
+v1,2024-02,4100 Rebates,Commercial,Respiqor,806.57,249602.31
+v1,2024-02,4200 Chargebacks,Commercial,Respiqor,806.57,14340.81
+v1,2024-02,4300 Returns,Commercial,Respiqor,806.57,7170.41
+v1,2024-02,4400 Prompt-pay discounts,Commercial,Respiqor,806.57,14340.81
+v1,2024-02,5000 Cost of goods sold,Manufacturing,Respiqor,806.57,56459.9
+v1,2024-02,4000 Gross product sales,Commercial,Onkalyn,23.71,321839.54
+v1,2024-02,4100 Rebates,Commercial,Onkalyn,23.71,15225.96
+v1,2024-02,4200 Chargebacks,Commercial,Onkalyn,23.71,32183.95
+v1,2024-02,4300 Returns,Commercial,Onkalyn,23.71,3218.4
+v1,2024-02,4400 Prompt-pay discounts,Commercial,Onkalyn,23.71,6436.79
+v1,2024-02,5000 Cost of goods sold,Manufacturing,Onkalyn,23.71,11855.0
+v1,2024-02,6000 Commercial,Commercial,,,350000.0
+v1,2024-02,6100 R&D,R&D,,,350000.0
+v1,2024-02,6200 Manufacturing,Manufacturing,,,150000.0
+v1,2024-02,6300 G&A,G&A,,,120250.0
+v1,2024-03,4000 Gross product sales,Commercial,Glyvanta,1732.26,1877769.84
+v1,2024-03,4100 Rebates,Commercial,Glyvanta,1732.26,673332.02
+v1,2024-03,4200 Chargebacks,Commercial,Glyvanta,1732.26,37555.4
+v1,2024-03,4300 Returns,Commercial,Glyvanta,1732.26,18777.7
+v1,2024-03,4400 Prompt-pay discounts,Commercial,Glyvanta,1732.26,37555.4
+v1,2024-03,5000 Cost of goods sold,Manufacturing,Glyvanta,1732.26,103935.6
+v1,2024-03,4000 Gross product sales,Commercial,Respiqor,806.57,717040.73
+v1,2024-03,4100 Rebates,Commercial,Respiqor,806.57,249602.31
+v1,2024-03,4200 Chargebacks,Commercial,Respiqor,806.57,14340.81
+v1,2024-03,4300 Returns,Commercial,Respiqor,806.57,7170.41
+v1,2024-03,4400 Prompt-pay discounts,Commercial,Respiqor,806.57,14340.81
+v1,2024-03,5000 Cost of goods sold,Manufacturing,Respiqor,806.57,56459.9
+v1,2024-03,4000 Gross product sales,Commercial,Onkalyn,23.71,321839.54
+v1,2024-03,4100 Rebates,Commercial,Onkalyn,23.71,15225.96
+v1,2024-03,4200 Chargebacks,Commercial,Onkalyn,23.71,32183.95
+v1,2024-03,4300 Returns,Commercial,Onkalyn,23.71,3218.4
+v1,2024-03,4400 Prompt-pay discounts,Commercial,Onkalyn,23.71,6436.79
+v1,2024-03,5000 Cost of goods sold,Manufacturing,Onkalyn,23.71,11855.0
+v1,2024-03,6000 Commercial,Commercial,,,350000.0
+v1,2024-03,6100 R&D,R&D,,,350000.0
+v1,2024-03,6200 Manufacturing,Manufacturing,,,150000.0
+v1,2024-03,6300 G&A,G&A,,,120250.0
+v1,2024-04,4000 Gross product sales,Commercial,Glyvanta,1732.26,1877769.84
+v1,2024-04,4100 Rebates,Commercial,Glyvanta,1732.26,673332.02
+v1,2024-04,4200 Chargebacks,Commercial,Glyvanta,1732.26,37555.4
+v1,2024-04,4300 Returns,Commercial,Glyvanta,1732.26,18777.7
+v1,2024-04,4400 Prompt-pay discounts,Commercial,Glyvanta,1732.26,37555.4
+v1,2024-04,5000 Cost of goods sold,Manufacturing,Glyvanta,1732.26,103935.6
+v1,2024-04,4000 Gross product sales,Commercial,Respiqor,806.57,717040.73
+v1,2024-04,4100 Rebates,Commercial,Respiqor,806.57,249602.31
+v1,2024-04,4200 Chargebacks,Commercial,Respiqor,806.57,14340.81
+v1,2024-04,4300 Returns,Commercial,Respiqor,806.57,7170.41
+v1,2024-04,4400 Prompt-pay discounts,Commercial,Respiqor,806.57,14340.81
+v1,2024-04,5000 Cost of goods sold,Manufacturing,Respiqor,806.57,56459.9
+v1,2024-04,4000 Gross product sales,Commercial,Onkalyn,23.71,321839.54
+v1,2024-04,4100 Rebates,Commercial,Onkalyn,23.71,15225.96
+v1,2024-04,4200 Chargebacks,Commercial,Onkalyn,23.71,32183.95
+v1,2024-04,4300 Returns,Commercial,Onkalyn,23.71,3218.4
+v1,2024-04,4400 Prompt-pay discounts,Commercial,Onkalyn,23.71,6436.79
+v1,2024-04,5000 Cost of goods sold,Manufacturing,Onkalyn,23.71,11855.0
+v1,2024-04,6000 Commercial,Commercial,,,350000.0
+v1,2024-04,6100 R&D,R&D,,,350000.0
+v1,2024-04,6200 Manufacturing,Manufacturing,,,150000.0
+v1,2024-04,6300 G&A,G&A,,,120250.0
+v1,2024-05,4000 Gross product sales,Commercial,Glyvanta,1732.26,1877769.84
+v1,2024-05,4100 Rebates,Commercial,Glyvanta,1732.26,673332.02
+v1,2024-05,4200 Chargebacks,Commercial,Glyvanta,1732.26,37555.4
+v1,2024-05,4300 Returns,Commercial,Glyvanta,1732.26,18777.7
+v1,2024-05,4400 Prompt-pay discounts,Commercial,Glyvanta,1732.26,37555.4
+v1,2024-05,5000 Cost of goods sold,Manufacturing,Glyvanta,1732.26,103935.6
+v1,2024-05,4000 Gross product sales,Commercial,Respiqor,806.57,717040.73
+v1,2024-05,4100 Rebates,Commercial,Respiqor,806.57,249602.31
+v1,2024-05,4200 Chargebacks,Commercial,Respiqor,806.57,14340.81
+v1,2024-05,4300 Returns,Commercial,Respiqor,806.57,7170.41
+v1,2024-05,4400 Prompt-pay discounts,Commercial,Respiqor,806.57,14340.81
+v1,2024-05,5000 Cost of goods sold,Manufacturing,Respiqor,806.57,56459.9
+v1,2024-05,4000 Gross product sales,Commercial,Onkalyn,23.71,321839.54
+v1,2024-05,4100 Rebates,Commercial,Onkalyn,23.71,15225.96
+v1,2024-05,4200 Chargebacks,Commercial,Onkalyn,23.71,32183.95
+v1,2024-05,4300 Returns,Commercial,Onkalyn,23.71,3218.4
+v1,2024-05,4400 Prompt-pay discounts,Commercial,Onkalyn,23.71,6436.79
+v1,2024-05,5000 Cost of goods sold,Manufacturing,Onkalyn,23.71,11855.0
+v1,2024-05,6000 Commercial,Commercial,,,350000.0
+v1,2024-05,6100 R&D,R&D,,,350000.0
+v1,2024-05,6200 Manufacturing,Manufacturing,,,150000.0
+v1,2024-05,6300 G&A,G&A,,,120250.0
+v1,2024-06,4000 Gross product sales,Commercial,Glyvanta,1732.26,1877769.84
+v1,2024-06,4100 Rebates,Commercial,Glyvanta,1732.26,673332.02
+v1,2024-06,4200 Chargebacks,Commercial,Glyvanta,1732.26,37555.4
+v1,2024-06,4300 Returns,Commercial,Glyvanta,1732.26,18777.7
+v1,2024-06,4400 Prompt-pay discounts,Commercial,Glyvanta,1732.26,37555.4
+v1,2024-06,5000 Cost of goods sold,Manufacturing,Glyvanta,1732.26,103935.6
+v1,2024-06,4000 Gross product sales,Commercial,Respiqor,806.57,717040.73
+v1,2024-06,4100 Rebates,Commercial,Respiqor,806.57,249602.31
+v1,2024-06,4200 Chargebacks,Commercial,Respiqor,806.57,14340.81
+v1,2024-06,4300 Returns,Commercial,Respiqor,806.57,7170.41
+v1,2024-06,4400 Prompt-pay discounts,Commercial,Respiqor,806.57,14340.81
+v1,2024-06,5000 Cost of goods sold,Manufacturing,Respiqor,806.57,56459.9
+v1,2024-06,4000 Gross product sales,Commercial,Onkalyn,23.71,321839.54
+v1,2024-06,4100 Rebates,Commercial,Onkalyn,23.71,15225.96
+v1,2024-06,4200 Chargebacks,Commercial,Onkalyn,23.71,32183.95
+v1,2024-06,4300 Returns,Commercial,Onkalyn,23.71,3218.4
+v1,2024-06,4400 Prompt-pay discounts,Commercial,Onkalyn,23.71,6436.79
+v1,2024-06,5000 Cost of goods sold,Manufacturing,Onkalyn,23.71,11855.0
+v1,2024-06,6000 Commercial,Commercial,,,350000.0
+v1,2024-06,6100 R&D,R&D,,,350000.0
+v1,2024-06,6200 Manufacturing,Manufacturing,,,150000.0
+v1,2024-06,6300 G&A,G&A,,,120250.0
+v1,2024-07,4000 Gross product sales,Commercial,Glyvanta,1732.26,1877769.84
+v1,2024-07,4100 Rebates,Commercial,Glyvanta,1732.26,673332.02
+v1,2024-07,4200 Chargebacks,Commercial,Glyvanta,1732.26,37555.4
+v1,2024-07,4300 Returns,Commercial,Glyvanta,1732.26,18777.7
+v1,2024-07,4400 Prompt-pay discounts,Commercial,Glyvanta,1732.26,37555.4
+v1,2024-07,5000 Cost of goods sold,Manufacturing,Glyvanta,1732.26,103935.6
+v1,2024-07,4000 Gross product sales,Commercial,Respiqor,806.57,717040.73
+v1,2024-07,4100 Rebates,Commercial,Respiqor,806.57,249602.31
+v1,2024-07,4200 Chargebacks,Commercial,Respiqor,806.57,14340.81
+v1,2024-07,4300 Returns,Commercial,Respiqor,806.57,7170.41
+v1,2024-07,4400 Prompt-pay discounts,Commercial,Respiqor,806.57,14340.81
+v1,2024-07,5000 Cost of goods sold,Manufacturing,Respiqor,806.57,56459.9
+v1,2024-07,4000 Gross product sales,Commercial,Onkalyn,23.71,321839.54
+v1,2024-07,4100 Rebates,Commercial,Onkalyn,23.71,15225.96
+v1,2024-07,4200 Chargebacks,Commercial,Onkalyn,23.71,32183.95
+v1,2024-07,4300 Returns,Commercial,Onkalyn,23.71,3218.4
+v1,2024-07,4400 Prompt-pay discounts,Commercial,Onkalyn,23.71,6436.79
+v1,2024-07,5000 Cost of goods sold,Manufacturing,Onkalyn,23.71,11855.0
+v1,2024-07,6000 Commercial,Commercial,,,350000.0
+v1,2024-07,6100 R&D,R&D,,,350000.0
+v1,2024-07,6200 Manufacturing,Manufacturing,,,150000.0
+v1,2024-07,6300 G&A,G&A,,,120250.0
+v1,2024-08,4000 Gross product sales,Commercial,Glyvanta,1732.26,1877769.84
+v1,2024-08,4100 Rebates,Commercial,Glyvanta,1732.26,673332.02
+v1,2024-08,4200 Chargebacks,Commercial,Glyvanta,1732.26,37555.4
+v1,2024-08,4300 Returns,Commercial,Glyvanta,1732.26,18777.7
+v1,2024-08,4400 Prompt-pay discounts,Commercial,Glyvanta,1732.26,37555.4
+v1,2024-08,5000 Cost of goods sold,Manufacturing,Glyvanta,1732.26,103935.6
+v1,2024-08,4000 Gross product sales,Commercial,Respiqor,806.57,717040.73
+v1,2024-08,4100 Rebates,Commercial,Respiqor,806.57,249602.31
+v1,2024-08,4200 Chargebacks,Commercial,Respiqor,806.57,14340.81
+v1,2024-08,4300 Returns,Commercial,Respiqor,806.57,7170.41
+v1,2024-08,4400 Prompt-pay discounts,Commercial,Respiqor,806.57,14340.81
+v1,2024-08,5000 Cost of goods sold,Manufacturing,Respiqor,806.57,56459.9
+v1,2024-08,4000 Gross product sales,Commercial,Onkalyn,23.71,321839.54
+v1,2024-08,4100 Rebates,Commercial,Onkalyn,23.71,15225.96
+v1,2024-08,4200 Chargebacks,Commercial,Onkalyn,23.71,32183.95
+v1,2024-08,4300 Returns,Commercial,Onkalyn,23.71,3218.4
+v1,2024-08,4400 Prompt-pay discounts,Commercial,Onkalyn,23.71,6436.79
+v1,2024-08,5000 Cost of goods sold,Manufacturing,Onkalyn,23.71,11855.0
+v1,2024-08,6000 Commercial,Commercial,,,350000.0
+v1,2024-08,6100 R&D,R&D,,,350000.0
+v1,2024-08,6200 Manufacturing,Manufacturing,,,150000.0
+v1,2024-08,6300 G&A,G&A,,,120250.0
+v1,2024-09,4000 Gross product sales,Commercial,Glyvanta,1732.26,1877769.84
+v1,2024-09,4100 Rebates,Commercial,Glyvanta,1732.26,673332.02
+v1,2024-09,4200 Chargebacks,Commercial,Glyvanta,1732.26,37555.4
+v1,2024-09,4300 Returns,Commercial,Glyvanta,1732.26,18777.7
+v1,2024-09,4400 Prompt-pay discounts,Commercial,Glyvanta,1732.26,37555.4
+v1,2024-09,5000 Cost of goods sold,Manufacturing,Glyvanta,1732.26,103935.6
+v1,2024-09,4000 Gross product sales,Commercial,Respiqor,806.57,717040.73
+v1,2024-09,4100 Rebates,Commercial,Respiqor,806.57,249602.31
+v1,2024-09,4200 Chargebacks,Commercial,Respiqor,806.57,14340.81
+v1,2024-09,4300 Returns,Commercial,Respiqor,806.57,7170.41
+v1,2024-09,4400 Prompt-pay discounts,Commercial,Respiqor,806.57,14340.81
+v1,2024-09,5000 Cost of goods sold,Manufacturing,Respiqor,806.57,56459.9
+v1,2024-09,4000 Gross product sales,Commercial,Onkalyn,23.71,321839.54
+v1,2024-09,4100 Rebates,Commercial,Onkalyn,23.71,15225.96
+v1,2024-09,4200 Chargebacks,Commercial,Onkalyn,23.71,32183.95
+v1,2024-09,4300 Returns,Commercial,Onkalyn,23.71,3218.4
+v1,2024-09,4400 Prompt-pay discounts,Commercial,Onkalyn,23.71,6436.79
+v1,2024-09,5000 Cost of goods sold,Manufacturing,Onkalyn,23.71,11855.0
+v1,2024-09,6000 Commercial,Commercial,,,350000.0
+v1,2024-09,6100 R&D,R&D,,,350000.0
+v1,2024-09,6200 Manufacturing,Manufacturing,,,150000.0
+v1,2024-09,6300 G&A,G&A,,,120250.0
+v1,2024-10,4000 Gross product sales,Commercial,Glyvanta,1732.26,1877769.84
+v1,2024-10,4100 Rebates,Commercial,Glyvanta,1732.26,673332.02
+v1,2024-10,4200 Chargebacks,Commercial,Glyvanta,1732.26,37555.4
+v1,2024-10,4300 Returns,Commercial,Glyvanta,1732.26,18777.7
+v1,2024-10,4400 Prompt-pay discounts,Commercial,Glyvanta,1732.26,37555.4
+v1,2024-10,5000 Cost of goods sold,Manufacturing,Glyvanta,1732.26,103935.6
+v1,2024-10,4000 Gross product sales,Commercial,Respiqor,806.57,717040.73
+v1,2024-10,4100 Rebates,Commercial,Respiqor,806.57,249602.31
+v1,2024-10,4200 Chargebacks,Commercial,Respiqor,806.57,14340.81
+v1,2024-10,4300 Returns,Commercial,Respiqor,806.57,7170.41
+v1,2024-10,4400 Prompt-pay discounts,Commercial,Respiqor,806.57,14340.81
+v1,2024-10,5000 Cost of goods sold,Manufacturing,Respiqor,806.57,56459.9
+v1,2024-10,4000 Gross product sales,Commercial,Onkalyn,23.71,321839.54
+v1,2024-10,4100 Rebates,Commercial,Onkalyn,23.71,15225.96
+v1,2024-10,4200 Chargebacks,Commercial,Onkalyn,23.71,32183.95
+v1,2024-10,4300 Returns,Commercial,Onkalyn,23.71,3218.4
+v1,2024-10,4400 Prompt-pay discounts,Commercial,Onkalyn,23.71,6436.79
+v1,2024-10,5000 Cost of goods sold,Manufacturing,Onkalyn,23.71,11855.0
+v1,2024-10,6000 Commercial,Commercial,,,350000.0
+v1,2024-10,6100 R&D,R&D,,,350000.0
+v1,2024-10,6200 Manufacturing,Manufacturing,,,150000.0
+v1,2024-10,6300 G&A,G&A,,,120250.0
+v1,2024-11,4000 Gross product sales,Commercial,Glyvanta,1732.26,1877769.84
+v1,2024-11,4100 Rebates,Commercial,Glyvanta,1732.26,673332.02
+v1,2024-11,4200 Chargebacks,Commercial,Glyvanta,1732.26,37555.4
+v1,2024-11,4300 Returns,Commercial,Glyvanta,1732.26,18777.7
+v1,2024-11,4400 Prompt-pay discounts,Commercial,Glyvanta,1732.26,37555.4
+v1,2024-11,5000 Cost of goods sold,Manufacturing,Glyvanta,1732.26,103935.6
+v1,2024-11,4000 Gross product sales,Commercial,Respiqor,806.57,717040.73
+v1,2024-11,4100 Rebates,Commercial,Respiqor,806.57,249602.31
+v1,2024-11,4200 Chargebacks,Commercial,Respiqor,806.57,14340.81
+v1,2024-11,4300 Returns,Commercial,Respiqor,806.57,7170.41
+v1,2024-11,4400 Prompt-pay discounts,Commercial,Respiqor,806.57,14340.81
+v1,2024-11,5000 Cost of goods sold,Manufacturing,Respiqor,806.57,56459.9
+v1,2024-11,4000 Gross product sales,Commercial,Onkalyn,23.71,321839.54
+v1,2024-11,4100 Rebates,Commercial,Onkalyn,23.71,15225.96
+v1,2024-11,4200 Chargebacks,Commercial,Onkalyn,23.71,32183.95
+v1,2024-11,4300 Returns,Commercial,Onkalyn,23.71,3218.4
+v1,2024-11,4400 Prompt-pay discounts,Commercial,Onkalyn,23.71,6436.79
+v1,2024-11,5000 Cost of goods sold,Manufacturing,Onkalyn,23.71,11855.0
+v1,2024-11,6000 Commercial,Commercial,,,350000.0
+v1,2024-11,6100 R&D,R&D,,,350000.0
+v1,2024-11,6200 Manufacturing,Manufacturing,,,150000.0
+v1,2024-11,6300 G&A,G&A,,,120250.0
+v1,2024-12,4000 Gross product sales,Commercial,Glyvanta,1732.26,1877769.84
+v1,2024-12,4100 Rebates,Commercial,Glyvanta,1732.26,673332.02
+v1,2024-12,4200 Chargebacks,Commercial,Glyvanta,1732.26,37555.4
+v1,2024-12,4300 Returns,Commercial,Glyvanta,1732.26,18777.7
+v1,2024-12,4400 Prompt-pay discounts,Commercial,Glyvanta,1732.26,37555.4
+v1,2024-12,5000 Cost of goods sold,Manufacturing,Glyvanta,1732.26,103935.6
+v1,2024-12,4000 Gross product sales,Commercial,Respiqor,806.57,717040.73
+v1,2024-12,4100 Rebates,Commercial,Respiqor,806.57,249602.31
+v1,2024-12,4200 Chargebacks,Commercial,Respiqor,806.57,14340.81
+v1,2024-12,4300 Returns,Commercial,Respiqor,806.57,7170.41
+v1,2024-12,4400 Prompt-pay discounts,Commercial,Respiqor,806.57,14340.81
+v1,2024-12,5000 Cost of goods sold,Manufacturing,Respiqor,806.57,56459.9
+v1,2024-12,4000 Gross product sales,Commercial,Onkalyn,23.71,321839.54
+v1,2024-12,4100 Rebates,Commercial,Onkalyn,23.71,15225.96
+v1,2024-12,4200 Chargebacks,Commercial,Onkalyn,23.71,32183.95
+v1,2024-12,4300 Returns,Commercial,Onkalyn,23.71,3218.4
+v1,2024-12,4400 Prompt-pay discounts,Commercial,Onkalyn,23.71,6436.79
+v1,2024-12,5000 Cost of goods sold,Manufacturing,Onkalyn,23.71,11855.0
+v1,2024-12,6000 Commercial,Commercial,,,350000.0
+v1,2024-12,6100 R&D,R&D,,,350000.0
+v1,2024-12,6200 Manufacturing,Manufacturing,,,150000.0
+v1,2024-12,6300 G&A,G&A,,,120250.0

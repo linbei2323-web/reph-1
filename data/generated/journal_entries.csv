@@ -2,330 +2,330 @@ je_no,posting_date,je_type,account,debit,credit,cost_center,product,party,remark
 JE-2024-00001,2024-01-01,Opening balance,1000 Bank,5000000.0,0.0,,,,Opening balances
 JE-2024-00001,2024-01-01,Opening balance,1200 Inventory,300000.0,0.0,,,,Opening balances
 JE-2024-00001,2024-01-01,Opening balance,3000 Equity,0.0,5300000.0,,,,Opening balances
-JE-2024-00002,2024-01-31,Payroll,6000 Commercial,201424.31,0.0,Commercial,,,Payroll Jan 2024
-JE-2024-00002,2024-01-31,Payroll,6100 R&D,151277.74,0.0,R&D,,,Payroll Jan 2024
-JE-2024-00002,2024-01-31,Payroll,6200 Manufacturing,151487.77,0.0,Manufacturing,,,Payroll Jan 2024
-JE-2024-00002,2024-01-31,Payroll,6300 G&A,80840.11,0.0,G&A,,,Payroll Jan 2024
-JE-2024-00002,2024-01-31,Payroll,1000 Bank,0.0,585029.93,,,,Payroll Jan 2024
+JE-2024-00002,2024-01-31,Payroll,6000 Commercial,205213.95,0.0,Commercial,,,Payroll Jan 2024
+JE-2024-00002,2024-01-31,Payroll,6100 R&D,143632.28,0.0,R&D,,,Payroll Jan 2024
+JE-2024-00002,2024-01-31,Payroll,6200 Manufacturing,146622.14,0.0,Manufacturing,,,Payroll Jan 2024
+JE-2024-00002,2024-01-31,Payroll,6300 G&A,81973.78,0.0,G&A,,,Payroll Jan 2024
+JE-2024-00002,2024-01-31,Payroll,1000 Bank,0.0,577442.15,,,,Payroll Jan 2024
 JE-2024-00003,2024-01-31,Bank fee,6300 G&A,250.0,0.0,G&A,,Bank,Bank service charge Jan 2024
 JE-2024-00003,2024-01-31,Bank fee,1000 Bank,0.0,250.0,,,Bank,Bank service charge Jan 2024
-JE-2024-00004,2024-01-31,COGS,5000 Cost of goods sold,58680.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold Jan 2024
-JE-2024-00004,2024-01-31,COGS,5000 Cost of goods sold,10000.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold Jan 2024
-JE-2024-00004,2024-01-31,COGS,5000 Cost of goods sold,36120.0,0.0,Manufacturing,Respiqor,,Cost of goods sold Jan 2024
-JE-2024-00004,2024-01-31,COGS,1200 Inventory,0.0,104800.0,Manufacturing,,,Cost of goods sold Jan 2024
-JE-2024-00005,2024-01-31,Rebate accrual,4100 Rebates,295160.4,0.0,Commercial,Glyvanta,,Rebate accrual Jan 2024
-JE-2024-00005,2024-01-31,Rebate accrual,4100 Rebates,13301.0,0.0,Commercial,Onkalyn,,Rebate accrual Jan 2024
-JE-2024-00005,2024-01-31,Rebate accrual,4100 Rebates,131115.6,0.0,Commercial,Respiqor,,Rebate accrual Jan 2024
-JE-2024-00005,2024-01-31,Rebate accrual,2100 Rebate accrual,0.0,439577.0,Commercial,,,Rebate accrual Jan 2024
-JE-2024-00006,2024-01-31,Chargeback accrual,4200 Chargebacks,19677.36,0.0,Commercial,Glyvanta,,Chargeback accrual Jan 2024
-JE-2024-00006,2024-01-31,Chargeback accrual,4200 Chargebacks,26602.0,0.0,Commercial,Onkalyn,,Chargeback accrual Jan 2024
-JE-2024-00006,2024-01-31,Chargeback accrual,4200 Chargebacks,8741.04,0.0,Commercial,Respiqor,,Chargeback accrual Jan 2024
-JE-2024-00006,2024-01-31,Chargeback accrual,2110 Chargeback accrual,0.0,55020.4,Commercial,,,Chargeback accrual Jan 2024
-JE-2024-00007,2024-01-31,Returns accrual,4300 Returns,9838.68,0.0,Commercial,Glyvanta,,Returns accrual Jan 2024
-JE-2024-00007,2024-01-31,Returns accrual,4300 Returns,2660.2,0.0,Commercial,Onkalyn,,Returns accrual Jan 2024
-JE-2024-00007,2024-01-31,Returns accrual,4300 Returns,4370.52,0.0,Commercial,Respiqor,,Returns accrual Jan 2024
-JE-2024-00007,2024-01-31,Returns accrual,2120 Returns reserve,0.0,16869.4,Commercial,,,Returns accrual Jan 2024
-JE-2024-00008,2024-02-29,Payroll,6000 Commercial,191766.37,0.0,Commercial,,,Payroll Feb 2024
-JE-2024-00008,2024-02-29,Payroll,6100 R&D,148974.38,0.0,R&D,,,Payroll Feb 2024
-JE-2024-00008,2024-02-29,Payroll,6200 Manufacturing,146951.76,0.0,Manufacturing,,,Payroll Feb 2024
-JE-2024-00008,2024-02-29,Payroll,6300 G&A,79051.0,0.0,G&A,,,Payroll Feb 2024
-JE-2024-00008,2024-02-29,Payroll,1000 Bank,0.0,566743.51,,,,Payroll Feb 2024
+JE-2024-00004,2024-01-31,COGS,5000 Cost of goods sold,102120.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold Jan 2024
+JE-2024-00004,2024-01-31,COGS,5000 Cost of goods sold,14000.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold Jan 2024
+JE-2024-00004,2024-01-31,COGS,5000 Cost of goods sold,54670.0,0.0,Manufacturing,Respiqor,,Cost of goods sold Jan 2024
+JE-2024-00004,2024-01-31,COGS,1200 Inventory,0.0,170790.0,Manufacturing,,,Cost of goods sold Jan 2024
+JE-2024-00005,2024-01-31,Rebate accrual,4100 Rebates,606869.5,0.0,Commercial,Glyvanta,,Rebate accrual Jan 2024
+JE-2024-00005,2024-01-31,Rebate accrual,4100 Rebates,13034.98,0.0,Commercial,Onkalyn,,Rebate accrual Jan 2024
+JE-2024-00005,2024-01-31,Rebate accrual,4100 Rebates,229198.2,0.0,Commercial,Respiqor,,Rebate accrual Jan 2024
+JE-2024-00005,2024-01-31,Rebate accrual,2100 Rebate accrual,0.0,849102.68,Commercial,,,Rebate accrual Jan 2024
+JE-2024-00006,2024-01-31,Chargeback accrual,4200 Chargebacks,34244.24,0.0,Commercial,Glyvanta,,Chargeback accrual Jan 2024
+JE-2024-00006,2024-01-31,Chargeback accrual,4200 Chargebacks,37242.8,0.0,Commercial,Onkalyn,,Chargeback accrual Jan 2024
+JE-2024-00006,2024-01-31,Chargeback accrual,4200 Chargebacks,13230.14,0.0,Commercial,Respiqor,,Chargeback accrual Jan 2024
+JE-2024-00006,2024-01-31,Chargeback accrual,2110 Chargeback accrual,0.0,84717.18,Commercial,,,Chargeback accrual Jan 2024
+JE-2024-00007,2024-01-31,Returns accrual,4300 Returns,17122.12,0.0,Commercial,Glyvanta,,Returns accrual Jan 2024
+JE-2024-00007,2024-01-31,Returns accrual,4300 Returns,3724.28,0.0,Commercial,Onkalyn,,Returns accrual Jan 2024
+JE-2024-00007,2024-01-31,Returns accrual,4300 Returns,6615.07,0.0,Commercial,Respiqor,,Returns accrual Jan 2024
+JE-2024-00007,2024-01-31,Returns accrual,2120 Returns reserve,0.0,27461.47,Commercial,,,Returns accrual Jan 2024
+JE-2024-00008,2024-02-29,Payroll,6000 Commercial,203316.2,0.0,Commercial,,,Payroll Feb 2024
+JE-2024-00008,2024-02-29,Payroll,6100 R&D,147344.43,0.0,R&D,,,Payroll Feb 2024
+JE-2024-00008,2024-02-29,Payroll,6200 Manufacturing,149243.79,0.0,Manufacturing,,,Payroll Feb 2024
+JE-2024-00008,2024-02-29,Payroll,6300 G&A,79065.94,0.0,G&A,,,Payroll Feb 2024
+JE-2024-00008,2024-02-29,Payroll,1000 Bank,0.0,578970.36,,,,Payroll Feb 2024
 JE-2024-00009,2024-02-29,Bank fee,6300 G&A,250.0,0.0,G&A,,Bank,Bank service charge Feb 2024
 JE-2024-00009,2024-02-29,Bank fee,1000 Bank,0.0,250.0,,,Bank,Bank service charge Feb 2024
-JE-2024-00010,2024-02-29,COGS,5000 Cost of goods sold,56340.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold Feb 2024
-JE-2024-00010,2024-02-29,COGS,5000 Cost of goods sold,10000.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold Feb 2024
-JE-2024-00010,2024-02-29,COGS,5000 Cost of goods sold,37100.0,0.0,Manufacturing,Respiqor,,Cost of goods sold Feb 2024
-JE-2024-00010,2024-02-29,COGS,1200 Inventory,0.0,103440.0,Manufacturing,,,Cost of goods sold Feb 2024
-JE-2024-00011,2024-02-29,Rebate accrual,4100 Rebates,283390.2,0.0,Commercial,Glyvanta,,Rebate accrual Feb 2024
-JE-2024-00011,2024-02-29,Rebate accrual,4100 Rebates,13301.0,0.0,Commercial,Onkalyn,,Rebate accrual Feb 2024
-JE-2024-00011,2024-02-29,Rebate accrual,4100 Rebates,134673.0,0.0,Commercial,Respiqor,,Rebate accrual Feb 2024
-JE-2024-00011,2024-02-29,Rebate accrual,2100 Rebate accrual,0.0,431364.2,Commercial,,,Rebate accrual Feb 2024
-JE-2024-00012,2024-02-29,Chargeback accrual,4200 Chargebacks,18892.68,0.0,Commercial,Glyvanta,,Chargeback accrual Feb 2024
-JE-2024-00012,2024-02-29,Chargeback accrual,4200 Chargebacks,26602.0,0.0,Commercial,Onkalyn,,Chargeback accrual Feb 2024
-JE-2024-00012,2024-02-29,Chargeback accrual,4200 Chargebacks,8978.2,0.0,Commercial,Respiqor,,Chargeback accrual Feb 2024
-JE-2024-00012,2024-02-29,Chargeback accrual,2110 Chargeback accrual,0.0,54472.88,Commercial,,,Chargeback accrual Feb 2024
-JE-2024-00013,2024-02-29,Returns accrual,4300 Returns,9446.34,0.0,Commercial,Glyvanta,,Returns accrual Feb 2024
-JE-2024-00013,2024-02-29,Returns accrual,4300 Returns,2660.2,0.0,Commercial,Onkalyn,,Returns accrual Feb 2024
-JE-2024-00013,2024-02-29,Returns accrual,4300 Returns,4489.1,0.0,Commercial,Respiqor,,Returns accrual Feb 2024
-JE-2024-00013,2024-02-29,Returns accrual,2120 Returns reserve,0.0,16595.64,Commercial,,,Returns accrual Feb 2024
-JE-2024-00014,2024-03-29,Payroll,6000 Commercial,198183.22,0.0,Commercial,,,Payroll Mar 2024
-JE-2024-00014,2024-03-29,Payroll,6100 R&D,146843.66,0.0,R&D,,,Payroll Mar 2024
-JE-2024-00014,2024-03-29,Payroll,6200 Manufacturing,149857.78,0.0,Manufacturing,,,Payroll Mar 2024
-JE-2024-00014,2024-03-29,Payroll,6300 G&A,80172.84,0.0,G&A,,,Payroll Mar 2024
-JE-2024-00014,2024-03-29,Payroll,1000 Bank,0.0,575057.5,,,,Payroll Mar 2024
+JE-2024-00010,2024-02-29,COGS,5000 Cost of goods sold,97800.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold Feb 2024
+JE-2024-00010,2024-02-29,COGS,5000 Cost of goods sold,16500.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold Feb 2024
+JE-2024-00010,2024-02-29,COGS,5000 Cost of goods sold,56280.0,0.0,Manufacturing,Respiqor,,Cost of goods sold Feb 2024
+JE-2024-00010,2024-02-29,COGS,1200 Inventory,0.0,170580.0,Manufacturing,,,Cost of goods sold Feb 2024
+JE-2024-00011,2024-02-29,Rebate accrual,4100 Rebates,583731.5,0.0,Commercial,Glyvanta,,Rebate accrual Feb 2024
+JE-2024-00011,2024-02-29,Rebate accrual,4100 Rebates,18621.4,0.0,Commercial,Onkalyn,,Rebate accrual Feb 2024
+JE-2024-00011,2024-02-29,Rebate accrual,4100 Rebates,237117.65,0.0,Commercial,Respiqor,,Rebate accrual Feb 2024
+JE-2024-00011,2024-02-29,Rebate accrual,2100 Rebate accrual,0.0,839470.55,Commercial,,,Rebate accrual Feb 2024
+JE-2024-00012,2024-02-29,Chargeback accrual,4200 Chargebacks,32795.6,0.0,Commercial,Glyvanta,,Chargeback accrual Feb 2024
+JE-2024-00012,2024-02-29,Chargeback accrual,4200 Chargebacks,43893.3,0.0,Commercial,Onkalyn,,Chargeback accrual Feb 2024
+JE-2024-00012,2024-02-29,Chargeback accrual,4200 Chargebacks,13619.76,0.0,Commercial,Respiqor,,Chargeback accrual Feb 2024
+JE-2024-00012,2024-02-29,Chargeback accrual,2110 Chargeback accrual,0.0,90308.66,Commercial,,,Chargeback accrual Feb 2024
+JE-2024-00013,2024-02-29,Returns accrual,4300 Returns,16397.8,0.0,Commercial,Glyvanta,,Returns accrual Feb 2024
+JE-2024-00013,2024-02-29,Returns accrual,4300 Returns,4389.33,0.0,Commercial,Onkalyn,,Returns accrual Feb 2024
+JE-2024-00013,2024-02-29,Returns accrual,4300 Returns,6809.88,0.0,Commercial,Respiqor,,Returns accrual Feb 2024
+JE-2024-00013,2024-02-29,Returns accrual,2120 Returns reserve,0.0,27597.01,Commercial,,,Returns accrual Feb 2024
+JE-2024-00014,2024-03-29,Payroll,6000 Commercial,206592.32,0.0,Commercial,,,Payroll Mar 2024
+JE-2024-00014,2024-03-29,Payroll,6100 R&D,149305.66,0.0,R&D,,,Payroll Mar 2024
+JE-2024-00014,2024-03-29,Payroll,6200 Manufacturing,148214.61,0.0,Manufacturing,,,Payroll Mar 2024
+JE-2024-00014,2024-03-29,Payroll,6300 G&A,78923.14,0.0,G&A,,,Payroll Mar 2024
+JE-2024-00014,2024-03-29,Payroll,1000 Bank,0.0,583035.73,,,,Payroll Mar 2024
 JE-2024-00015,2024-03-29,Bank fee,6300 G&A,250.0,0.0,G&A,,Bank,Bank service charge Mar 2024
 JE-2024-00015,2024-03-29,Bank fee,1000 Bank,0.0,250.0,,,Bank,Bank service charge Mar 2024
-JE-2024-00016,2024-03-29,COGS,5000 Cost of goods sold,56340.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold Mar 2024
-JE-2024-00016,2024-03-29,COGS,5000 Cost of goods sold,9500.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold Mar 2024
-JE-2024-00016,2024-03-29,COGS,5000 Cost of goods sold,36400.0,0.0,Manufacturing,Respiqor,,Cost of goods sold Mar 2024
-JE-2024-00016,2024-03-29,COGS,1200 Inventory,0.0,102240.0,Manufacturing,,,Cost of goods sold Mar 2024
-JE-2024-00017,2024-03-29,Rebate accrual,4100 Rebates,283390.2,0.0,Commercial,Glyvanta,,Rebate accrual Mar 2024
-JE-2024-00017,2024-03-29,Rebate accrual,4100 Rebates,12635.95,0.0,Commercial,Onkalyn,,Rebate accrual Mar 2024
-JE-2024-00017,2024-03-29,Rebate accrual,4100 Rebates,132132.0,0.0,Commercial,Respiqor,,Rebate accrual Mar 2024
-JE-2024-00017,2024-03-29,Rebate accrual,2100 Rebate accrual,0.0,428158.15,Commercial,,,Rebate accrual Mar 2024
-JE-2024-00018,2024-03-29,Chargeback accrual,4200 Chargebacks,18892.68,0.0,Commercial,Glyvanta,,Chargeback accrual Mar 2024
-JE-2024-00018,2024-03-29,Chargeback accrual,4200 Chargebacks,25271.9,0.0,Commercial,Onkalyn,,Chargeback accrual Mar 2024
-JE-2024-00018,2024-03-29,Chargeback accrual,4200 Chargebacks,8808.8,0.0,Commercial,Respiqor,,Chargeback accrual Mar 2024
-JE-2024-00018,2024-03-29,Chargeback accrual,2110 Chargeback accrual,0.0,52973.38,Commercial,,,Chargeback accrual Mar 2024
-JE-2024-00019,2024-03-29,Returns accrual,4300 Returns,9446.34,0.0,Commercial,Glyvanta,,Returns accrual Mar 2024
-JE-2024-00019,2024-03-29,Returns accrual,4300 Returns,2527.19,0.0,Commercial,Onkalyn,,Returns accrual Mar 2024
-JE-2024-00019,2024-03-29,Returns accrual,4300 Returns,4404.4,0.0,Commercial,Respiqor,,Returns accrual Mar 2024
-JE-2024-00019,2024-03-29,Returns accrual,2120 Returns reserve,0.0,16377.93,Commercial,,,Returns accrual Mar 2024
-JE-2024-00020,2024-04-30,Payroll,6000 Commercial,193535.18,0.0,Commercial,,,Payroll Apr 2024
-JE-2024-00020,2024-04-30,Payroll,6100 R&D,143697.2,0.0,R&D,,,Payroll Apr 2024
-JE-2024-00020,2024-04-30,Payroll,6200 Manufacturing,144145.08,0.0,Manufacturing,,,Payroll Apr 2024
-JE-2024-00020,2024-04-30,Payroll,6300 G&A,74719.71,0.0,G&A,,,Payroll Apr 2024
-JE-2024-00020,2024-04-30,Payroll,1000 Bank,0.0,556097.17,,,,Payroll Apr 2024
+JE-2024-00016,2024-03-29,COGS,5000 Cost of goods sold,98040.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold Mar 2024
+JE-2024-00016,2024-03-29,COGS,5000 Cost of goods sold,14500.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold Mar 2024
+JE-2024-00016,2024-03-29,COGS,5000 Cost of goods sold,55090.0,0.0,Manufacturing,Respiqor,,Cost of goods sold Mar 2024
+JE-2024-00016,2024-03-29,COGS,1200 Inventory,0.0,167630.0,Manufacturing,,,Cost of goods sold Mar 2024
+JE-2024-00017,2024-03-29,Rebate accrual,4100 Rebates,584737.5,0.0,Commercial,Glyvanta,,Rebate accrual Mar 2024
+JE-2024-00017,2024-03-29,Rebate accrual,4100 Rebates,23941.8,0.0,Commercial,Onkalyn,,Rebate accrual Mar 2024
+JE-2024-00017,2024-03-29,Rebate accrual,4100 Rebates,232459.15,0.0,Commercial,Respiqor,,Rebate accrual Mar 2024
+JE-2024-00017,2024-03-29,Rebate accrual,2100 Rebate accrual,0.0,841138.45,Commercial,,,Rebate accrual Mar 2024
+JE-2024-00018,2024-03-29,Chargeback accrual,4200 Chargebacks,32876.08,0.0,Commercial,Glyvanta,,Chargeback accrual Mar 2024
+JE-2024-00018,2024-03-29,Chargeback accrual,4200 Chargebacks,38572.9,0.0,Commercial,Onkalyn,,Chargeback accrual Mar 2024
+JE-2024-00018,2024-03-29,Chargeback accrual,4200 Chargebacks,13331.78,0.0,Commercial,Respiqor,,Chargeback accrual Mar 2024
+JE-2024-00018,2024-03-29,Chargeback accrual,2110 Chargeback accrual,0.0,84780.76,Commercial,,,Chargeback accrual Mar 2024
+JE-2024-00019,2024-03-29,Returns accrual,4300 Returns,16438.04,0.0,Commercial,Glyvanta,,Returns accrual Mar 2024
+JE-2024-00019,2024-03-29,Returns accrual,4300 Returns,3857.29,0.0,Commercial,Onkalyn,,Returns accrual Mar 2024
+JE-2024-00019,2024-03-29,Returns accrual,4300 Returns,6665.89,0.0,Commercial,Respiqor,,Returns accrual Mar 2024
+JE-2024-00019,2024-03-29,Returns accrual,2120 Returns reserve,0.0,26961.22,Commercial,,,Returns accrual Mar 2024
+JE-2024-00020,2024-04-30,Payroll,6000 Commercial,177289.63,0.0,Commercial,,,Payroll Apr 2024
+JE-2024-00020,2024-04-30,Payroll,6100 R&D,151547.03,0.0,R&D,,,Payroll Apr 2024
+JE-2024-00020,2024-04-30,Payroll,6200 Manufacturing,154701.41,0.0,Manufacturing,,,Payroll Apr 2024
+JE-2024-00020,2024-04-30,Payroll,6300 G&A,81508.97,0.0,G&A,,,Payroll Apr 2024
+JE-2024-00020,2024-04-30,Payroll,1000 Bank,0.0,565047.04,,,,Payroll Apr 2024
 JE-2024-00021,2024-04-30,Bank fee,6300 G&A,250.0,0.0,G&A,,Bank,Bank service charge Apr 2024
 JE-2024-00021,2024-04-30,Bank fee,1000 Bank,0.0,250.0,,,Bank,Bank service charge Apr 2024
-JE-2024-00022,2024-04-30,COGS,5000 Cost of goods sold,54480.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold Apr 2024
-JE-2024-00022,2024-04-30,COGS,5000 Cost of goods sold,10500.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold Apr 2024
-JE-2024-00022,2024-04-30,COGS,5000 Cost of goods sold,36960.0,0.0,Manufacturing,Respiqor,,Cost of goods sold Apr 2024
-JE-2024-00022,2024-04-30,COGS,1200 Inventory,0.0,101940.0,Manufacturing,,,Cost of goods sold Apr 2024
-JE-2024-00023,2024-04-30,Rebate accrual,4100 Rebates,274034.4,0.0,Commercial,Glyvanta,,Rebate accrual Apr 2024
-JE-2024-00023,2024-04-30,Rebate accrual,4100 Rebates,13966.05,0.0,Commercial,Onkalyn,,Rebate accrual Apr 2024
-JE-2024-00023,2024-04-30,Rebate accrual,4100 Rebates,134164.8,0.0,Commercial,Respiqor,,Rebate accrual Apr 2024
-JE-2024-00023,2024-04-30,Rebate accrual,2100 Rebate accrual,0.0,422165.25,Commercial,,,Rebate accrual Apr 2024
-JE-2024-00024,2024-04-30,Chargeback accrual,4200 Chargebacks,18268.96,0.0,Commercial,Glyvanta,,Chargeback accrual Apr 2024
-JE-2024-00024,2024-04-30,Chargeback accrual,4200 Chargebacks,27932.1,0.0,Commercial,Onkalyn,,Chargeback accrual Apr 2024
-JE-2024-00024,2024-04-30,Chargeback accrual,4200 Chargebacks,8944.32,0.0,Commercial,Respiqor,,Chargeback accrual Apr 2024
-JE-2024-00024,2024-04-30,Chargeback accrual,2110 Chargeback accrual,0.0,55145.38,Commercial,,,Chargeback accrual Apr 2024
-JE-2024-00025,2024-04-30,Returns accrual,4300 Returns,9134.48,0.0,Commercial,Glyvanta,,Returns accrual Apr 2024
-JE-2024-00025,2024-04-30,Returns accrual,4300 Returns,2793.21,0.0,Commercial,Onkalyn,,Returns accrual Apr 2024
-JE-2024-00025,2024-04-30,Returns accrual,4300 Returns,4472.16,0.0,Commercial,Respiqor,,Returns accrual Apr 2024
-JE-2024-00025,2024-04-30,Returns accrual,2120 Returns reserve,0.0,16399.85,Commercial,,,Returns accrual Apr 2024
-JE-2024-00026,2024-05-31,Payroll,6000 Commercial,201813.14,0.0,Commercial,,,Payroll May 2024
-JE-2024-00026,2024-05-31,Payroll,6100 R&D,147928.4,0.0,R&D,,,Payroll May 2024
-JE-2024-00026,2024-05-31,Payroll,6200 Manufacturing,150585.96,0.0,Manufacturing,,,Payroll May 2024
-JE-2024-00026,2024-05-31,Payroll,6300 G&A,78450.85,0.0,G&A,,,Payroll May 2024
-JE-2024-00026,2024-05-31,Payroll,1000 Bank,0.0,578778.35,,,,Payroll May 2024
+JE-2024-00022,2024-04-30,COGS,5000 Cost of goods sold,94860.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold Apr 2024
+JE-2024-00022,2024-04-30,COGS,5000 Cost of goods sold,14500.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold Apr 2024
+JE-2024-00022,2024-04-30,COGS,5000 Cost of goods sold,55720.0,0.0,Manufacturing,Respiqor,,Cost of goods sold Apr 2024
+JE-2024-00022,2024-04-30,COGS,1200 Inventory,0.0,165080.0,Manufacturing,,,Cost of goods sold Apr 2024
+JE-2024-00023,2024-04-30,Rebate accrual,4100 Rebates,570150.5,0.0,Commercial,Glyvanta,,Rebate accrual Apr 2024
+JE-2024-00023,2024-04-30,Rebate accrual,4100 Rebates,14232.07,0.0,Commercial,Onkalyn,,Rebate accrual Apr 2024
+JE-2024-00023,2024-04-30,Rebate accrual,4100 Rebates,234534.3,0.0,Commercial,Respiqor,,Rebate accrual Apr 2024
+JE-2024-00023,2024-04-30,Rebate accrual,2100 Rebate accrual,0.0,818916.87,Commercial,,,Rebate accrual Apr 2024
+JE-2024-00024,2024-04-30,Chargeback accrual,4200 Chargebacks,31809.72,0.0,Commercial,Glyvanta,,Chargeback accrual Apr 2024
+JE-2024-00024,2024-04-30,Chargeback accrual,4200 Chargebacks,38572.9,0.0,Commercial,Onkalyn,,Chargeback accrual Apr 2024
+JE-2024-00024,2024-04-30,Chargeback accrual,4200 Chargebacks,13484.24,0.0,Commercial,Respiqor,,Chargeback accrual Apr 2024
+JE-2024-00024,2024-04-30,Chargeback accrual,2110 Chargeback accrual,0.0,83866.86,Commercial,,,Chargeback accrual Apr 2024
+JE-2024-00025,2024-04-30,Returns accrual,4300 Returns,15904.86,0.0,Commercial,Glyvanta,,Returns accrual Apr 2024
+JE-2024-00025,2024-04-30,Returns accrual,4300 Returns,3857.29,0.0,Commercial,Onkalyn,,Returns accrual Apr 2024
+JE-2024-00025,2024-04-30,Returns accrual,4300 Returns,6742.12,0.0,Commercial,Respiqor,,Returns accrual Apr 2024
+JE-2024-00025,2024-04-30,Returns accrual,2120 Returns reserve,0.0,26504.27,Commercial,,,Returns accrual Apr 2024
+JE-2024-00026,2024-05-31,Payroll,6000 Commercial,202568.05,0.0,Commercial,,,Payroll May 2024
+JE-2024-00026,2024-05-31,Payroll,6100 R&D,149930.74,0.0,R&D,,,Payroll May 2024
+JE-2024-00026,2024-05-31,Payroll,6200 Manufacturing,146273.07,0.0,Manufacturing,,,Payroll May 2024
+JE-2024-00026,2024-05-31,Payroll,6300 G&A,81150.58,0.0,G&A,,,Payroll May 2024
+JE-2024-00026,2024-05-31,Payroll,1000 Bank,0.0,579922.44,,,,Payroll May 2024
 JE-2024-00027,2024-05-31,Bank fee,6300 G&A,250.0,0.0,G&A,,Bank,Bank service charge May 2024
 JE-2024-00027,2024-05-31,Bank fee,1000 Bank,0.0,250.0,,,Bank,Bank service charge May 2024
-JE-2024-00028,2024-05-31,COGS,5000 Cost of goods sold,56160.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold May 2024
-JE-2024-00028,2024-05-31,COGS,5000 Cost of goods sold,10000.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold May 2024
-JE-2024-00028,2024-05-31,COGS,5000 Cost of goods sold,36470.0,0.0,Manufacturing,Respiqor,,Cost of goods sold May 2024
-JE-2024-00028,2024-05-31,COGS,1200 Inventory,0.0,102630.0,Manufacturing,,,Cost of goods sold May 2024
-JE-2024-00029,2024-05-31,Rebate accrual,4100 Rebates,282484.8,0.0,Commercial,Glyvanta,,Rebate accrual May 2024
-JE-2024-00029,2024-05-31,Rebate accrual,4100 Rebates,13301.0,0.0,Commercial,Onkalyn,,Rebate accrual May 2024
-JE-2024-00029,2024-05-31,Rebate accrual,4100 Rebates,132386.1,0.0,Commercial,Respiqor,,Rebate accrual May 2024
-JE-2024-00029,2024-05-31,Rebate accrual,2100 Rebate accrual,0.0,428171.9,Commercial,,,Rebate accrual May 2024
-JE-2024-00030,2024-05-31,Chargeback accrual,4200 Chargebacks,18832.32,0.0,Commercial,Glyvanta,,Chargeback accrual May 2024
-JE-2024-00030,2024-05-31,Chargeback accrual,4200 Chargebacks,26602.0,0.0,Commercial,Onkalyn,,Chargeback accrual May 2024
-JE-2024-00030,2024-05-31,Chargeback accrual,4200 Chargebacks,8825.74,0.0,Commercial,Respiqor,,Chargeback accrual May 2024
-JE-2024-00030,2024-05-31,Chargeback accrual,2110 Chargeback accrual,0.0,54260.06,Commercial,,,Chargeback accrual May 2024
-JE-2024-00031,2024-05-31,Returns accrual,4300 Returns,9416.16,0.0,Commercial,Glyvanta,,Returns accrual May 2024
-JE-2024-00031,2024-05-31,Returns accrual,4300 Returns,2660.2,0.0,Commercial,Onkalyn,,Returns accrual May 2024
-JE-2024-00031,2024-05-31,Returns accrual,4300 Returns,4412.87,0.0,Commercial,Respiqor,,Returns accrual May 2024
-JE-2024-00031,2024-05-31,Returns accrual,2120 Returns reserve,0.0,16489.23,Commercial,,,Returns accrual May 2024
-JE-2024-00032,2024-06-28,Payroll,6000 Commercial,203843.73,0.0,Commercial,,,Payroll Jun 2024
-JE-2024-00032,2024-06-28,Payroll,6100 R&D,148662.76,0.0,R&D,,,Payroll Jun 2024
-JE-2024-00032,2024-06-28,Payroll,6200 Manufacturing,149380.64,0.0,Manufacturing,,,Payroll Jun 2024
-JE-2024-00032,2024-06-28,Payroll,6300 G&A,80761.56,0.0,G&A,,,Payroll Jun 2024
-JE-2024-00032,2024-06-28,Payroll,1000 Bank,0.0,582648.69,,,,Payroll Jun 2024
+JE-2024-00028,2024-05-31,COGS,5000 Cost of goods sold,97860.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold May 2024
+JE-2024-00028,2024-05-31,COGS,5000 Cost of goods sold,16000.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold May 2024
+JE-2024-00028,2024-05-31,COGS,5000 Cost of goods sold,55160.0,0.0,Manufacturing,Respiqor,,Cost of goods sold May 2024
+JE-2024-00028,2024-05-31,COGS,1200 Inventory,0.0,169020.0,Manufacturing,,,Cost of goods sold May 2024
+JE-2024-00029,2024-05-31,Rebate accrual,4100 Rebates,587504.0,0.0,Commercial,Glyvanta,,Rebate accrual May 2024
+JE-2024-00029,2024-05-31,Rebate accrual,4100 Rebates,19020.43,0.0,Commercial,Onkalyn,,Rebate accrual May 2024
+JE-2024-00029,2024-05-31,Rebate accrual,4100 Rebates,232967.35,0.0,Commercial,Respiqor,,Rebate accrual May 2024
+JE-2024-00029,2024-05-31,Rebate accrual,2100 Rebate accrual,0.0,839491.78,Commercial,,,Rebate accrual May 2024
+JE-2024-00030,2024-05-31,Chargeback accrual,4200 Chargebacks,32815.72,0.0,Commercial,Glyvanta,,Chargeback accrual May 2024
+JE-2024-00030,2024-05-31,Chargeback accrual,4200 Chargebacks,42563.2,0.0,Commercial,Onkalyn,,Chargeback accrual May 2024
+JE-2024-00030,2024-05-31,Chargeback accrual,4200 Chargebacks,13348.72,0.0,Commercial,Respiqor,,Chargeback accrual May 2024
+JE-2024-00030,2024-05-31,Chargeback accrual,2110 Chargeback accrual,0.0,88727.64,Commercial,,,Chargeback accrual May 2024
+JE-2024-00031,2024-05-31,Returns accrual,4300 Returns,16407.86,0.0,Commercial,Glyvanta,,Returns accrual May 2024
+JE-2024-00031,2024-05-31,Returns accrual,4300 Returns,4256.32,0.0,Commercial,Onkalyn,,Returns accrual May 2024
+JE-2024-00031,2024-05-31,Returns accrual,4300 Returns,6674.36,0.0,Commercial,Respiqor,,Returns accrual May 2024
+JE-2024-00031,2024-05-31,Returns accrual,2120 Returns reserve,0.0,27338.54,Commercial,,,Returns accrual May 2024
+JE-2024-00032,2024-06-28,Payroll,6000 Commercial,192316.56,0.0,Commercial,,,Payroll Jun 2024
+JE-2024-00032,2024-06-28,Payroll,6100 R&D,155360.63,0.0,R&D,,,Payroll Jun 2024
+JE-2024-00032,2024-06-28,Payroll,6200 Manufacturing,151978.8,0.0,Manufacturing,,,Payroll Jun 2024
+JE-2024-00032,2024-06-28,Payroll,6300 G&A,80297.24,0.0,G&A,,,Payroll Jun 2024
+JE-2024-00032,2024-06-28,Payroll,1000 Bank,0.0,579953.23,,,,Payroll Jun 2024
 JE-2024-00033,2024-06-28,Bank fee,6300 G&A,250.0,0.0,G&A,,Bank,Bank service charge Jun 2024
 JE-2024-00033,2024-06-28,Bank fee,1000 Bank,0.0,250.0,,,Bank,Bank service charge Jun 2024
-JE-2024-00034,2024-06-28,COGS,5000 Cost of goods sold,57360.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold Jun 2024
-JE-2024-00034,2024-06-28,COGS,5000 Cost of goods sold,10000.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold Jun 2024
-JE-2024-00034,2024-06-28,COGS,5000 Cost of goods sold,37450.0,0.0,Manufacturing,Respiqor,,Cost of goods sold Jun 2024
-JE-2024-00034,2024-06-28,COGS,1200 Inventory,0.0,104810.0,Manufacturing,,,Cost of goods sold Jun 2024
-JE-2024-00035,2024-06-28,Rebate accrual,4100 Rebates,288520.8,0.0,Commercial,Glyvanta,,Rebate accrual Jun 2024
-JE-2024-00035,2024-06-28,Rebate accrual,4100 Rebates,13301.0,0.0,Commercial,Onkalyn,,Rebate accrual Jun 2024
-JE-2024-00035,2024-06-28,Rebate accrual,4100 Rebates,135943.5,0.0,Commercial,Respiqor,,Rebate accrual Jun 2024
-JE-2024-00035,2024-06-28,Rebate accrual,2100 Rebate accrual,0.0,437765.3,Commercial,,,Rebate accrual Jun 2024
-JE-2024-00036,2024-06-28,Chargeback accrual,4200 Chargebacks,19234.72,0.0,Commercial,Glyvanta,,Chargeback accrual Jun 2024
-JE-2024-00036,2024-06-28,Chargeback accrual,4200 Chargebacks,26602.0,0.0,Commercial,Onkalyn,,Chargeback accrual Jun 2024
-JE-2024-00036,2024-06-28,Chargeback accrual,4200 Chargebacks,9062.9,0.0,Commercial,Respiqor,,Chargeback accrual Jun 2024
-JE-2024-00036,2024-06-28,Chargeback accrual,2110 Chargeback accrual,0.0,54899.62,Commercial,,,Chargeback accrual Jun 2024
-JE-2024-00037,2024-06-28,Returns accrual,4300 Returns,9617.36,0.0,Commercial,Glyvanta,,Returns accrual Jun 2024
-JE-2024-00037,2024-06-28,Returns accrual,4300 Returns,2660.2,0.0,Commercial,Onkalyn,,Returns accrual Jun 2024
-JE-2024-00037,2024-06-28,Returns accrual,4300 Returns,4531.45,0.0,Commercial,Respiqor,,Returns accrual Jun 2024
-JE-2024-00037,2024-06-28,Returns accrual,2120 Returns reserve,0.0,16809.01,Commercial,,,Returns accrual Jun 2024
-JE-2024-00038,2024-07-31,Payroll,6000 Commercial,214322.8,0.0,Commercial,,,Payroll Jul 2024
-JE-2024-00038,2024-07-31,Payroll,6100 R&D,141312.71,0.0,R&D,,,Payroll Jul 2024
-JE-2024-00038,2024-07-31,Payroll,6200 Manufacturing,146124.89,0.0,Manufacturing,,,Payroll Jul 2024
-JE-2024-00038,2024-07-31,Payroll,6300 G&A,80150.27,0.0,G&A,,,Payroll Jul 2024
-JE-2024-00038,2024-07-31,Payroll,1000 Bank,0.0,581910.67,,,,Payroll Jul 2024
+JE-2024-00034,2024-06-28,COGS,5000 Cost of goods sold,99720.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold Jun 2024
+JE-2024-00034,2024-06-28,COGS,5000 Cost of goods sold,16000.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold Jun 2024
+JE-2024-00034,2024-06-28,COGS,5000 Cost of goods sold,56560.0,0.0,Manufacturing,Respiqor,,Cost of goods sold Jun 2024
+JE-2024-00034,2024-06-28,COGS,1200 Inventory,0.0,172280.0,Manufacturing,,,Cost of goods sold Jun 2024
+JE-2024-00035,2024-06-28,Rebate accrual,4100 Rebates,595300.5,0.0,Commercial,Glyvanta,,Rebate accrual Jun 2024
+JE-2024-00035,2024-06-28,Rebate accrual,4100 Rebates,21813.64,0.0,Commercial,Onkalyn,,Rebate accrual Jun 2024
+JE-2024-00035,2024-06-28,Rebate accrual,4100 Rebates,236355.35,0.0,Commercial,Respiqor,,Rebate accrual Jun 2024
+JE-2024-00035,2024-06-28,Rebate accrual,2100 Rebate accrual,0.0,853469.49,Commercial,,,Rebate accrual Jun 2024
+JE-2024-00036,2024-06-28,Chargeback accrual,4200 Chargebacks,33439.44,0.0,Commercial,Glyvanta,,Chargeback accrual Jun 2024
+JE-2024-00036,2024-06-28,Chargeback accrual,4200 Chargebacks,42563.2,0.0,Commercial,Onkalyn,,Chargeback accrual Jun 2024
+JE-2024-00036,2024-06-28,Chargeback accrual,4200 Chargebacks,13687.52,0.0,Commercial,Respiqor,,Chargeback accrual Jun 2024
+JE-2024-00036,2024-06-28,Chargeback accrual,2110 Chargeback accrual,0.0,89690.16,Commercial,,,Chargeback accrual Jun 2024
+JE-2024-00037,2024-06-28,Returns accrual,4300 Returns,16719.72,0.0,Commercial,Glyvanta,,Returns accrual Jun 2024
+JE-2024-00037,2024-06-28,Returns accrual,4300 Returns,4256.32,0.0,Commercial,Onkalyn,,Returns accrual Jun 2024
+JE-2024-00037,2024-06-28,Returns accrual,4300 Returns,6843.76,0.0,Commercial,Respiqor,,Returns accrual Jun 2024
+JE-2024-00037,2024-06-28,Returns accrual,2120 Returns reserve,0.0,27819.8,Commercial,,,Returns accrual Jun 2024
+JE-2024-00038,2024-07-31,Payroll,6000 Commercial,197565.24,0.0,Commercial,,,Payroll Jul 2024
+JE-2024-00038,2024-07-31,Payroll,6100 R&D,151386.84,0.0,R&D,,,Payroll Jul 2024
+JE-2024-00038,2024-07-31,Payroll,6200 Manufacturing,140281.31,0.0,Manufacturing,,,Payroll Jul 2024
+JE-2024-00038,2024-07-31,Payroll,6300 G&A,83028.79,0.0,G&A,,,Payroll Jul 2024
+JE-2024-00038,2024-07-31,Payroll,1000 Bank,0.0,572262.18,,,,Payroll Jul 2024
 JE-2024-00039,2024-07-31,Bank fee,6300 G&A,250.0,0.0,G&A,,Bank,Bank service charge Jul 2024
 JE-2024-00039,2024-07-31,Bank fee,1000 Bank,0.0,250.0,,,Bank,Bank service charge Jul 2024
-JE-2024-00040,2024-07-31,COGS,5000 Cost of goods sold,57480.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold Jul 2024
-JE-2024-00040,2024-07-31,COGS,5000 Cost of goods sold,11500.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold Jul 2024
-JE-2024-00040,2024-07-31,COGS,5000 Cost of goods sold,36050.0,0.0,Manufacturing,Respiqor,,Cost of goods sold Jul 2024
-JE-2024-00040,2024-07-31,COGS,1200 Inventory,0.0,105030.0,Manufacturing,,,Cost of goods sold Jul 2024
-JE-2024-00041,2024-07-31,Rebate accrual,4100 Rebates,289124.4,0.0,Commercial,Glyvanta,,Rebate accrual Jul 2024
-JE-2024-00041,2024-07-31,Rebate accrual,4100 Rebates,15296.15,0.0,Commercial,Onkalyn,,Rebate accrual Jul 2024
-JE-2024-00041,2024-07-31,Rebate accrual,4100 Rebates,130861.5,0.0,Commercial,Respiqor,,Rebate accrual Jul 2024
-JE-2024-00041,2024-07-31,Rebate accrual,2100 Rebate accrual,0.0,435282.05,Commercial,,,Rebate accrual Jul 2024
-JE-2024-00042,2024-07-31,Chargeback accrual,4200 Chargebacks,19274.96,0.0,Commercial,Glyvanta,,Chargeback accrual Jul 2024
-JE-2024-00042,2024-07-31,Chargeback accrual,4200 Chargebacks,30592.3,0.0,Commercial,Onkalyn,,Chargeback accrual Jul 2024
-JE-2024-00042,2024-07-31,Chargeback accrual,4200 Chargebacks,8724.1,0.0,Commercial,Respiqor,,Chargeback accrual Jul 2024
-JE-2024-00042,2024-07-31,Chargeback accrual,2110 Chargeback accrual,0.0,58591.36,Commercial,,,Chargeback accrual Jul 2024
-JE-2024-00043,2024-07-31,Returns accrual,4300 Returns,9637.48,0.0,Commercial,Glyvanta,,Returns accrual Jul 2024
-JE-2024-00043,2024-07-31,Returns accrual,4300 Returns,3059.23,0.0,Commercial,Onkalyn,,Returns accrual Jul 2024
-JE-2024-00043,2024-07-31,Returns accrual,4300 Returns,4362.05,0.0,Commercial,Respiqor,,Returns accrual Jul 2024
-JE-2024-00043,2024-07-31,Returns accrual,2120 Returns reserve,0.0,17058.76,Commercial,,,Returns accrual Jul 2024
-JE-2024-00044,2024-08-30,Payroll,6000 Commercial,195861.29,0.0,Commercial,,,Payroll Aug 2024
-JE-2024-00044,2024-08-30,Payroll,6100 R&D,151757.94,0.0,R&D,,,Payroll Aug 2024
-JE-2024-00044,2024-08-30,Payroll,6200 Manufacturing,146496.53,0.0,Manufacturing,,,Payroll Aug 2024
-JE-2024-00044,2024-08-30,Payroll,6300 G&A,78444.58,0.0,G&A,,,Payroll Aug 2024
-JE-2024-00044,2024-08-30,Payroll,1000 Bank,0.0,572560.34,,,,Payroll Aug 2024
+JE-2024-00040,2024-07-31,COGS,5000 Cost of goods sold,99960.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold Jul 2024
+JE-2024-00040,2024-07-31,COGS,5000 Cost of goods sold,16500.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold Jul 2024
+JE-2024-00040,2024-07-31,COGS,5000 Cost of goods sold,54740.0,0.0,Manufacturing,Respiqor,,Cost of goods sold Jul 2024
+JE-2024-00040,2024-07-31,COGS,1200 Inventory,0.0,171200.0,Manufacturing,,,Cost of goods sold Jul 2024
+JE-2024-00041,2024-07-31,Rebate accrual,4100 Rebates,595853.8,0.0,Commercial,Glyvanta,,Rebate accrual Jul 2024
+JE-2024-00041,2024-07-31,Rebate accrual,4100 Rebates,15562.17,0.0,Commercial,Onkalyn,,Rebate accrual Jul 2024
+JE-2024-00041,2024-07-31,Rebate accrual,4100 Rebates,231442.75,0.0,Commercial,Respiqor,,Rebate accrual Jul 2024
+JE-2024-00041,2024-07-31,Rebate accrual,2100 Rebate accrual,0.0,842858.72,Commercial,,,Rebate accrual Jul 2024
+JE-2024-00042,2024-07-31,Chargeback accrual,4200 Chargebacks,33519.92,0.0,Commercial,Glyvanta,,Chargeback accrual Jul 2024
+JE-2024-00042,2024-07-31,Chargeback accrual,4200 Chargebacks,43893.3,0.0,Commercial,Onkalyn,,Chargeback accrual Jul 2024
+JE-2024-00042,2024-07-31,Chargeback accrual,4200 Chargebacks,13247.08,0.0,Commercial,Respiqor,,Chargeback accrual Jul 2024
+JE-2024-00042,2024-07-31,Chargeback accrual,2110 Chargeback accrual,0.0,90660.3,Commercial,,,Chargeback accrual Jul 2024
+JE-2024-00043,2024-07-31,Returns accrual,4300 Returns,16759.96,0.0,Commercial,Glyvanta,,Returns accrual Jul 2024
+JE-2024-00043,2024-07-31,Returns accrual,4300 Returns,4389.33,0.0,Commercial,Onkalyn,,Returns accrual Jul 2024
+JE-2024-00043,2024-07-31,Returns accrual,4300 Returns,6623.54,0.0,Commercial,Respiqor,,Returns accrual Jul 2024
+JE-2024-00043,2024-07-31,Returns accrual,2120 Returns reserve,0.0,27772.83,Commercial,,,Returns accrual Jul 2024
+JE-2024-00044,2024-08-30,Payroll,6000 Commercial,189752.4,0.0,Commercial,,,Payroll Aug 2024
+JE-2024-00044,2024-08-30,Payroll,6100 R&D,153210.41,0.0,R&D,,,Payroll Aug 2024
+JE-2024-00044,2024-08-30,Payroll,6200 Manufacturing,152313.73,0.0,Manufacturing,,,Payroll Aug 2024
+JE-2024-00044,2024-08-30,Payroll,6300 G&A,82930.51,0.0,G&A,,,Payroll Aug 2024
+JE-2024-00044,2024-08-30,Payroll,1000 Bank,0.0,578207.05,,,,Payroll Aug 2024
 JE-2024-00045,2024-08-30,Bank fee,6300 G&A,250.0,0.0,G&A,,Bank,Bank service charge Aug 2024
 JE-2024-00045,2024-08-30,Bank fee,1000 Bank,0.0,250.0,,,Bank,Bank service charge Aug 2024
-JE-2024-00046,2024-08-30,COGS,5000 Cost of goods sold,57960.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold Aug 2024
-JE-2024-00046,2024-08-30,COGS,5000 Cost of goods sold,10500.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold Aug 2024
-JE-2024-00046,2024-08-30,COGS,5000 Cost of goods sold,35140.0,0.0,Manufacturing,Respiqor,,Cost of goods sold Aug 2024
-JE-2024-00046,2024-08-30,COGS,1200 Inventory,0.0,103600.0,Manufacturing,,,Cost of goods sold Aug 2024
-JE-2024-00047,2024-08-30,Rebate accrual,4100 Rebates,291538.8,0.0,Commercial,Glyvanta,,Rebate accrual Aug 2024
-JE-2024-00047,2024-08-30,Rebate accrual,4100 Rebates,13966.05,0.0,Commercial,Onkalyn,,Rebate accrual Aug 2024
-JE-2024-00047,2024-08-30,Rebate accrual,4100 Rebates,127558.2,0.0,Commercial,Respiqor,,Rebate accrual Aug 2024
-JE-2024-00047,2024-08-30,Rebate accrual,2100 Rebate accrual,0.0,433063.05,Commercial,,,Rebate accrual Aug 2024
-JE-2024-00048,2024-08-30,Chargeback accrual,4200 Chargebacks,19435.92,0.0,Commercial,Glyvanta,,Chargeback accrual Aug 2024
-JE-2024-00048,2024-08-30,Chargeback accrual,4200 Chargebacks,27932.1,0.0,Commercial,Onkalyn,,Chargeback accrual Aug 2024
-JE-2024-00048,2024-08-30,Chargeback accrual,4200 Chargebacks,8503.88,0.0,Commercial,Respiqor,,Chargeback accrual Aug 2024
-JE-2024-00048,2024-08-30,Chargeback accrual,2110 Chargeback accrual,0.0,55871.9,Commercial,,,Chargeback accrual Aug 2024
-JE-2024-00049,2024-08-30,Returns accrual,4300 Returns,9717.96,0.0,Commercial,Glyvanta,,Returns accrual Aug 2024
-JE-2024-00049,2024-08-30,Returns accrual,4300 Returns,2793.21,0.0,Commercial,Onkalyn,,Returns accrual Aug 2024
-JE-2024-00049,2024-08-30,Returns accrual,4300 Returns,4251.94,0.0,Commercial,Respiqor,,Returns accrual Aug 2024
-JE-2024-00049,2024-08-30,Returns accrual,2120 Returns reserve,0.0,16763.11,Commercial,,,Returns accrual Aug 2024
-JE-2024-00050,2024-09-30,Payroll,6000 Commercial,205657.4,0.0,Commercial,,,Payroll Sep 2024
-JE-2024-00050,2024-09-30,Payroll,6100 R&D,152332.22,0.0,R&D,,,Payroll Sep 2024
-JE-2024-00050,2024-09-30,Payroll,6200 Manufacturing,147044.4,0.0,Manufacturing,,,Payroll Sep 2024
-JE-2024-00050,2024-09-30,Payroll,6300 G&A,80730.83,0.0,G&A,,,Payroll Sep 2024
-JE-2024-00050,2024-09-30,Payroll,1000 Bank,0.0,585764.85,,,,Payroll Sep 2024
+JE-2024-00046,2024-08-30,COGS,5000 Cost of goods sold,100440.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold Aug 2024
+JE-2024-00046,2024-08-30,COGS,5000 Cost of goods sold,16000.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold Aug 2024
+JE-2024-00046,2024-08-30,COGS,5000 Cost of goods sold,53270.0,0.0,Manufacturing,Respiqor,,Cost of goods sold Aug 2024
+JE-2024-00046,2024-08-30,COGS,1200 Inventory,0.0,169710.0,Manufacturing,,,Cost of goods sold Aug 2024
+JE-2024-00047,2024-08-30,Rebate accrual,4100 Rebates,602895.8,0.0,Commercial,Glyvanta,,Rebate accrual Aug 2024
+JE-2024-00047,2024-08-30,Rebate accrual,4100 Rebates,17690.33,0.0,Commercial,Onkalyn,,Rebate accrual Aug 2024
+JE-2024-00047,2024-08-30,Rebate accrual,4100 Rebates,224200.9,0.0,Commercial,Respiqor,,Rebate accrual Aug 2024
+JE-2024-00047,2024-08-30,Rebate accrual,2100 Rebate accrual,0.0,844787.03,Commercial,,,Rebate accrual Aug 2024
+JE-2024-00048,2024-08-30,Chargeback accrual,4200 Chargebacks,33680.88,0.0,Commercial,Glyvanta,,Chargeback accrual Aug 2024
+JE-2024-00048,2024-08-30,Chargeback accrual,4200 Chargebacks,42563.2,0.0,Commercial,Onkalyn,,Chargeback accrual Aug 2024
+JE-2024-00048,2024-08-30,Chargeback accrual,4200 Chargebacks,12891.34,0.0,Commercial,Respiqor,,Chargeback accrual Aug 2024
+JE-2024-00048,2024-08-30,Chargeback accrual,2110 Chargeback accrual,0.0,89135.42,Commercial,,,Chargeback accrual Aug 2024
+JE-2024-00049,2024-08-30,Returns accrual,4300 Returns,16840.44,0.0,Commercial,Glyvanta,,Returns accrual Aug 2024
+JE-2024-00049,2024-08-30,Returns accrual,4300 Returns,4256.32,0.0,Commercial,Onkalyn,,Returns accrual Aug 2024
+JE-2024-00049,2024-08-30,Returns accrual,4300 Returns,6445.67,0.0,Commercial,Respiqor,,Returns accrual Aug 2024
+JE-2024-00049,2024-08-30,Returns accrual,2120 Returns reserve,0.0,27542.43,Commercial,,,Returns accrual Aug 2024
+JE-2024-00050,2024-09-30,Payroll,6000 Commercial,197322.68,0.0,Commercial,,,Payroll Sep 2024
+JE-2024-00050,2024-09-30,Payroll,6100 R&D,152835.35,0.0,R&D,,,Payroll Sep 2024
+JE-2024-00050,2024-09-30,Payroll,6200 Manufacturing,143084.53,0.0,Manufacturing,,,Payroll Sep 2024
+JE-2024-00050,2024-09-30,Payroll,6300 G&A,77468.89,0.0,G&A,,,Payroll Sep 2024
+JE-2024-00050,2024-09-30,Payroll,1000 Bank,0.0,570711.45,,,,Payroll Sep 2024
 JE-2024-00051,2024-09-30,Bank fee,6300 G&A,250.0,0.0,G&A,,Bank,Bank service charge Sep 2024
 JE-2024-00051,2024-09-30,Bank fee,1000 Bank,0.0,250.0,,,Bank,Bank service charge Sep 2024
-JE-2024-00052,2024-09-30,COGS,5000 Cost of goods sold,56400.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold Sep 2024
-JE-2024-00052,2024-09-30,COGS,5000 Cost of goods sold,9500.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold Sep 2024
-JE-2024-00052,2024-09-30,COGS,5000 Cost of goods sold,36400.0,0.0,Manufacturing,Respiqor,,Cost of goods sold Sep 2024
-JE-2024-00052,2024-09-30,COGS,1200 Inventory,0.0,102300.0,Manufacturing,,,Cost of goods sold Sep 2024
-JE-2024-00053,2024-09-30,Rebate accrual,4100 Rebates,283692.0,0.0,Commercial,Glyvanta,,Rebate accrual Sep 2024
-JE-2024-00053,2024-09-30,Rebate accrual,4100 Rebates,12635.95,0.0,Commercial,Onkalyn,,Rebate accrual Sep 2024
-JE-2024-00053,2024-09-30,Rebate accrual,4100 Rebates,132132.0,0.0,Commercial,Respiqor,,Rebate accrual Sep 2024
-JE-2024-00053,2024-09-30,Rebate accrual,2100 Rebate accrual,0.0,428459.95,Commercial,,,Rebate accrual Sep 2024
-JE-2024-00054,2024-09-30,Chargeback accrual,4200 Chargebacks,18912.8,0.0,Commercial,Glyvanta,,Chargeback accrual Sep 2024
-JE-2024-00054,2024-09-30,Chargeback accrual,4200 Chargebacks,25271.9,0.0,Commercial,Onkalyn,,Chargeback accrual Sep 2024
-JE-2024-00054,2024-09-30,Chargeback accrual,4200 Chargebacks,8808.8,0.0,Commercial,Respiqor,,Chargeback accrual Sep 2024
-JE-2024-00054,2024-09-30,Chargeback accrual,2110 Chargeback accrual,0.0,52993.5,Commercial,,,Chargeback accrual Sep 2024
-JE-2024-00055,2024-09-30,Returns accrual,4300 Returns,9456.4,0.0,Commercial,Glyvanta,,Returns accrual Sep 2024
-JE-2024-00055,2024-09-30,Returns accrual,4300 Returns,2527.19,0.0,Commercial,Onkalyn,,Returns accrual Sep 2024
-JE-2024-00055,2024-09-30,Returns accrual,4300 Returns,4404.4,0.0,Commercial,Respiqor,,Returns accrual Sep 2024
-JE-2024-00055,2024-09-30,Returns accrual,2120 Returns reserve,0.0,16387.99,Commercial,,,Returns accrual Sep 2024
-JE-2024-00056,2024-10-31,Payroll,6000 Commercial,200365.62,0.0,Commercial,,,Payroll Oct 2024
-JE-2024-00056,2024-10-31,Payroll,6100 R&D,153108.03,0.0,R&D,,,Payroll Oct 2024
-JE-2024-00056,2024-10-31,Payroll,6200 Manufacturing,147245.21,0.0,Manufacturing,,,Payroll Oct 2024
-JE-2024-00056,2024-10-31,Payroll,6300 G&A,78058.43,0.0,G&A,,,Payroll Oct 2024
-JE-2024-00056,2024-10-31,Payroll,1000 Bank,0.0,578777.29,,,,Payroll Oct 2024
+JE-2024-00052,2024-09-30,COGS,5000 Cost of goods sold,97920.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold Sep 2024
+JE-2024-00052,2024-09-30,COGS,5000 Cost of goods sold,15500.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold Sep 2024
+JE-2024-00052,2024-09-30,COGS,5000 Cost of goods sold,55090.0,0.0,Manufacturing,Respiqor,,Cost of goods sold Sep 2024
+JE-2024-00052,2024-09-30,COGS,1200 Inventory,0.0,168510.0,Manufacturing,,,Cost of goods sold Sep 2024
+JE-2024-00053,2024-09-30,Rebate accrual,4100 Rebates,579254.8,0.0,Commercial,Glyvanta,,Rebate accrual Sep 2024
+JE-2024-00053,2024-09-30,Rebate accrual,4100 Rebates,15296.15,0.0,Commercial,Onkalyn,,Rebate accrual Sep 2024
+JE-2024-00053,2024-09-30,Rebate accrual,4100 Rebates,231823.9,0.0,Commercial,Respiqor,,Rebate accrual Sep 2024
+JE-2024-00053,2024-09-30,Rebate accrual,2100 Rebate accrual,0.0,826374.85,Commercial,,,Rebate accrual Sep 2024
+JE-2024-00054,2024-09-30,Chargeback accrual,4200 Chargebacks,32835.84,0.0,Commercial,Glyvanta,,Chargeback accrual Sep 2024
+JE-2024-00054,2024-09-30,Chargeback accrual,4200 Chargebacks,41233.1,0.0,Commercial,Onkalyn,,Chargeback accrual Sep 2024
+JE-2024-00054,2024-09-30,Chargeback accrual,4200 Chargebacks,13331.78,0.0,Commercial,Respiqor,,Chargeback accrual Sep 2024
+JE-2024-00054,2024-09-30,Chargeback accrual,2110 Chargeback accrual,0.0,87400.72,Commercial,,,Chargeback accrual Sep 2024
+JE-2024-00055,2024-09-30,Returns accrual,4300 Returns,16417.92,0.0,Commercial,Glyvanta,,Returns accrual Sep 2024
+JE-2024-00055,2024-09-30,Returns accrual,4300 Returns,4123.31,0.0,Commercial,Onkalyn,,Returns accrual Sep 2024
+JE-2024-00055,2024-09-30,Returns accrual,4300 Returns,6665.89,0.0,Commercial,Respiqor,,Returns accrual Sep 2024
+JE-2024-00055,2024-09-30,Returns accrual,2120 Returns reserve,0.0,27207.12,Commercial,,,Returns accrual Sep 2024
+JE-2024-00056,2024-10-31,Payroll,6000 Commercial,205941.71,0.0,Commercial,,,Payroll Oct 2024
+JE-2024-00056,2024-10-31,Payroll,6100 R&D,149769.42,0.0,R&D,,,Payroll Oct 2024
+JE-2024-00056,2024-10-31,Payroll,6200 Manufacturing,143361.8,0.0,Manufacturing,,,Payroll Oct 2024
+JE-2024-00056,2024-10-31,Payroll,6300 G&A,82064.18,0.0,G&A,,,Payroll Oct 2024
+JE-2024-00056,2024-10-31,Payroll,1000 Bank,0.0,581137.11,,,,Payroll Oct 2024
 JE-2024-00057,2024-10-31,Bank fee,6300 G&A,250.0,0.0,G&A,,Bank,Bank service charge Oct 2024
 JE-2024-00057,2024-10-31,Bank fee,1000 Bank,0.0,250.0,,,Bank,Bank service charge Oct 2024
-JE-2024-00058,2024-10-31,COGS,5000 Cost of goods sold,57060.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold Oct 2024
-JE-2024-00058,2024-10-31,COGS,5000 Cost of goods sold,12000.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold Oct 2024
-JE-2024-00058,2024-10-31,COGS,5000 Cost of goods sold,37730.0,0.0,Manufacturing,Respiqor,,Cost of goods sold Oct 2024
-JE-2024-00058,2024-10-31,COGS,1200 Inventory,0.0,106790.0,Manufacturing,,,Cost of goods sold Oct 2024
-JE-2024-00059,2024-10-31,Rebate accrual,4100 Rebates,287011.8,0.0,Commercial,Glyvanta,,Rebate accrual Oct 2024
-JE-2024-00059,2024-10-31,Rebate accrual,4100 Rebates,15961.2,0.0,Commercial,Onkalyn,,Rebate accrual Oct 2024
-JE-2024-00059,2024-10-31,Rebate accrual,4100 Rebates,136959.9,0.0,Commercial,Respiqor,,Rebate accrual Oct 2024
-JE-2024-00059,2024-10-31,Rebate accrual,2100 Rebate accrual,0.0,439932.9,Commercial,,,Rebate accrual Oct 2024
-JE-2024-00060,2024-10-31,Chargeback accrual,4200 Chargebacks,19134.12,0.0,Commercial,Glyvanta,,Chargeback accrual Oct 2024
-JE-2024-00060,2024-10-31,Chargeback accrual,4200 Chargebacks,31922.4,0.0,Commercial,Onkalyn,,Chargeback accrual Oct 2024
-JE-2024-00060,2024-10-31,Chargeback accrual,4200 Chargebacks,9130.66,0.0,Commercial,Respiqor,,Chargeback accrual Oct 2024
-JE-2024-00060,2024-10-31,Chargeback accrual,2110 Chargeback accrual,0.0,60187.18,Commercial,,,Chargeback accrual Oct 2024
-JE-2024-00061,2024-10-31,Returns accrual,4300 Returns,9567.06,0.0,Commercial,Glyvanta,,Returns accrual Oct 2024
-JE-2024-00061,2024-10-31,Returns accrual,4300 Returns,3192.24,0.0,Commercial,Onkalyn,,Returns accrual Oct 2024
-JE-2024-00061,2024-10-31,Returns accrual,4300 Returns,4565.33,0.0,Commercial,Respiqor,,Returns accrual Oct 2024
-JE-2024-00061,2024-10-31,Returns accrual,2120 Returns reserve,0.0,17324.63,Commercial,,,Returns accrual Oct 2024
-JE-2024-00062,2024-11-29,Payroll,6000 Commercial,203576.4,0.0,Commercial,,,Payroll Nov 2024
-JE-2024-00062,2024-11-29,Payroll,6100 R&D,148389.86,0.0,R&D,,,Payroll Nov 2024
-JE-2024-00062,2024-11-29,Payroll,6200 Manufacturing,146409.68,0.0,Manufacturing,,,Payroll Nov 2024
-JE-2024-00062,2024-11-29,Payroll,6300 G&A,77009.22,0.0,G&A,,,Payroll Nov 2024
-JE-2024-00062,2024-11-29,Payroll,1000 Bank,0.0,575385.16,,,,Payroll Nov 2024
+JE-2024-00058,2024-10-31,COGS,5000 Cost of goods sold,99060.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold Oct 2024
+JE-2024-00058,2024-10-31,COGS,5000 Cost of goods sold,16000.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold Oct 2024
+JE-2024-00058,2024-10-31,COGS,5000 Cost of goods sold,56980.0,0.0,Manufacturing,Respiqor,,Cost of goods sold Oct 2024
+JE-2024-00058,2024-10-31,COGS,1200 Inventory,0.0,172040.0,Manufacturing,,,Cost of goods sold Oct 2024
+JE-2024-00059,2024-10-31,Rebate accrual,4100 Rebates,593540.0,0.0,Commercial,Glyvanta,,Rebate accrual Oct 2024
+JE-2024-00059,2024-10-31,Rebate accrual,4100 Rebates,18488.39,0.0,Commercial,Onkalyn,,Rebate accrual Oct 2024
+JE-2024-00059,2024-10-31,Rebate accrual,4100 Rebates,239531.6,0.0,Commercial,Respiqor,,Rebate accrual Oct 2024
+JE-2024-00059,2024-10-31,Rebate accrual,2100 Rebate accrual,0.0,851559.99,Commercial,,,Rebate accrual Oct 2024
+JE-2024-00060,2024-10-31,Chargeback accrual,4200 Chargebacks,33218.12,0.0,Commercial,Glyvanta,,Chargeback accrual Oct 2024
+JE-2024-00060,2024-10-31,Chargeback accrual,4200 Chargebacks,42563.2,0.0,Commercial,Onkalyn,,Chargeback accrual Oct 2024
+JE-2024-00060,2024-10-31,Chargeback accrual,4200 Chargebacks,13789.16,0.0,Commercial,Respiqor,,Chargeback accrual Oct 2024
+JE-2024-00060,2024-10-31,Chargeback accrual,2110 Chargeback accrual,0.0,89570.48,Commercial,,,Chargeback accrual Oct 2024
+JE-2024-00061,2024-10-31,Returns accrual,4300 Returns,16609.06,0.0,Commercial,Glyvanta,,Returns accrual Oct 2024
+JE-2024-00061,2024-10-31,Returns accrual,4300 Returns,4256.32,0.0,Commercial,Onkalyn,,Returns accrual Oct 2024
+JE-2024-00061,2024-10-31,Returns accrual,4300 Returns,6894.58,0.0,Commercial,Respiqor,,Returns accrual Oct 2024
+JE-2024-00061,2024-10-31,Returns accrual,2120 Returns reserve,0.0,27759.96,Commercial,,,Returns accrual Oct 2024
+JE-2024-00062,2024-11-29,Payroll,6000 Commercial,192048.86,0.0,Commercial,,,Payroll Nov 2024
+JE-2024-00062,2024-11-29,Payroll,6100 R&D,158254.94,0.0,R&D,,,Payroll Nov 2024
+JE-2024-00062,2024-11-29,Payroll,6200 Manufacturing,145871.11,0.0,Manufacturing,,,Payroll Nov 2024
+JE-2024-00062,2024-11-29,Payroll,6300 G&A,82269.55,0.0,G&A,,,Payroll Nov 2024
+JE-2024-00062,2024-11-29,Payroll,1000 Bank,0.0,578444.46,,,,Payroll Nov 2024
 JE-2024-00063,2024-11-29,Bank fee,6300 G&A,250.0,0.0,G&A,,Bank,Bank service charge Nov 2024
 JE-2024-00063,2024-11-29,Bank fee,1000 Bank,0.0,250.0,,,Bank,Bank service charge Nov 2024
-JE-2024-00064,2024-11-29,COGS,5000 Cost of goods sold,56880.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold Nov 2024
-JE-2024-00064,2024-11-29,COGS,5000 Cost of goods sold,10000.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold Nov 2024
-JE-2024-00064,2024-11-29,COGS,5000 Cost of goods sold,35700.0,0.0,Manufacturing,Respiqor,,Cost of goods sold Nov 2024
-JE-2024-00064,2024-11-29,COGS,1200 Inventory,0.0,102580.0,Manufacturing,,,Cost of goods sold Nov 2024
-JE-2024-00065,2024-11-29,Rebate accrual,4100 Rebates,286106.4,0.0,Commercial,Glyvanta,,Rebate accrual Nov 2024
-JE-2024-00065,2024-11-29,Rebate accrual,4100 Rebates,13301.0,0.0,Commercial,Onkalyn,,Rebate accrual Nov 2024
-JE-2024-00065,2024-11-29,Rebate accrual,4100 Rebates,129591.0,0.0,Commercial,Respiqor,,Rebate accrual Nov 2024
-JE-2024-00065,2024-11-29,Rebate accrual,2100 Rebate accrual,0.0,428998.4,Commercial,,,Rebate accrual Nov 2024
-JE-2024-00066,2024-11-29,Chargeback accrual,4200 Chargebacks,19073.76,0.0,Commercial,Glyvanta,,Chargeback accrual Nov 2024
-JE-2024-00066,2024-11-29,Chargeback accrual,4200 Chargebacks,26602.0,0.0,Commercial,Onkalyn,,Chargeback accrual Nov 2024
-JE-2024-00066,2024-11-29,Chargeback accrual,4200 Chargebacks,8639.4,0.0,Commercial,Respiqor,,Chargeback accrual Nov 2024
-JE-2024-00066,2024-11-29,Chargeback accrual,2110 Chargeback accrual,0.0,54315.16,Commercial,,,Chargeback accrual Nov 2024
-JE-2024-00067,2024-11-29,Returns accrual,4300 Returns,9536.88,0.0,Commercial,Glyvanta,,Returns accrual Nov 2024
-JE-2024-00067,2024-11-29,Returns accrual,4300 Returns,2660.2,0.0,Commercial,Onkalyn,,Returns accrual Nov 2024
-JE-2024-00067,2024-11-29,Returns accrual,4300 Returns,4319.7,0.0,Commercial,Respiqor,,Returns accrual Nov 2024
-JE-2024-00067,2024-11-29,Returns accrual,2120 Returns reserve,0.0,16516.78,Commercial,,,Returns accrual Nov 2024
-JE-2024-00068,2024-12-31,Payroll,6000 Commercial,201780.25,0.0,Commercial,,,Payroll Dec 2024
-JE-2024-00068,2024-12-31,Payroll,6100 R&D,147429.16,0.0,R&D,,,Payroll Dec 2024
-JE-2024-00068,2024-12-31,Payroll,6200 Manufacturing,149740.94,0.0,Manufacturing,,,Payroll Dec 2024
-JE-2024-00068,2024-12-31,Payroll,6300 G&A,80984.59,0.0,G&A,,,Payroll Dec 2024
-JE-2024-00068,2024-12-31,Payroll,1000 Bank,0.0,579934.94,,,,Payroll Dec 2024
+JE-2024-00064,2024-11-29,COGS,5000 Cost of goods sold,98580.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold Nov 2024
+JE-2024-00064,2024-11-29,COGS,5000 Cost of goods sold,16000.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold Nov 2024
+JE-2024-00064,2024-11-29,COGS,5000 Cost of goods sold,54320.0,0.0,Manufacturing,Respiqor,,Cost of goods sold Nov 2024
+JE-2024-00064,2024-11-29,COGS,1200 Inventory,0.0,168900.0,Manufacturing,,,Cost of goods sold Nov 2024
+JE-2024-00065,2024-11-29,Rebate accrual,4100 Rebates,594898.1,0.0,Commercial,Glyvanta,,Rebate accrual Nov 2024
+JE-2024-00065,2024-11-29,Rebate accrual,4100 Rebates,14099.06,0.0,Commercial,Onkalyn,,Rebate accrual Nov 2024
+JE-2024-00065,2024-11-29,Rebate accrual,4100 Rebates,227927.7,0.0,Commercial,Respiqor,,Rebate accrual Nov 2024
+JE-2024-00065,2024-11-29,Rebate accrual,2100 Rebate accrual,0.0,836924.86,Commercial,,,Rebate accrual Nov 2024
+JE-2024-00066,2024-11-29,Chargeback accrual,4200 Chargebacks,33057.16,0.0,Commercial,Glyvanta,,Chargeback accrual Nov 2024
+JE-2024-00066,2024-11-29,Chargeback accrual,4200 Chargebacks,42563.2,0.0,Commercial,Onkalyn,,Chargeback accrual Nov 2024
+JE-2024-00066,2024-11-29,Chargeback accrual,4200 Chargebacks,13145.44,0.0,Commercial,Respiqor,,Chargeback accrual Nov 2024
+JE-2024-00066,2024-11-29,Chargeback accrual,2110 Chargeback accrual,0.0,88765.8,Commercial,,,Chargeback accrual Nov 2024
+JE-2024-00067,2024-11-29,Returns accrual,4300 Returns,16528.58,0.0,Commercial,Glyvanta,,Returns accrual Nov 2024
+JE-2024-00067,2024-11-29,Returns accrual,4300 Returns,4256.32,0.0,Commercial,Onkalyn,,Returns accrual Nov 2024
+JE-2024-00067,2024-11-29,Returns accrual,4300 Returns,6572.72,0.0,Commercial,Respiqor,,Returns accrual Nov 2024
+JE-2024-00067,2024-11-29,Returns accrual,2120 Returns reserve,0.0,27357.62,Commercial,,,Returns accrual Nov 2024
+JE-2024-00068,2024-12-31,Payroll,6000 Commercial,198573.79,0.0,Commercial,,,Payroll Dec 2024
+JE-2024-00068,2024-12-31,Payroll,6100 R&D,142148.96,0.0,R&D,,,Payroll Dec 2024
+JE-2024-00068,2024-12-31,Payroll,6200 Manufacturing,149943.28,0.0,Manufacturing,,,Payroll Dec 2024
+JE-2024-00068,2024-12-31,Payroll,6300 G&A,78994.17,0.0,G&A,,,Payroll Dec 2024
+JE-2024-00068,2024-12-31,Payroll,1000 Bank,0.0,569660.2,,,,Payroll Dec 2024
 JE-2024-00069,2024-12-31,Bank fee,6300 G&A,250.0,0.0,G&A,,Bank,Bank service charge Dec 2024
 JE-2024-00069,2024-12-31,Bank fee,1000 Bank,0.0,250.0,,,Bank,Bank service charge Dec 2024
-JE-2024-00070,2024-12-31,COGS,5000 Cost of goods sold,56820.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold Dec 2024
-JE-2024-00070,2024-12-31,COGS,5000 Cost of goods sold,11500.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold Dec 2024
-JE-2024-00070,2024-12-31,COGS,5000 Cost of goods sold,36400.0,0.0,Manufacturing,Respiqor,,Cost of goods sold Dec 2024
-JE-2024-00070,2024-12-31,COGS,1200 Inventory,0.0,104720.0,Manufacturing,,,Cost of goods sold Dec 2024
-JE-2024-00071,2024-12-31,Rebate accrual,4100 Rebates,285804.6,0.0,Commercial,Glyvanta,,Rebate accrual Dec 2024
-JE-2024-00071,2024-12-31,Rebate accrual,4100 Rebates,15296.15,0.0,Commercial,Onkalyn,,Rebate accrual Dec 2024
-JE-2024-00071,2024-12-31,Rebate accrual,4100 Rebates,132132.0,0.0,Commercial,Respiqor,,Rebate accrual Dec 2024
-JE-2024-00071,2024-12-31,Rebate accrual,2100 Rebate accrual,0.0,433232.75,Commercial,,,Rebate accrual Dec 2024
-JE-2024-00072,2024-12-31,Chargeback accrual,4200 Chargebacks,19053.64,0.0,Commercial,Glyvanta,,Chargeback accrual Dec 2024
-JE-2024-00072,2024-12-31,Chargeback accrual,4200 Chargebacks,30592.3,0.0,Commercial,Onkalyn,,Chargeback accrual Dec 2024
-JE-2024-00072,2024-12-31,Chargeback accrual,4200 Chargebacks,8808.8,0.0,Commercial,Respiqor,,Chargeback accrual Dec 2024
-JE-2024-00072,2024-12-31,Chargeback accrual,2110 Chargeback accrual,0.0,58454.74,Commercial,,,Chargeback accrual Dec 2024
-JE-2024-00073,2024-12-31,Returns accrual,4300 Returns,9526.82,0.0,Commercial,Glyvanta,,Returns accrual Dec 2024
-JE-2024-00073,2024-12-31,Returns accrual,4300 Returns,3059.23,0.0,Commercial,Onkalyn,,Returns accrual Dec 2024
-JE-2024-00073,2024-12-31,Returns accrual,4300 Returns,4404.4,0.0,Commercial,Respiqor,,Returns accrual Dec 2024
-JE-2024-00073,2024-12-31,Returns accrual,2120 Returns reserve,0.0,16990.45,Commercial,,,Returns accrual Dec 2024
-JE-2024-00074,2024-05-13,Rebate settlement,2100 Rebate accrual,1299099.35,0.0,Commercial,,Payer rebate programs,Rebate settlement Q1 2024
-JE-2024-00074,2024-05-13,Rebate settlement,4100 Rebates,57126.32,0.0,Commercial,,Payer rebate programs,Rebate settlement Q1 2024
-JE-2024-00074,2024-05-13,Rebate settlement,1000 Bank,0.0,1356225.67,,,Payer rebate programs,Rebate settlement Q1 2024
-JE-2024-00075,2024-08-12,Rebate settlement,2100 Rebate accrual,1288102.45,0.0,Commercial,,Payer rebate programs,Rebate settlement Q2 2024
-JE-2024-00075,2024-08-12,Rebate settlement,4100 Rebates,0.0,1005.37,Commercial,,Payer rebate programs,Rebate settlement Q2 2024
-JE-2024-00075,2024-08-12,Rebate settlement,1000 Bank,0.0,1287097.08,,,Payer rebate programs,Rebate settlement Q2 2024
-JE-2024-00076,2024-11-14,Rebate settlement,2100 Rebate accrual,1296805.05,0.0,Commercial,,Payer rebate programs,Rebate settlement Q3 2024
-JE-2024-00076,2024-11-14,Rebate settlement,4100 Rebates,18602.84,0.0,Commercial,,Payer rebate programs,Rebate settlement Q3 2024
-JE-2024-00076,2024-11-14,Rebate settlement,1000 Bank,0.0,1315407.89,,,Payer rebate programs,Rebate settlement Q3 2024
-JE-2024-00077,2024-02-20,Chargeback settlement,2110 Chargeback accrual,55020.4,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Jan 2024
-JE-2024-00077,2024-02-20,Chargeback settlement,4200 Chargebacks,438.19,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Jan 2024
-JE-2024-00077,2024-02-20,Chargeback settlement,1000 Bank,0.0,55458.59,,,Wholesalers (claims),Chargeback settlement Jan 2024
-JE-2024-00078,2024-03-20,Chargeback settlement,2110 Chargeback accrual,54472.88,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Feb 2024
-JE-2024-00078,2024-03-20,Chargeback settlement,4200 Chargebacks,0.0,1189.32,Commercial,,Wholesalers (claims),Chargeback settlement Feb 2024
-JE-2024-00078,2024-03-20,Chargeback settlement,1000 Bank,0.0,53283.56,,,Wholesalers (claims),Chargeback settlement Feb 2024
-JE-2024-00079,2024-04-18,Chargeback settlement,2110 Chargeback accrual,52973.38,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Mar 2024
-JE-2024-00079,2024-04-18,Chargeback settlement,4200 Chargebacks,218.39,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Mar 2024
-JE-2024-00079,2024-04-18,Chargeback settlement,1000 Bank,0.0,53191.77,,,Wholesalers (claims),Chargeback settlement Mar 2024
-JE-2024-00080,2024-05-20,Chargeback settlement,2110 Chargeback accrual,55145.38,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Apr 2024
-JE-2024-00080,2024-05-20,Chargeback settlement,4200 Chargebacks,228.79,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Apr 2024
-JE-2024-00080,2024-05-20,Chargeback settlement,1000 Bank,0.0,55374.17,,,Wholesalers (claims),Chargeback settlement Apr 2024
-JE-2024-00081,2024-06-20,Chargeback settlement,2110 Chargeback accrual,54260.06,0.0,Commercial,,Wholesalers (claims),Chargeback settlement May 2024
-JE-2024-00081,2024-06-20,Chargeback settlement,4200 Chargebacks,559.94,0.0,Commercial,,Wholesalers (claims),Chargeback settlement May 2024
-JE-2024-00081,2024-06-20,Chargeback settlement,1000 Bank,0.0,54820.0,,,Wholesalers (claims),Chargeback settlement May 2024
-JE-2024-00082,2024-07-18,Chargeback settlement,2110 Chargeback accrual,54899.62,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Jun 2024
-JE-2024-00082,2024-07-18,Chargeback settlement,4200 Chargebacks,38.92,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Jun 2024
-JE-2024-00082,2024-07-18,Chargeback settlement,1000 Bank,0.0,54938.54,,,Wholesalers (claims),Chargeback settlement Jun 2024
-JE-2024-00083,2024-08-20,Chargeback settlement,2110 Chargeback accrual,58591.36,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Jul 2024
-JE-2024-00083,2024-08-20,Chargeback settlement,4200 Chargebacks,678.52,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Jul 2024
-JE-2024-00083,2024-08-20,Chargeback settlement,1000 Bank,0.0,59269.88,,,Wholesalers (claims),Chargeback settlement Jul 2024
-JE-2024-00084,2024-09-19,Chargeback settlement,2110 Chargeback accrual,55871.9,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Aug 2024
-JE-2024-00084,2024-09-19,Chargeback settlement,4200 Chargebacks,224.71,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Aug 2024
-JE-2024-00084,2024-09-19,Chargeback settlement,1000 Bank,0.0,56096.61,,,Wholesalers (claims),Chargeback settlement Aug 2024
-JE-2024-00085,2024-10-21,Chargeback settlement,2110 Chargeback accrual,52993.5,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Sep 2024
-JE-2024-00085,2024-10-21,Chargeback settlement,4200 Chargebacks,1335.02,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Sep 2024
-JE-2024-00085,2024-10-21,Chargeback settlement,1000 Bank,0.0,54328.52,,,Wholesalers (claims),Chargeback settlement Sep 2024
-JE-2024-00086,2024-11-20,Chargeback settlement,2110 Chargeback accrual,60187.18,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Oct 2024
-JE-2024-00086,2024-11-20,Chargeback settlement,4200 Chargebacks,1878.37,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Oct 2024
-JE-2024-00086,2024-11-20,Chargeback settlement,1000 Bank,0.0,62065.55,,,Wholesalers (claims),Chargeback settlement Oct 2024
-JE-2024-00087,2024-12-19,Chargeback settlement,2110 Chargeback accrual,54315.16,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Nov 2024
-JE-2024-00087,2024-12-19,Chargeback settlement,4200 Chargebacks,790.01,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Nov 2024
-JE-2024-00087,2024-12-19,Chargeback settlement,1000 Bank,0.0,55105.17,,,Wholesalers (claims),Chargeback settlement Nov 2024
-JE-2024-00088,2024-04-29,Returns settlement,2120 Returns reserve,49842.97,0.0,Commercial,,Wholesalers (claims),Returns settlement Q1 2024
-JE-2024-00088,2024-04-29,Returns settlement,4300 Returns,0.0,1715.57,Commercial,,Wholesalers (claims),Returns settlement Q1 2024
-JE-2024-00088,2024-04-29,Returns settlement,1000 Bank,0.0,48127.4,,,Wholesalers (claims),Returns settlement Q1 2024
-JE-2024-00089,2024-07-29,Returns settlement,2120 Returns reserve,49698.09,0.0,Commercial,,Wholesalers (claims),Returns settlement Q2 2024
-JE-2024-00089,2024-07-29,Returns settlement,4300 Returns,0.0,2326.82,Commercial,,Wholesalers (claims),Returns settlement Q2 2024
-JE-2024-00089,2024-07-29,Returns settlement,1000 Bank,0.0,47371.27,,,Wholesalers (claims),Returns settlement Q2 2024
-JE-2024-00090,2024-10-30,Returns settlement,2120 Returns reserve,50209.86,0.0,Commercial,,Wholesalers (claims),Returns settlement Q3 2024
-JE-2024-00090,2024-10-30,Returns settlement,4300 Returns,8592.16,0.0,Commercial,,Wholesalers (claims),Returns settlement Q3 2024
-JE-2024-00090,2024-10-30,Returns settlement,1000 Bank,0.0,58802.02,,,Wholesalers (claims),Returns settlement Q3 2024
+JE-2024-00070,2024-12-31,COGS,5000 Cost of goods sold,98640.0,0.0,Manufacturing,Glyvanta,,Cost of goods sold Dec 2024
+JE-2024-00070,2024-12-31,COGS,5000 Cost of goods sold,15500.0,0.0,Manufacturing,Onkalyn,,Cost of goods sold Dec 2024
+JE-2024-00070,2024-12-31,COGS,5000 Cost of goods sold,55160.0,0.0,Manufacturing,Respiqor,,Cost of goods sold Dec 2024
+JE-2024-00070,2024-12-31,COGS,1200 Inventory,0.0,169300.0,Manufacturing,,,Cost of goods sold Dec 2024
+JE-2024-00071,2024-12-31,Rebate accrual,4100 Rebates,588409.4,0.0,Commercial,Glyvanta,,Rebate accrual Dec 2024
+JE-2024-00071,2024-12-31,Rebate accrual,4100 Rebates,14764.11,0.0,Commercial,Onkalyn,,Rebate accrual Dec 2024
+JE-2024-00071,2024-12-31,Rebate accrual,4100 Rebates,231950.95,0.0,Commercial,Respiqor,,Rebate accrual Dec 2024
+JE-2024-00071,2024-12-31,Rebate accrual,2100 Rebate accrual,0.0,835124.46,Commercial,,,Rebate accrual Dec 2024
+JE-2024-00072,2024-12-31,Chargeback accrual,4200 Chargebacks,33077.28,0.0,Commercial,Glyvanta,,Chargeback accrual Dec 2024
+JE-2024-00072,2024-12-31,Chargeback accrual,4200 Chargebacks,41233.1,0.0,Commercial,Onkalyn,,Chargeback accrual Dec 2024
+JE-2024-00072,2024-12-31,Chargeback accrual,4200 Chargebacks,13348.72,0.0,Commercial,Respiqor,,Chargeback accrual Dec 2024
+JE-2024-00072,2024-12-31,Chargeback accrual,2110 Chargeback accrual,0.0,87659.1,Commercial,,,Chargeback accrual Dec 2024
+JE-2024-00073,2024-12-31,Returns accrual,4300 Returns,16538.64,0.0,Commercial,Glyvanta,,Returns accrual Dec 2024
+JE-2024-00073,2024-12-31,Returns accrual,4300 Returns,4123.31,0.0,Commercial,Onkalyn,,Returns accrual Dec 2024
+JE-2024-00073,2024-12-31,Returns accrual,4300 Returns,6674.36,0.0,Commercial,Respiqor,,Returns accrual Dec 2024
+JE-2024-00073,2024-12-31,Returns accrual,2120 Returns reserve,0.0,27336.31,Commercial,,,Returns accrual Dec 2024
+JE-2024-00074,2024-05-13,Rebate settlement,2100 Rebate accrual,2529711.68,0.0,Commercial,,Payer rebate programs,Rebate settlement Q1 2024
+JE-2024-00074,2024-05-13,Rebate settlement,4100 Rebates,0.0,17566.69,Commercial,,Payer rebate programs,Rebate settlement Q1 2024
+JE-2024-00074,2024-05-13,Rebate settlement,1000 Bank,0.0,2512144.99,,,Payer rebate programs,Rebate settlement Q1 2024
+JE-2024-00075,2024-08-12,Rebate settlement,2100 Rebate accrual,2511878.14,0.0,Commercial,,Payer rebate programs,Rebate settlement Q2 2024
+JE-2024-00075,2024-08-12,Rebate settlement,4100 Rebates,132938.93,0.0,Commercial,,Payer rebate programs,Rebate settlement Q2 2024
+JE-2024-00075,2024-08-12,Rebate settlement,1000 Bank,0.0,2644817.07,,,Payer rebate programs,Rebate settlement Q2 2024
+JE-2024-00076,2024-11-14,Rebate settlement,2100 Rebate accrual,2514020.6,0.0,Commercial,,Payer rebate programs,Rebate settlement Q3 2024
+JE-2024-00076,2024-11-14,Rebate settlement,4100 Rebates,30430.19,0.0,Commercial,,Payer rebate programs,Rebate settlement Q3 2024
+JE-2024-00076,2024-11-14,Rebate settlement,1000 Bank,0.0,2544450.79,,,Payer rebate programs,Rebate settlement Q3 2024
+JE-2024-00077,2024-02-20,Chargeback settlement,2110 Chargeback accrual,84717.18,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Jan 2024
+JE-2024-00077,2024-02-20,Chargeback settlement,4200 Chargebacks,1452.9,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Jan 2024
+JE-2024-00077,2024-02-20,Chargeback settlement,1000 Bank,0.0,86170.08,,,Wholesalers (claims),Chargeback settlement Jan 2024
+JE-2024-00078,2024-03-20,Chargeback settlement,2110 Chargeback accrual,90308.66,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Feb 2024
+JE-2024-00078,2024-03-20,Chargeback settlement,4200 Chargebacks,0.0,1523.08,Commercial,,Wholesalers (claims),Chargeback settlement Feb 2024
+JE-2024-00078,2024-03-20,Chargeback settlement,1000 Bank,0.0,88785.58,,,Wholesalers (claims),Chargeback settlement Feb 2024
+JE-2024-00079,2024-04-18,Chargeback settlement,2110 Chargeback accrual,84780.76,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Mar 2024
+JE-2024-00079,2024-04-18,Chargeback settlement,4200 Chargebacks,622.68,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Mar 2024
+JE-2024-00079,2024-04-18,Chargeback settlement,1000 Bank,0.0,85403.44,,,Wholesalers (claims),Chargeback settlement Mar 2024
+JE-2024-00080,2024-05-20,Chargeback settlement,2110 Chargeback accrual,83866.86,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Apr 2024
+JE-2024-00080,2024-05-20,Chargeback settlement,4200 Chargebacks,0.0,145.16,Commercial,,Wholesalers (claims),Chargeback settlement Apr 2024
+JE-2024-00080,2024-05-20,Chargeback settlement,1000 Bank,0.0,83721.7,,,Wholesalers (claims),Chargeback settlement Apr 2024
+JE-2024-00081,2024-06-20,Chargeback settlement,2110 Chargeback accrual,88727.64,0.0,Commercial,,Wholesalers (claims),Chargeback settlement May 2024
+JE-2024-00081,2024-06-20,Chargeback settlement,4200 Chargebacks,1879.4,0.0,Commercial,,Wholesalers (claims),Chargeback settlement May 2024
+JE-2024-00081,2024-06-20,Chargeback settlement,1000 Bank,0.0,90607.04,,,Wholesalers (claims),Chargeback settlement May 2024
+JE-2024-00082,2024-07-18,Chargeback settlement,2110 Chargeback accrual,89690.16,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Jun 2024
+JE-2024-00082,2024-07-18,Chargeback settlement,4200 Chargebacks,2486.93,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Jun 2024
+JE-2024-00082,2024-07-18,Chargeback settlement,1000 Bank,0.0,92177.09,,,Wholesalers (claims),Chargeback settlement Jun 2024
+JE-2024-00083,2024-08-20,Chargeback settlement,2110 Chargeback accrual,90660.3,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Jul 2024
+JE-2024-00083,2024-08-20,Chargeback settlement,4200 Chargebacks,1294.45,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Jul 2024
+JE-2024-00083,2024-08-20,Chargeback settlement,1000 Bank,0.0,91954.75,,,Wholesalers (claims),Chargeback settlement Jul 2024
+JE-2024-00084,2024-09-19,Chargeback settlement,2110 Chargeback accrual,89135.42,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Aug 2024
+JE-2024-00084,2024-09-19,Chargeback settlement,4200 Chargebacks,0.0,3533.07,Commercial,,Wholesalers (claims),Chargeback settlement Aug 2024
+JE-2024-00084,2024-09-19,Chargeback settlement,1000 Bank,0.0,85602.35,,,Wholesalers (claims),Chargeback settlement Aug 2024
+JE-2024-00085,2024-10-21,Chargeback settlement,2110 Chargeback accrual,87400.72,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Sep 2024
+JE-2024-00085,2024-10-21,Chargeback settlement,4200 Chargebacks,0.0,1671.95,Commercial,,Wholesalers (claims),Chargeback settlement Sep 2024
+JE-2024-00085,2024-10-21,Chargeback settlement,1000 Bank,0.0,85728.77,,,Wholesalers (claims),Chargeback settlement Sep 2024
+JE-2024-00086,2024-11-20,Chargeback settlement,2110 Chargeback accrual,89570.48,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Oct 2024
+JE-2024-00086,2024-11-20,Chargeback settlement,4200 Chargebacks,0.0,4128.42,Commercial,,Wholesalers (claims),Chargeback settlement Oct 2024
+JE-2024-00086,2024-11-20,Chargeback settlement,1000 Bank,0.0,85442.06,,,Wholesalers (claims),Chargeback settlement Oct 2024
+JE-2024-00087,2024-12-19,Chargeback settlement,2110 Chargeback accrual,88765.8,0.0,Commercial,,Wholesalers (claims),Chargeback settlement Nov 2024
+JE-2024-00087,2024-12-19,Chargeback settlement,4200 Chargebacks,0.0,1352.56,Commercial,,Wholesalers (claims),Chargeback settlement Nov 2024
+JE-2024-00087,2024-12-19,Chargeback settlement,1000 Bank,0.0,87413.24,,,Wholesalers (claims),Chargeback settlement Nov 2024
+JE-2024-00088,2024-04-29,Returns settlement,2120 Returns reserve,82019.7,0.0,Commercial,,Wholesalers (claims),Returns settlement Q1 2024
+JE-2024-00088,2024-04-29,Returns settlement,4300 Returns,0.0,8407.8,Commercial,,Wholesalers (claims),Returns settlement Q1 2024
+JE-2024-00088,2024-04-29,Returns settlement,1000 Bank,0.0,73611.9,,,Wholesalers (claims),Returns settlement Q1 2024
+JE-2024-00089,2024-07-29,Returns settlement,2120 Returns reserve,81662.61,0.0,Commercial,,Wholesalers (claims),Returns settlement Q2 2024
+JE-2024-00089,2024-07-29,Returns settlement,4300 Returns,761.58,0.0,Commercial,,Wholesalers (claims),Returns settlement Q2 2024
+JE-2024-00089,2024-07-29,Returns settlement,1000 Bank,0.0,82424.19,,,Wholesalers (claims),Returns settlement Q2 2024
+JE-2024-00090,2024-10-30,Returns settlement,2120 Returns reserve,82522.38,0.0,Commercial,,Wholesalers (claims),Returns settlement Q3 2024
+JE-2024-00090,2024-10-30,Returns settlement,4300 Returns,1387.72,0.0,Commercial,,Wholesalers (claims),Returns settlement Q3 2024
+JE-2024-00090,2024-10-30,Returns settlement,1000 Bank,0.0,83910.1,,,Wholesalers (claims),Returns settlement Q3 2024

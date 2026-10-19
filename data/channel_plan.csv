@@ -1,0 +1,10 @@
+product,channel,rebate_rate,budget_units_month,actual_units_month,budget_price,actual_price
+Glyvanta,Medicaid,0.5,262.41,224.97,1084,1006
+Glyvanta,Medicare,0.35,979.9,947.36,1084,1006
+Glyvanta,Commercial,0.3,489.95,473.68,1084,1006
+Respiqor,Medicaid,0.5,60.81,58.87,889,847
+Respiqor,Medicare,0.35,532.69,520.91,889,847
+Respiqor,Commercial,0.3,213.07,208.36,889,847
+Onkalyn,Medicaid,0.3,1.04,0.95,13574,13301
+Onkalyn,Medicare,0.03,16.19,21.31,13574,13301
+Onkalyn,Commercial,0.05,6.48,8.52,13574,13301

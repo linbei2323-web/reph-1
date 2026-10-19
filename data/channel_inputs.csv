@@ -1,0 +1,28 @@
+model_drug,year,channel,rx,avg_spend_per_rx,source
+Jardiance,2022,Medicare,5653254.0,1035.1066451286283,CMS Part D spending
+Jardiance,2022,Medicaid,1680648.0,,Medicaid SDUD national: Jardiance 
+Jardiance,2022,Commercial,2826627.0,,assumption: 50% of Medicare (to verify)
+Jardiance,2023,Medicare,8153238.0,1084.2238461946038,CMS Part D spending
+Jardiance,2023,Medicaid,2300489.0,,Medicaid SDUD national: Jardiance 
+Jardiance,2023,Commercial,4076619.0,,assumption: 50% of Medicare (to verify)
+Jardiance,2024,Medicare,11368280.0,1005.9566989025604,CMS Part D spending
+Jardiance,2024,Medicaid,2699654.0,,Medicaid SDUD national: Jardiance 
+Jardiance,2024,Commercial,5684140.0,,assumption: 50% of Medicare (to verify)
+Trelegy Ellipta,2022,Medicare,3926585.0,850.6400157898021,CMS Part D spending
+Trelegy Ellipta,2022,Medicaid,447362.0,,Medicaid SDUD national: TRELEGY EL
+Trelegy Ellipta,2022,Commercial,1570634.0,,assumption: 40% of Medicare (to verify)
+Trelegy Ellipta,2023,Medicare,5009961.0,889.4049294395704,CMS Part D spending
+Trelegy Ellipta,2023,Medicaid,571347.0,,Medicaid SDUD national: TRELEGY EL
+Trelegy Ellipta,2023,Commercial,2003984.0,,assumption: 40% of Medicare (to verify)
+Trelegy Ellipta,2024,Medicare,6250872.0,846.9861127855442,CMS Part D spending
+Trelegy Ellipta,2024,Medicaid,706425.0,,Medicaid SDUD national: TRELEGY EL
+Trelegy Ellipta,2024,Commercial,2500349.0,,assumption: 40% of Medicare (to verify)
+Xtandi,2022,Medicare,189085.0,12887.303079038527,CMS Part D spending
+Xtandi,2022,Medicaid,11223.0,,"Medicaid SDUD national: XTANDI 40M, XTANDI 80M"
+Xtandi,2022,Commercial,75634.0,,assumption: 40% of Medicare (to verify)
+Xtandi,2023,Medicare,191657.0,13573.781694381109,CMS Part D spending
+Xtandi,2023,Medicaid,11858.0,,"Medicaid SDUD national: XTANDI 40M, XTANDI 80M"
+Xtandi,2023,Commercial,76663.0,,assumption: 40% of Medicare (to verify)
+Xtandi,2024,Medicare,255669.0,13301.453162487434,CMS Part D spending
+Xtandi,2024,Medicaid,11413.0,,"Medicaid SDUD national: XTANDI 40M, XTANDI 80M"
+Xtandi,2024,Commercial,102268.0,,assumption: 40% of Medicare (to verify)

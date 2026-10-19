@@ -1,16 +1,17 @@
 """Generate 12 months of transactions for Halvern Pharmaceuticals.
 
-Reads the product plan from data/design_inputs.csv (made by design_inputs.py) and
-writes one CSV per document type to data/generated/. The random seed is fixed, so
-every run produces exactly the same data.
+Reads the product drivers from data/design_inputs.csv and data/channel_plan.csv
+(made by design_inputs.py) and writes one CSV per document type to data/generated/.
+Actuals follow the real 2024 market; the budget follows the trend known in late
+2023. The random seed is fixed, so every run produces exactly the same data.
 
 Built piece by piece:
     1. calendar + sales invoices          (done)
     2. customer payments                  (done)
     3. purchase invoices + supplier payments  (done)
     4. journal entries + period close dates   (done)
-    5a. bank statement lines                  (this version)
-    5b. payer channels + Medicaid unwinding scenario (waits for Daniel's channel data)
+    5a. bank statement lines                  (done)
+    5b. payer channels + budget (v1)          (this version)
 
 Usage:
     python data/generate_transactions.py
@@ -52,14 +53,16 @@ ON_TIME_SHARE = 0.85        # share of invoices paid by the due date
 MAX_DAYS_LATE = 15          # late payers pay 1 to 15 days after the due date
 
 # Suppliers: what each bills for, how often, and the planned monthly spend.
-# Inventory purchases replace what was sold (planned COGS about $103,790 a month).
+# Inventory purchases replace what is sold: the two inventory suppliers share the
+# planned monthly COGS (70% ingredients, 30% packaging; filled in from the plan).
 # Department spend is the vendor share of each cost center budget; the rest of
 # each budget is payroll, booked by journal entry in piece 4.
+INVENTORY_SHARE = {"Corvane Ingredients": 0.70, "Pacwell Packaging": 0.30}
 SUPPLIERS = [
     {"supplier": "Corvane Ingredients", "account": "1200 Inventory", "cost_center": "Manufacturing",
-     "per_month": 4, "monthly_amount": 72_650},
+     "per_month": 4, "monthly_amount": None},
     {"supplier": "Pacwell Packaging", "account": "1200 Inventory", "cost_center": "Manufacturing",
-     "per_month": 2, "monthly_amount": 31_140},
+     "per_month": 2, "monthly_amount": None},
     {"supplier": "Arclight Clinical Research", "account": "6100 R&D", "cost_center": "R&D",
      "per_month": 4, "monthly_amount": 200_000},
     {"supplier": "Brightline Marketing", "account": "6000 Commercial", "cost_center": "Commercial",
@@ -182,6 +185,67 @@ def customer_payments(invoices, rng):
     return payments
 
 
+def channel_utilization(invoices, channels, rng):
+    """Units sold each month split by the payer that reimbursed them.
+
+    Halvern does not know the payer when it invoices a wholesaler; it learns the
+    mix later from utilization data. Each month's invoiced units are split at the
+    real 2024 channel shares, with random variation. Rebates are accrued from this.
+    """
+    inv = invoices.assign(month=pd.to_datetime(invoices["posting_date"]).dt.month)
+    sold = inv.groupby(["item", "month"])["qty"].sum()
+    rows = []
+    for (product, month), units in sold.items():
+        mix = channels[channels["product"] == product]
+        shares = (mix["actual_units_month"] / mix["actual_units_month"].sum()).to_numpy()
+        split = rng.multinomial(int(units), shares)
+        for channel, n in zip(mix["channel"], split):
+            rows.append({"period": f"{YEAR}-{month:02d}", "product": product,
+                         "channel": channel, "units": int(n)})
+    return pd.DataFrame(rows)
+
+
+def budget_table(plan, channels):
+    """Budget v1: the plan as if prepared in late 2023, one row per month and line.
+
+    Revenue lines by product: units and price from the trend known in late 2023
+    (channel_plan budget columns); rebates at each channel's rate; the other GTN
+    deductions and COGS at their planned rates. Expenses by cost center: payroll,
+    supplier spend and the bank fee. Amounts are positive; the account says
+    whether they are revenue, deductions or costs.
+    """
+    rows = []
+    rates = plan.set_index("product")
+    vendor = {}
+    for sup in SUPPLIERS:
+        if sup["account"] != "1200 Inventory":
+            key = (sup["account"], sup["cost_center"])
+            vendor[key] = vendor.get(key, 0) + sup["monthly_amount"]
+    for month in range(1, 13):
+        period = f"{YEAR}-{month:02d}"
+        for product, mix in channels.groupby("product", sort=False):
+            units = mix["budget_units_month"].sum()
+            price = mix["budget_price"].iloc[0]
+            gross = units * price
+            rebates = (mix["budget_units_month"] * price * mix["rebate_rate"]).sum()
+            r = rates.loc[product]
+            for account, amount, cc in [
+                ("4000 Gross product sales", gross, "Commercial"),
+                ("4100 Rebates", rebates, "Commercial"),
+                ("4200 Chargebacks", gross * r["chargeback"], "Commercial"),
+                ("4300 Returns", gross * r["returns"], "Commercial"),
+                ("4400 Prompt-pay discounts", gross * r["prompt_pay"], "Commercial"),
+                ("5000 Cost of goods sold", units * r["unit_cost"], "Manufacturing"),
+            ]:
+                rows.append({"version": "v1", "period": period, "account": account, "cost_center": cc,
+                             "product": product, "units": round(units, 2), "amount": round(amount, 2)})
+        for cost_center, (account, payroll) in PAYROLL.items():
+            amount = payroll + vendor.get((account, cost_center), 0) + (BANK_FEE if cost_center == "G&A" else 0)
+            rows.append({"version": "v1", "period": period, "account": account, "cost_center": cost_center,
+                         "product": "", "units": None, "amount": round(amount, 2)})
+    return pd.DataFrame(rows)
+
+
 def purchase_invoices(calendar, rng):
     """Supplier invoices spread evenly through each month.
 
@@ -274,7 +338,7 @@ def month_end(month):
     return BUSINESS_DAY.rollback(pd.Timestamp(YEAR, month, 1) + pd.offsets.MonthEnd(0))
 
 
-def journal_entries(plan, invoices, rng):
+def journal_entries(plan, invoices, util, channels, rng):
     """Opening balances, payroll, cost of goods sold, GTN accruals and their settlements."""
     j = Journal()
     rates = plan.set_index("product")
@@ -314,10 +378,18 @@ def journal_entries(plan, invoices, rng):
         j.add(end, "COGS", lines, f"Cost of goods sold {end:%b %Y}")
 
         # GTN accruals: this month's gross sales x the planned rate, by product.
+        # Rebates use the month's payer mix: units by channel x price x channel rate.
+        month_util = util[util["period"] == f"{YEAR}-{month:02d}"].merge(
+            channels[["product", "channel", "rebate_rate"]], on=["product", "channel"])
         for kind, a in ACCRUALS.items():
             lines, total = [], 0
             for product, gross in sold.groupby("item")["amount"].sum().items():
-                amt = round(gross * rates.loc[product, kind], 2)
+                if kind == "rebate":
+                    u = month_util[month_util["product"] == product]
+                    price = rates.loc[product, "price_per_unit"]
+                    amt = round((u["units"] * price * u["rebate_rate"]).sum(), 2)
+                else:
+                    amt = round(gross * rates.loc[product, kind], 2)
                 total += amt
                 lines.append((a["expense"], amt, 0, "Commercial", product, ""))
             lines.append((a["liability"], 0, round(total, 2), "Commercial", "", ""))
@@ -431,13 +503,20 @@ def general_ledger(invoices, payments, bills, supplier_pay, journal):
 def main():
     rng = np.random.default_rng(SEED)
     plan = pd.read_csv(HERE / "design_inputs.csv")
+    channels = pd.read_csv(HERE / "channel_plan.csv")
+    monthly_cogs = plan["monthly_cogs"].sum()
+    for sup in SUPPLIERS:
+        if sup["supplier"] in INVENTORY_SHARE:
+            sup["monthly_amount"] = round(monthly_cogs * INVENTORY_SHARE[sup["supplier"]], 2)
     calendar = business_days(YEAR)
 
     invoices = sales_invoices(plan, calendar, rng)
     payments = customer_payments(invoices, rng)
     bills = purchase_invoices(calendar, rng)
     supplier_pay = supplier_payments(bills, rng)
-    journal = journal_entries(plan, invoices, rng)
+    util = channel_utilization(invoices, channels, rng)
+    journal = journal_entries(plan, invoices, util, channels, rng)
+    budget = budget_table(plan, channels)
     periods = period_close_dates()
     bank, uncleared = bank_transactions(payments, supplier_pay, journal, rng)
 
@@ -449,6 +528,8 @@ def main():
     journal.to_csv(OUT / "journal_entries.csv", index=False)
     periods.to_csv(OUT / "periods.csv", index=False)
     bank.to_csv(OUT / "bank_transactions.csv", index=False)
+    util.to_csv(OUT / "channel_utilization.csv", index=False)
+    budget.to_csv(OUT / "budget.csv", index=False)
 
     # Check: generated units per month vs plan.
     invoices["month"] = pd.to_datetime(invoices["posting_date"]).dt.month
@@ -533,6 +614,34 @@ def main():
     print(uncleared.to_string(index=False))
     assert round(book_close - statement_close, 2) == round(uncleared["amount"].sum(), 2), "bank does not reconcile"
     print("Bank check: statement + uncleared items = book balance  OK")
+
+    # Budget v1 vs actual for the year: the story the stage 6 report must explain.
+    print()
+    print("Budget v1 vs actual, full year:")
+    actual_units = invoices.groupby("item")["qty"].sum()
+    budget_units = budget[budget["account"] == "4000 Gross product sales"].groupby("product")["units"].sum()
+    by_channel = util.groupby(["product", "channel"])["units"].sum()
+    bud_channel = channels.set_index(["product", "channel"])["budget_units_month"] * 12
+    for product in plan["product"]:
+        print(f"  {product}: units budget {budget_units[product]:,.0f} actual {actual_units[product]:,.0f} "
+              f"({actual_units[product] / budget_units[product] - 1:+.1%})")
+        for channel in ["Medicaid", "Medicare", "Commercial"]:
+            b, a = bud_channel[(product, channel)], by_channel[(product, channel)]
+            print(f"      {channel:<10} budget {b:>8,.0f} actual {a:>8,.0f} ({a / b - 1:+.1%})")
+    lines = {
+        "Gross sales": ("4000 Gross product sales", 1),
+        "Rebates": ("4100 Rebates", -1),
+        "Chargebacks": ("4200 Chargebacks", -1),
+        "Returns": ("4300 Returns", -1),
+        "Prompt-pay discounts": ("4400 Prompt-pay discounts", -1),
+    }
+    net_b = net_a = 0
+    for label, (account, sign) in lines.items():
+        b = budget.loc[budget["account"] == account, "amount"].sum()
+        a = abs(tb.loc[account, "balance"])
+        net_b, net_a = net_b + sign * b, net_a + sign * a
+        print(f"  {label:<22} budget ${b:>14,.0f}  actual ${a:>14,.0f}  variance ${a - b:>+13,.0f}")
+    print(f"  {'Net revenue':<22} budget ${net_b:>14,.0f}  actual ${net_a:>14,.0f}  variance ${net_a - net_b:>+13,.0f}")
 
 
 if __name__ == "__main__":
