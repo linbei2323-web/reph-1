@@ -32,6 +32,8 @@ S = {
     "quotezh": ParagraphStyle("quotezh", fontName="STSong-Light", fontSize=9, leading=13.5, textColor=GREY, leftIndent=10, wordWrap="CJK"),
     "cell": ParagraphStyle("cell", fontName="Helvetica", fontSize=8.5, leading=11),
     "cellb": ParagraphStyle("cellb", fontName="Helvetica-Bold", fontSize=8.5, leading=11, textColor=colors.white),
+    "cellbzh": ParagraphStyle("cellbzh", fontName="STSong-Light", fontSize=8.5, leading=11, textColor=colors.white),
+    "cellzh": ParagraphStyle("cellzh", fontName="STSong-Light", fontSize=8, leading=11, textColor=GREY, wordWrap="CJK"),
     "label": ParagraphStyle("label", fontName="Helvetica-Bold", fontSize=9, leading=12, textColor=NAVY, spaceBefore=4),
 }
 
@@ -84,8 +86,8 @@ ROADMAP = [
      "Halvern Pharmaceuticals: 3 products modelled on CMS 2024 Part D data, GTN, cost centers, opening balances",
      "Review and defend every assumption"),
     ("3", "Generate & record 12 months", "In progress",
-     "Generator pieces 1-5a (year 2024): 1,047 sales invoices, 1,132 payments, 192 purchase invoices, 90 journal entries, 1,170 bank lines",
-     "You: channel mix from your market data; then piece 5b (Medicaid unwinding); you: ERPNext setup and import"),
+     "Generator finished (2024): 1,047 sales invoices, 1,132 payments, 192 purchase invoices, 90 journal entries, 1,170 bank lines, budget v1, channel data",
+     "You: set up ERPNext and import; check the trial balance against expected_trial_balance.csv"),
     ("4", "Move the data to SQL", "Not started", "-", "Schema script, fact / dimension / versioned budget tables"),
     ("5", "Close controls, tested", "Not started",
      "Error plan designed: 4 types x 10, held-out test", "7 control queries, close workbook, seeded test, score"),
@@ -112,11 +114,12 @@ STAGES = [
     {
         "n": "2", "name": "Design the company", "status": "Done",
         "what": "Halvern Pharmaceuticals, fictional. Glyvanta, Respiqor and Onkalyn are modelled on Jardiance, "
-                "Trelegy Ellipta and Xtandi using real 2024 Medicare Part D price per claim, with volumes scaled "
-                "by 1/1000. About $20M gross sales a year.",
+                "Trelegy Ellipta and Xtandi using real Medicare Part D and Medicaid prescriptions (2022-2024) and "
+                "Medicare price per claim, with volumes scaled by 1/1000. About $33M gross sales a year.",
         "say": "\"I designed the company from real data. In an earlier project I cleaned CMS Medicare Part D "
                "data, 288.7 billion dollars of 2024 drug spending. I picked three drugs from different "
-               "therapeutic areas, kept their real price per claim and scaled volumes down by a thousand. "
+               "therapeutic areas, kept their real price per claim and scaled Medicare and Medicaid "
+               "prescriptions down by a thousand. "
                "A script reproduces every number. The gross-to-net rates are my assumptions, and I can explain "
                "each one: pharmacy drugs in competitive classes pay large rebates, while the oncology drug "
                "pays small rebates but more chargebacks.\"",
@@ -194,6 +197,10 @@ STAGES = [
                 "Volume = (actual units - budget units) x budget price. Price = (actual price - budget price) x "
                 "actual units. Example: budget 1,000 at $100, actual 1,100 at $95: volume +10,000, price -5,500, "
                 "total +4,500."),
+               ("What was the main variance story?",
+                "The Medicaid unwinding. The budget extrapolated 2022-23 growth; in 2024 all Medicaid prescriptions fell "
+                "6% as about 25M people were disenrolled (KFF), so Medicaid growth for my products slowed well below "
+                "budget. Onkalyn's Medicare volume beat budget by about 40%. [Your price / volume numbers.]"),
                ("What did the 90 / 20 minutes consist of?",
                 "Describe your actual steps from the timing log: export, lookups, rebuild pivots versus refresh, review, write commentary.")],
         "evidence": "Dashboard pages, management report, report/timing_log.csv.",
@@ -224,8 +231,67 @@ TOUGH = [
      "gross-to-net, the close and variance analysis. Together they cover both halves of pharma finance."),
 ]
 
+QUESTION_BANK = [
+    ("The big picture", [
+        ("Walk me through this project.", "Use the 60-second pitch (section 2).", "介绍一下这个项目。"),
+        ("Why did you build this?", "To learn how a pharma finance team closes its books and explains results; real ledgers are confidential, so I simulated one.", "为什么做这个项目？"),
+        ("Is this a real company?", "No: a self-directed project with a fictional company; prices and volumes come from real CMS data.", "这是真实公司吗？"),
+        ("What was the hardest part?", "A real moment from your own work, e.g. Medicaid product names cut to 10 characters, and Jardiance spelled 'Jardiance' in one table and 'JARDIANCE' in another.", "最难的是什么？"),
+    ]),
+    ("Data and design", [
+        ("Where does the data come from?", "Real CMS Medicare Part D and Medicaid data (2022-2024) for prices, volumes and payer mix; transactions generated by a fixed-seed Python script and recorded in ERPNext.", "数据从哪来？"),
+        ("Why these three drugs?", "Three therapeutic areas and two channel types: high-rebate pharmacy drugs and a specialty drug with chargebacks.", "为什么选这三个药？"),
+        ("How did you scale real data?", "Real price per claim; real prescriptions / 1,000 for every channel. About $33M gross a year.", "怎么缩小规模？"),
+        ("Why synthetic transactions?", "To test controls you need the right answer: planted errors plus an answer key give recall and false positives.", "为什么用模拟交易？"),
+        ("What does your data not cover?", "Hospital drugs (Part B), commercial insurance (assumed), net prices: all CMS figures are gross, pre-rebate.", "数据有什么局限？"),
+        ("How do you know the data is consistent?", "The generator checks itself every run: entries balance, AR and AP reconcile, accruals roll forward, bank reconciles.", "怎么知道数据内部一致？"),
+    ]),
+    ("Accounting", [
+        ("Book a credit sale and its payment.", "Dr AR / Cr Gross sales; then Dr Bank + Dr Prompt-pay discount / Cr AR.", "赊销和收款怎么记账？"),
+        ("How do you account for rebates?", "Accrue monthly from the payer mix: Dr 4100 / Cr 2100. Pay quarterly about 45 days later: Dr 2100 / Cr Bank, true-up to 4100.", "返利怎么记账？"),
+        ("What's a true-up?", "The difference between the estimate and the actual bill, booked back to the deduction account.", "什么是调整（true-up）？"),
+        ("What's gross-to-net?", "Gross sales minus rebates, chargebacks, returns and discounts. About 37% of gross is deducted in the 2024 data.", "什么是毛到净？"),
+        ("Rebate vs chargeback?", "Rebates go to payers for coverage; chargebacks repay wholesalers the gap to a lower contract price.", "返利和价格补差的区别？"),
+        ("The trial balance balances. Are the books right?", "Not necessarily: wrong periods and misclassifications still balance. Hence seven controls.", "试算平衡了，账就对吗？"),
+        ("Why didn't the bank reconciliation reach zero?", "Three receipts booked 31 Dec cleared in January: $75,050 deposits in transit, named item by item.", "银行对账为什么不是零？"),
+        ("Why a big rebate liability at year end?", "Q4 rebates are paid in February: about $2.5M still owed at 31 Dec.", "年末为什么有大额应计返利？"),
+    ]),
+    ("Controls and testing", [
+        ("What controls did you build?", "Trial balance, subledger to GL, bank match, duplicates, cutoff, classification, unapplied payments: SQL queries whose rows are exceptions.", "建了哪些控制？"),
+        ("What does held-out mean?", "Rules written on a development copy; run once, unchanged, on a test copy with 40 planted errors.", "“留出”是什么意思？"),
+        ("What did you miss and why?", "[Your actual misses], e.g. a duplicate with a typo in the amount escapes an exact-amount rule.", "漏掉了什么、为什么？"),
+        ("Recall vs precision?", "Recall = found / 40; precision = found / (found + false positives). [Your numbers.]", "召回率和精确率？"),
+        ("How would you catch the misses?", "E.g. near-amount matching for duplicates, traded off against more false positives.", "怎么抓住漏掉的错误？"),
+    ]),
+    ("FP&A and reporting", [
+        ("Explain price vs volume variance.", "Volume = (actual - budget units) x budget price; price = (actual - budget price) x actual units; they add to the total.", "解释量差和价差。"),
+        ("What was the variance story?", "Medicaid unwinding: budget extrapolated 2022-23 growth; Medicaid growth slowed in 2024 as all Medicaid prescriptions fell 6%. Onkalyn Medicare beat budget. [Your numbers.]", "差异的故事是什么？"),
+        ("Why does losing Medicaid units help net price?", "Medicaid carries the highest statutory rebate (about 23.1% basic, to verify), so the average rebate rate falls.", "为什么失去 Medicaid 销量反而提高净价？"),
+        ("Did Medicaid volume fall for your drugs?", "No, and that's the insight: the market fell 6% but these brands still grew, only more slowly than budget. Aggregate trends don't always apply to every product.", "你的药在 Medicaid 销量下降了吗？"),
+        ("How do you know the dashboard is right?", "Every GTN bar ties to its ledger account; volume + price = total variance.", "怎么知道看板是对的？"),
+        ("What did the 90 / 20 minutes consist of?", "[Only from your stopwatch log.]", "90 / 20 分钟包括什么？"),
+    ]),
+    ("Pharma industry", [
+        ("What's happening in drug pricing?", "IRA Medicare negotiation: Trelegy and Xtandi selected January 2025 for prices from 2027; Jardiance in the first round from 2026 (to verify).", "药价领域最近有什么变化？"),
+        ("How did Medicaid change recently?", "From your data: drug spend +11.6% in 2023, -3.0% in 2024; prescriptions -6.0% in 2024.", "Medicaid 最近有什么变化？"),
+        ("Who are wholesalers?", "A few large distributors buy most US drugs; they take prompt-pay discounts and file chargebacks.", "批发商是谁、为什么重要？"),
+    ]),
+    ("Technical", [
+        ("Why ERPNext rather than your script?", "It enforces accounting rules and produces a real ERP structure.", "为什么用 ERPNext？"),
+        ("Show me a SQL query you wrote.", "[Your own control query]: explain every line.", "给我看一个你写的 SQL。"),
+        ("How did you model the database?", "[Your stage 4 design]: star schema, versioned budget, rebuild script.", "数据库怎么设计的？"),
+        ("Is it reproducible?", "Yes: fixed seed, scripts in GitHub, same numbers every run.", "可以重现吗？"),
+    ]),
+    ("Trap questions", [
+        ("How many transactions exactly?", "The real final count, not a target.", "交易到底有多少笔？"),
+        ("Why 2024?", "So the real Medicaid unwinding falls inside the simulated year.", "为什么是 2024 年？"),
+        ("Why does profit differ from plan?", "[Your variance analysis.]", "利润为什么和计划不同？"),
+        ("What would you do differently?", "An honest answer, e.g. batched customer payments or accrued prompt-pay discounts.", "如果重做会怎么改？"),
+    ]),
+]
+
 FILL = [
-    ("Transactions recorded", "Generator so far: 3,631 records incl. 1,170 bank lines", "Actual final row count"),
+    ("Transactions recorded", "Generated: 3,631 records incl. 1,170 bank lines (before ERPNext)", "Actual final row count"),
     ("Errors found / false positives", "Not run yet", "Your score output"),
     ("Report time manual / automated", "Not measured yet", "Your stopwatch log"),
     ("Project dates", "Started Oct 2026", "The months you actually worked on it"),
@@ -287,6 +353,7 @@ def build(path):
         story.append(KeepTogether(block))
 
     story += [
+        PageBreak(),
         p("4. Tough questions", "h1"),
         p("难题", "zh"),
         Spacer(1, 4),
@@ -296,6 +363,19 @@ def build(path):
         Spacer(1, 4),
         table([["Claim", "Status today", "Source of the final number"]] + [list(r) for r in FILL],
               [2.0 * inch, 2.6 * inch, 2.4 * inch]),
+        PageBreak(),
+        p("6. Question bank", "h1"),
+        p("\u9762\u8bd5\u9898\u5e93\uff1a\u53ef\u80fd\u88ab\u95ee\u5230\u7684\u95ee\u9898\u548c\u56de\u7b54\u8981\u70b9", "zh"),
+        p("[Brackets] = fill in from your own results when that stage is done."),
+    ]
+    for category, rows in QUESTION_BANK:
+        story += [
+            p(category, "h2"),
+            table([["Question", "How to answer", Paragraph("\u4e2d\u6587", S["cellbzh"])]]
+                  + [[q, a, Paragraph(zh, S["cellzh"])] for q, a, zh in rows],
+                  [2.0 * inch, 3.7 * inch, 1.3 * inch]),
+        ]
+    story += [
         Spacer(1, 10),
         note_box([
             p("<b>Takeaway</b>"),
