@@ -8,8 +8,9 @@ Built piece by piece:
     1. calendar + sales invoices          (done)
     2. customer payments                  (done)
     3. purchase invoices + supplier payments  (done)
-    4. journal entries + period close dates   (this version)
-    5. bank lines + planned deviations
+    4. journal entries + period close dates   (done)
+    5a. bank statement lines                  (this version)
+    5b. payer channels + Medicaid unwinding scenario (waits for Daniel's channel data)
 
 Usage:
     python data/generate_transactions.py
@@ -92,6 +93,14 @@ ACCRUALS = {
                 "party": "wholesaler", "settle": "quarterly", "lag_days": 30, "true_up_noise": 0.10},
 }
 CLOSE_BUSINESS_DAYS = 5     # each month is closed on the 5th business day of the next month
+BANK_FEE = 250.00           # monthly bank service charge, booked to G&A
+
+# Bank statement (piece 5a). Business days between the book date and the date the
+# bank shows the money: wires from wholesalers clear the same or next day, the
+# supplier ACH run 1-2 days later, payroll the same day.
+CLEARING_DAYS = {"receipt": (0, 1), "supplier": (1, 2), "payroll": (0, 0),
+                 "settlement": (1, 2), "fee": (0, 0)}
+REMITTANCE_REF_SHARE = 0.90  # share of customer receipts that quote the invoice number
 
 # Banks and wholesalers don't work on US federal holidays.
 BUSINESS_DAY = CustomBusinessDay(calendar=USFederalHolidayCalendar())
@@ -290,6 +299,11 @@ def journal_entries(plan, invoices, rng):
         lines.append(("1000 Bank", 0, round(total, 2), "", "", ""))
         j.add(end, "Payroll", lines, f"Payroll {end:%b %Y}")
 
+        # Bank service charge: taken by the bank, booked from the statement.
+        j.add(end, "Bank fee",
+              [("6300 G&A", BANK_FEE, 0, "G&A", "", "Bank"), ("1000 Bank", 0, BANK_FEE, "", "", "Bank")],
+              f"Bank service charge {end:%b %Y}")
+
         # Cost of goods sold: units sold this month x standard unit cost.
         lines, total = [], 0
         for product, units in sold.groupby("item")["qty"].sum().items():
@@ -342,6 +356,45 @@ def journal_entries(plan, invoices, rng):
     return j.frame()
 
 
+def bank_transactions(payments, supplier_pay, journal, rng):
+    """The bank statement: one line for every cash movement the bank has processed by 31 Dec.
+
+    The statement knows nothing about Halvern's document numbers except what the
+    payer writes in the reference: most wholesalers quote the invoice number, some
+    don't. Cash recorded in the books on the last days of December but cleared by
+    the bank in January is not on the statement (an outstanding item at year end).
+    """
+    year_end = pd.Timestamp(f"{YEAR}-12-31")
+    moves = []
+    for r in payments.itertuples():
+        ref = r.invoice_no if rng.random() < REMITTANCE_REF_SHARE else ""
+        moves.append((r.payment_date, r.amount_received, f"ACH CREDIT {r.customer.upper()}", ref, "receipt"))
+    for r in supplier_pay.itertuples():
+        moves.append((r.payment_date, -r.amount_paid, f"ACH DEBIT {r.supplier.upper()}", r.payment_no, "supplier"))
+    bank_lines = journal[(journal["account"] == "1000 Bank") & (journal["je_type"] != "Opening balance")]
+    for r in bank_lines.itertuples():
+        kind = {"Payroll": "payroll", "Bank fee": "fee"}.get(r.je_type, "settlement")
+        text = {"payroll": "PAYROLL HALVERN PHARMACEUTICALS", "fee": "SERVICE CHARGE"}.get(
+            kind, f"WIRE OUT {str(r.party).upper()}")
+        ref = r.je_no if kind != "fee" else ""
+        moves.append((r.posting_date, round(r.debit - r.credit, 2), text, ref, kind))
+
+    rows, uncleared = [], []
+    for book_date, amount, description, reference, kind in moves:
+        lo, hi = CLEARING_DAYS[kind]
+        lag = int(rng.integers(lo, hi + 1))
+        bank_date = BUSINESS_DAY.rollforward(pd.Timestamp(book_date)) + lag * BUSINESS_DAY
+        if bank_date > year_end:
+            uncleared.append({"book_date": book_date, "amount": amount, "description": description})
+            continue
+        rows.append({"bank_date": bank_date.date(), "amount": amount,
+                     "reference": reference, "description": description})
+
+    bank = pd.DataFrame(rows).sort_values(["bank_date", "amount"], ascending=[True, False])
+    bank.insert(0, "bank_txn_id", [f"BANK-{YEAR}-{i:05d}" for i in range(1, len(bank) + 1)])
+    return bank, pd.DataFrame(uncleared)
+
+
 def period_close_dates():
     """Planned close date for each month: the 5th business day of the next month."""
     rows = []
@@ -386,6 +439,7 @@ def main():
     supplier_pay = supplier_payments(bills, rng)
     journal = journal_entries(plan, invoices, rng)
     periods = period_close_dates()
+    bank, uncleared = bank_transactions(payments, supplier_pay, journal, rng)
 
     OUT.mkdir(exist_ok=True)
     invoices.to_csv(OUT / "sales_invoices.csv", index=False)
@@ -394,6 +448,7 @@ def main():
     supplier_pay.to_csv(OUT / "supplier_payments.csv", index=False)
     journal.to_csv(OUT / "journal_entries.csv", index=False)
     periods.to_csv(OUT / "periods.csv", index=False)
+    bank.to_csv(OUT / "bank_transactions.csv", index=False)
 
     # Check: generated units per month vs plan.
     invoices["month"] = pd.to_datetime(invoices["posting_date"]).dt.month
@@ -462,6 +517,22 @@ def main():
     assert abs(tb["balance"].sum()) < 0.01, "trial balance does not balance"
     print("TB check: total debits = total credits  OK")
     assert tb.loc["1000 Bank", "balance"] > 0 and tb.loc["1200 Inventory", "balance"] > 0
+
+    # Check: bank reconciliation at 31 Dec.
+    opening = OPENING_BALANCES["1000 Bank"]
+    statement_close = round(opening + bank["amount"].sum(), 2)
+    book_close = round(tb.loc["1000 Bank", "balance"], 2)
+    print()
+    print("bank statement lines:", len(bank), f"(about {len(bank) / 12:.0f} a month)")
+    print("receipts without an invoice reference:",
+          int(((bank["amount"] > 0) & (bank["reference"].fillna("") == "")).sum()))
+    print("statement closing balance:", f"${statement_close:,.2f}")
+    print("book (GL) bank balance:   ", f"${book_close:,.2f}")
+    print("difference = items in the books not yet cleared by the bank:",
+          f"${book_close - statement_close:,.2f}")
+    print(uncleared.to_string(index=False))
+    assert round(book_close - statement_close, 2) == round(uncleared["amount"].sum(), 2), "bank does not reconcile"
+    print("Bank check: statement + uncleared items = book balance  OK")
 
 
 if __name__ == "__main__":

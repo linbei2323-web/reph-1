@@ -22,7 +22,7 @@ design_inputs.csv  (3 products: price, volume, GTN rates, unit cost)
 sales_invoices ─► customer_payments
 purchase_invoices ─► supplier_payments
 journal_entries            periods            expected_trial_balance
-bank_transactions (piece 5, coming)
+bank_transactions (bank statement)
         │ you: import into ERPNext → ERPNext writes the general ledger
         ▼
 your SQL database (stage 4) → controls (stage 5) → reporting (stage 6)
@@ -111,7 +111,7 @@ Keys: **PK** = primary key (unique per row), **FK** = links to another table.
 
 **Ledger effect:** Dr 2000 Accounts payable / Cr 1000 Bank.
 
-### journal_entries.csv: 78 entries, 306 lines / 日记账
+### journal_entries.csv: 90 entries, 330 lines / 日记账
 
 One row per **line**; all lines with the same `je_no` form one balanced entry (debits = credits).
 每行是一条分录**行**,同一个 `je_no` 的所有行构成一笔借贷平衡的分录。
@@ -120,7 +120,7 @@ One row per **line**; all lines with the same `je_no` form one balanced entry (d
 |---|---|---|---|---|
 | je_no | text | PK with line order | Entry number | JE-2024-00004 |
 | posting_date | date | | Date posted | 2024-01-31 |
-| je_type | text | | Opening balance, Payroll, COGS, Rebate / Chargeback / Returns accrual or settlement | Rebate accrual |
+| je_type | text | | Opening balance, Payroll, Bank fee, COGS, Rebate / Chargeback / Returns accrual or settlement | Rebate accrual |
 | account | text | FK → accounts | Account | 4100 Rebates |
 | debit | number | | USD | 295160.4 |
 | credit | number | | USD | 0.0 |
@@ -133,6 +133,7 @@ One row per **line**; all lines with the same `je_no` form one balanced entry (d
 |---|---|---|
 | Opening balance | 1 | Dr Bank, Inventory / Cr Equity |
 | Payroll | 12 | Dr 6000–6300 by cost center / Cr Bank |
+| Bank fee | 12 | Dr 6300 G&A 250 / Cr Bank (monthly service charge) |
 | COGS | 12 | Dr 5000 COGS (by product) / Cr 1200 Inventory |
 | Rebate accrual | 12 | Dr 4100 (by product) / Cr 2100 |
 | Chargeback accrual | 12 | Dr 4200 (by product) / Cr 2110 |
@@ -141,9 +142,23 @@ One row per **line**; all lines with the same `je_no` form one balanced entry (d
 | Chargeback settlement | 11 | Dr 2110 / Cr Bank, ± true-up to 4200 |
 | Returns settlement | 3 | Dr 2120 / Cr Bank, ± true-up to 4300 |
 
-### bank_transactions.csv: coming in piece 5 / 银行流水(第 5 部分)
+### bank_transactions.csv: 1,170 rows, the bank statement / 银行流水
 
-One row per line on the bank statement: every cash movement in customer_payments, supplier_payments and journal entries that touch 1000 Bank. Planned columns: `bank_date`, `amount` (+ in / − out), `reference`, `description`. Source for control 3 (bank match).
+One line for every cash movement the bank processed by 31 Dec: customer receipts, supplier payments, payroll, GTN settlements and the bank's service charge. The statement opening balance is $5,000,000.
+银行在 12 月 31 日前处理的每一笔现金流动一行。期初余额 $5,000,000。
+
+| Column | Type | Key | Meaning | Example |
+|---|---|---|---|---|
+| bank_txn_id | text | PK | Bank line number | BANK-2024-00004 |
+| bank_date | date | | Date the bank processed it: receipts 0–1, supplier ACH 1–2, settlements 1–2 business days after the book date; payroll and fees same day | 2024-02-01 |
+| amount | number | | USD; + money in, − money out | 20703.0 |
+| reference | text | | What the payer wrote: an invoice number on 90% of receipts, Halvern's payment or JE number on outgoing payments, blank otherwise | SINV-2024-00004 |
+| description | text | | Bank's text | ACH CREDIT KEYSTONE PHARMA WHOLESALE |
+
+There is **no column linking a bank line to a book entry**: finding the match (amount, date within ±3 days, reference when present) is control 3's job. 74 receipts have no reference and must be matched on amount and date alone.
+**没有**直接关联账面记录的列:匹配是控制 3 的工作。74 笔收款没有参考号,只能按金额和日期匹配。
+
+**Reconciliation at 31 Dec:** statement closing balance $6,005,962.80 + three customer receipts booked on 31 Dec but cleared in January ($35,981.00) = book bank balance $6,041,943.80.
 
 ## 4. Control and check tables / 控制与核对表
 
@@ -227,4 +242,5 @@ Also in the file: `model_drug`, `area`, `real_spend_usd_b`, `real_claims` (the r
 4. For each GTN accrual account: accrued = paid − true-up + still owed at 31 Dec.
 5. No transactions on weekends or US federal holidays (payroll and settlements roll to the next business day).
 6. Amounts are USD. Sales amounts are gross (before rebates, chargebacks, returns and discounts).
-7. The data is clean: the 40 test errors are added later, to a copy, in stage 5.
+7. Bank statement + items not yet cleared = GL bank balance (checked by the generator).
+8. The data is clean: the 40 test errors are added later, to a copy, in stage 5.
